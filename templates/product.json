@@ -6,6 +6,13 @@
         "title": {
           "type": "title"
         },
+        "rating_line": {
+          "type": "text",
+          "settings": {
+            "text": "<a href=\"#reviews\">★★★★★ 4.7/5 · Partner store reviews</a>",
+            "text_style": "body"
+          }
+        },
         "subtitle": {
           "type": "text",
           "settings": {
@@ -90,6 +97,7 @@
       },
       "block_order": [
         "title",
+        "rating_line",
         "subtitle",
         "price",
         "benefits",
@@ -443,6 +451,181 @@
         "padding_bottom": 60
       }
     },
+    "reviews_carousel": {
+      "type": "pv-reviews",
+      "blocks": {
+        "rv0": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "title": "Worth every penny",
+            "text": "<p>Worth every penny! My neck pain has decreased significantly since I started using this pillow.</p>",
+            "author": "Andrea"
+          }
+        },
+        "rv1": {
+          "type": "review",
+          "settings": {
+            "rating": 4,
+            "title": "Customer service",
+            "text": "<p>I ordered an extra pillowcase that didn't arrive at first, but customer support was very kind and reshipped it for free. Great service — 4 stars only because of the small initial hiccup.</p>",
+            "author": "Giorgio"
+          }
+        },
+        "rv2": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "title": "Neck pain gone!",
+            "text": "<p>I'm very happy with my pillow. Since I started using it, my neck pain has disappeared. I had swelling at the base of my neck and now it's gone. It's been fantastic, thank you! 👍</p>",
+            "author": "Lucia"
+          }
+        },
+        "rv3": {
+          "type": "review",
+          "settings": {
+            "rating": 3,
+            "title": "Good, but it takes time",
+            "text": "<p>The pillow is good, but it took me a few days to get used to it. I sleep better now, but it wasn't an immediate change.</p>",
+            "author": "Luca"
+          }
+        },
+        "rv4": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "title": "No adjustment period",
+            "text": "<p>I was afraid I'd have to put up with weeks of neck and shoulder pain to get used to it, but that wasn't the case. I fall asleep faster and almost never wake up with neck or back pain anymore. It really made a difference for me.</p>",
+            "author": "Serena"
+          }
+        },
+        "rv5": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "title": "Happy with my purchase",
+            "text": "<p>I'm really happy with my pillow. Thank you!</p>",
+            "author": "Martina"
+          }
+        },
+        "rv6": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "title": "The best pillow for my husband",
+            "text": "<p>Finally a pillow that really relieves neck pain. My husband had suffered for years: after a few days of use he told me it's the best pillow he's ever tried. He no longer has pain at night. It really makes a difference. We highly recommend it!</p>",
+            "author": "Francesca"
+          }
+        },
+        "rv7": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "title": "No more stiffness",
+            "text": "<p>I wake up without stiffness. 10/10</p>",
+            "author": "Simone"
+          }
+        },
+        "rv8": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "title": "The best pillow I've tried",
+            "text": "<p>No neck pain. I must have tried at least ten, including a water pillow. This is without a doubt the best pillow I've ever had.</p>",
+            "author": "Davide"
+          }
+        },
+        "rv9": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "title": "Neck pain gone",
+            "text": "<p>I suffered from neck pain for years, but this pillow has really made a difference. I wake up pain-free and finally rested!</p>",
+            "author": "Laura"
+          }
+        },
+        "rv10": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "title": "I use it on the couch too",
+            "text": "<p>I have back and neck problems and I use this pillow while reading or watching TV on the couch. It's memory foam and helps relieve the pain. I also use it for my back when sitting, and the pain goes away.</p>",
+            "author": "Giuseppe"
+          }
+        },
+        "rv11": {
+          "type": "review",
+          "settings": {
+            "rating": 0,
+            "title": "",
+            "text": "<p>Excellent pillow, I recommend it: I bought it more than 6 months ago and it really delivers good results.</p>",
+            "author": "Maria L."
+          }
+        },
+        "rv12": {
+          "type": "review",
+          "settings": {
+            "rating": 0,
+            "title": "",
+            "text": "<p>I'm 50 and I used to wake up sore every morning. I tried at least six pillows and none of them helped. This one did — THANK YOU!</p>",
+            "author": "Alessandra G."
+          }
+        },
+        "rv13": {
+          "type": "review",
+          "settings": {
+            "rating": 0,
+            "title": "",
+            "text": "<p>I thought it was just another pillow… and at first I didn't notice much. But after a few days I started sleeping better and my neck pain dropped a lot.</p>",
+            "author": "Camillo D."
+          }
+        },
+        "rv14": {
+          "type": "review",
+          "settings": {
+            "rating": 0,
+            "title": "",
+            "text": "<p>I've been using it for weeks and I no longer wake up with a stiff neck. You can really feel the difference.</p>",
+            "author": "Giovanna B."
+          }
+        },
+        "rv15": {
+          "type": "review",
+          "settings": {
+            "rating": 0,
+            "title": "",
+            "text": "<p>Honestly, I'm not someone who leaves reviews, but this pillow deserves 5 stars.</p>",
+            "author": "Simone V."
+          }
+        }
+      },
+      "block_order": [
+        "rv0",
+        "rv1",
+        "rv2",
+        "rv3",
+        "rv4",
+        "rv5",
+        "rv6",
+        "rv7",
+        "rv8",
+        "rv9",
+        "rv10",
+        "rv11",
+        "rv12",
+        "rv13",
+        "rv14",
+        "rv15"
+      ],
+      "settings": {
+        "heading": "What customers say",
+        "reviews_label": "reviews",
+        "source_note": "Reviews from customers of our partner store Serenium (Italy), translated from Italian.",
+        "color_scheme": "scheme-2",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "faq": {
       "type": "collapsible-content",
       "blocks": {
@@ -551,6 +734,7 @@
     "story2",
     "positions",
     "compare",
+    "reviews_carousel",
     "guarantee",
     "faq",
     "reviews"

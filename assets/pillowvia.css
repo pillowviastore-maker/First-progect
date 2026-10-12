@@ -73,3 +73,33 @@
 @media screen and (max-width: 749px) {
   .header__heading-logo.pv-logo { width: 140px; }
 }
+
+/* Reviews carousel */
+.pv-reviews__summary { margin: 0.4rem 0 0; display: flex; gap: 0.8rem; justify-content: center; align-items: center; flex-wrap: wrap; }
+.pv-stars, .pv-review__stars { color: #F5B301; letter-spacing: 0.1em; }
+.pv-reviews__note { margin: 0.8rem 0 0; font-size: 1.3rem; opacity: 0.7; }
+.pv-reviews { position: relative; }
+.pv-reviews__track {
+  list-style: none; margin: 0; padding: 0.4rem 0 1.6rem; display: flex; gap: 1.6rem;
+  overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none;
+}
+.pv-reviews__track::-webkit-scrollbar { display: none; }
+.pv-review {
+  box-sizing: border-box; flex: 0 0 calc(100% - 4rem); scroll-snap-align: start; display: flex; flex-direction: column; gap: 0.8rem;
+  background: rgb(var(--color-background)); border-radius: 1.6rem; padding: 2.4rem;
+  box-shadow: 0 0.4rem 2rem rgba(var(--color-foreground), 0.06);
+}
+@media screen and (min-width: 750px) { .pv-review { flex-basis: calc((100% - 3.2rem) / 3); } }
+.pv-review__stars { font-size: 1.8rem; }
+.pv-review__star--off { color: rgba(var(--color-foreground), 0.18); }
+.pv-review__title { margin: 0; font-weight: 700; font-size: 1.7rem; }
+.pv-review__text { flex: 1; }
+.pv-review__text p { margin: 0; }
+.pv-review__author { margin: 0; font-weight: 600; opacity: 0.8; }
+.pv-reviews__nav { display: flex; justify-content: center; gap: 1.2rem; margin-top: 0.8rem; }
+.pv-reviews__btn {
+  width: 4.4rem; height: 4.4rem; border-radius: 50%; border: 1px solid rgba(var(--color-foreground), 0.2);
+  background: rgb(var(--color-background)); color: rgb(var(--color-foreground)); font-size: 2.4rem; line-height: 1; cursor: pointer;
+}
+.pv-reviews__btn:hover { background: rgb(var(--color-button)); color: rgb(var(--color-button-text)); border-color: transparent; }
+.pv-rating-link { display: inline-flex; gap: 0.6rem; align-items: center; text-decoration: none; color: inherit; font-size: 1.4rem; }
