@@ -1,0 +1,541 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title"
+        },
+        "subtitle": {
+          "type": "text",
+          "settings": {
+            "text": "Ergonomic memory foam support for deeper, more comfortable sleep",
+            "text_style": "subtitle"
+          }
+        },
+        "price": {
+          "type": "price"
+        },
+        "benefits": {
+          "type": "text",
+          "settings": {
+            "text": "✓ Keeps your neck aligned all night<br>✓ Supports back, side & stomach sleepers<br>✓ High-density memory foam<br>✓ Removable, washable cover",
+            "text_style": "body"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector"
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "trust": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "truck",
+            "heading_1": "Free US shipping",
+            "icon_2": "return",
+            "heading_2": "100-night trial",
+            "icon_3": "lock",
+            "heading_3": "Secure checkout"
+          }
+        },
+        "description": {
+          "type": "description"
+        },
+        "specs": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Specifications",
+            "icon": "ruler",
+            "content": "<ul><li><strong>Dimensions:</strong> approx. 23.6\" × 14.6\" × 4.3\" (60 × 37 × 11 cm)</li><li><strong>Side height:</strong> approx. 5.1\" (13 cm) — the deepest part where your neck rests</li><li><strong>Fill:</strong> high-density memory foam, latex-free</li><li><strong>Cover:</strong> removable, washable silky fabric</li></ul><p><em>Dimensions are approximate and may vary slightly.</em></p>"
+          }
+        },
+        "shipping": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping",
+            "icon": "truck",
+            "content": "<p>Free shipping on all US orders. Orders are processed within 1–3 business days, and delivery typically takes 7–15 business days. You'll receive a tracking number by email as soon as your order ships.</p>"
+          }
+        },
+        "returns": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "100-Night Trial & Returns",
+            "icon": "return",
+            "content": "<p>We're confident you'll love your pillow. If for any reason you're not completely satisfied, you can request a return within 100 days of your purchase. Just contact us and we'll take care of the rest.</p>"
+          }
+        },
+        "care": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Care instructions",
+            "icon": "washing",
+            "content": "<p>Remove the cover and machine wash on a gentle cycle (up to 86°F / 30°C). Air dry completely before putting it back on. Spot-clean the foam with a damp cloth — do not machine wash or tumble dry the foam.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "subtitle",
+        "price",
+        "benefits",
+        "quantity_selector",
+        "buy_buttons",
+        "trust",
+        "description",
+        "specs",
+        "shipping",
+        "returns",
+        "care"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_position": "left",
+        "gallery_layout": "thumbnail_slider",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "show",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "badges": {
+      "type": "pv-badges",
+      "blocks": {
+        "b0": {
+          "type": "badge",
+          "settings": {
+            "icon": "truck",
+            "text": "Free US shipping"
+          }
+        },
+        "b1": {
+          "type": "badge",
+          "settings": {
+            "icon": "return",
+            "text": "100-night trial"
+          }
+        },
+        "b2": {
+          "type": "badge",
+          "settings": {
+            "icon": "lock",
+            "text": "Secure payment"
+          }
+        },
+        "b3": {
+          "type": "badge",
+          "settings": {
+            "icon": "chat_bubble",
+            "text": "Friendly support"
+          }
+        }
+      },
+      "block_order": [
+        "b0",
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "problems": {
+      "type": "pv-problems",
+      "blocks": {
+        "p1": {
+          "type": "problem",
+          "settings": {
+            "icon": "silhouette",
+            "title": "Neck stiffness",
+            "cause": "<p>Sleeping with your neck bent at an awkward angle for hours can leave it tense and stiff in the morning.</p>",
+            "solution": "<p>The contoured shape cradles the natural curve of your neck, helping keep your head and spine in line.</p>"
+          }
+        },
+        "p2": {
+          "type": "problem",
+          "settings": {
+            "icon": "heart",
+            "title": "Shoulder tension",
+            "cause": "<p>Flat or overstuffed pillows can push your shoulders into an uncomfortable position.</p>",
+            "solution": "<p>Ergonomic side grooves give your shoulders room to rest in a more natural position.</p>"
+          }
+        },
+        "p3": {
+          "type": "problem",
+          "settings": {
+            "icon": "check_mark",
+            "title": "Back discomfort",
+            "cause": "<p>Without proper support, your upper body can sag out of alignment during the night.</p>",
+            "solution": "<p>A supportive structure encourages better overall posture while you sleep.</p>"
+          }
+        },
+        "p4": {
+          "type": "problem",
+          "settings": {
+            "icon": "stopwatch",
+            "title": "Restless nights",
+            "cause": "<p>Constant tossing and turning is often a sign of pressure points and poor support.</p>",
+            "solution": "<p>Adaptive memory foam distributes pressure evenly, so you can settle in and stay comfortable.</p>"
+          }
+        },
+        "p5": {
+          "type": "problem",
+          "settings": {
+            "icon": "lightning_bolt",
+            "title": "Morning headaches",
+            "cause": "<p>Poor head and neck positioning can build up muscle tension overnight.</p>",
+            "solution": "<p>Steady alignment helps reduce tension, so you wake up feeling fresher.</p>"
+          }
+        },
+        "p6": {
+          "type": "problem",
+          "settings": {
+            "icon": "leaf",
+            "title": "Noisy breathing",
+            "cause": "<p>An awkward head position can affect how comfortably you breathe at night.</p>",
+            "solution": "<p>Helps keep your head and neck well positioned for a calmer, quieter rest.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6"
+      ],
+      "settings": {
+        "heading": "Why you wake up sore — and what you can do about it",
+        "subheading": "Your pillow could be the reason. Here's how Pillowvia helps.",
+        "cause_label": "The cause",
+        "solution_label": "How Pillowvia helps",
+        "columns": "3",
+        "color_scheme": "scheme-2",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "story": {
+      "type": "image-with-text",
+      "blocks": {
+        "h": {
+          "type": "heading",
+          "settings": {
+            "heading": "Say goodbye to waking up stiff",
+            "heading_size": "h1"
+          }
+        },
+        "t": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Do you wake up tired, tense or with a stiff neck? Tossing and turning, morning headaches and tight shoulders can all be signs that <strong>your pillow isn't giving you the support you need</strong>.</p><p>Traditional pillows often fail to keep your neck and spine aligned, forcing your body into awkward positions all night long.</p><p><strong>Now imagine waking up rested and ready for the day.</strong></p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "h",
+        "t"
+      ],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-1",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "story2": {
+      "type": "image-with-text",
+      "blocks": {
+        "h": {
+          "type": "heading",
+          "settings": {
+            "heading": "Support your neck with Pillowvia",
+            "heading_size": "h1"
+          }
+        },
+        "t": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pillowvia is designed to give your neck precise ergonomic support, helping keep it in its most natural position while you rest.</p><p>The right support helps <strong>reduce tension and discomfort</strong>, so you can wake up more comfortable — night after night.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "h",
+        "t"
+      ],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-1",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "positions": {
+      "type": "pv-image-cards",
+      "blocks": {
+        "c1": {
+          "type": "card",
+          "settings": {
+            "title": "For side sleepers",
+            "text": "<p>The raised side grooves keep your neck aligned and give your shoulder room for a more natural position.</p>"
+          }
+        },
+        "c2": {
+          "type": "card",
+          "settings": {
+            "title": "For back sleepers",
+            "text": "<p>Rest your head in the lower center area for gentle, natural support of your head and neck.</p>"
+          }
+        },
+        "c3": {
+          "type": "card",
+          "settings": {
+            "title": "For stomach sleepers",
+            "text": "<p>The unique butterfly shape supports your head and leaves space to breathe comfortably.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "heading": "Made for every sleeping position",
+        "subheading": "",
+        "color_scheme": "scheme-2",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "compare": {
+      "type": "pv-comparison",
+      "blocks": {
+        "r0": {
+          "type": "row",
+          "settings": {
+            "feature": "Ergonomic contour for neck support",
+            "brand": true,
+            "other": false
+          }
+        },
+        "r1": {
+          "type": "row",
+          "settings": {
+            "feature": "High-density memory foam",
+            "brand": true,
+            "other": false
+          }
+        },
+        "r2": {
+          "type": "row",
+          "settings": {
+            "feature": "Two heights for back & side sleepers",
+            "brand": true,
+            "other": false
+          }
+        },
+        "r3": {
+          "type": "row",
+          "settings": {
+            "feature": "Room for shoulders (butterfly shape)",
+            "brand": true,
+            "other": false
+          }
+        },
+        "r4": {
+          "type": "row",
+          "settings": {
+            "feature": "Removable, washable cover",
+            "brand": true,
+            "other": true
+          }
+        },
+        "r5": {
+          "type": "row",
+          "settings": {
+            "feature": "100-night risk-free trial",
+            "brand": true,
+            "other": false
+          }
+        }
+      },
+      "block_order": [
+        "r0",
+        "r1",
+        "r2",
+        "r3",
+        "r4",
+        "r5"
+      ],
+      "settings": {
+        "heading": "Pillowvia vs. a regular pillow",
+        "subheading": "",
+        "brand_label": "Pillowvia",
+        "other_label": "Regular pillow",
+        "color_scheme": "scheme-1",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "guarantee": {
+      "type": "pv-guarantee",
+      "settings": {
+        "number": "100",
+        "unit": "Night trial",
+        "heading": "Try it risk-free for 100 nights",
+        "text": "<p>We believe in Pillowvia so much that we want you to try it without any worries. Sleep on it for up to 100 nights and discover the difference for yourself.</p><p><strong>Not completely satisfied? We'll refund you.</strong> No risk — you only keep it if it's the right pillow for you.</p>",
+        "button_label": "Shop now",
+        "button_link": "",
+        "color_scheme": "scheme-3",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "faq": {
+      "type": "collapsible-content",
+      "blocks": {
+        "f1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is a pillowcase included?",
+            "icon": "question_mark",
+            "row_content": "<p>Yes — every pillow comes with a soft, removable cover shaped to fit the ergonomic design. Standard pillowcases may not fit the contour as well, so we recommend using the included cover.</p>"
+          }
+        },
+        "f2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I clean the pillow and the cover?",
+            "icon": "washing",
+            "row_content": "<p>The <strong>cover</strong> is machine washable on a gentle cycle (up to 86°F / 30°C) — air dry or tumble dry on low. The <strong>foam</strong> should not be machine washed: simply spot-clean it with a damp cloth and let it air dry.</p>"
+          }
+        },
+        "f3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long does it take to get used to it?",
+            "icon": "stopwatch",
+            "row_content": "<p>Because the pillow encourages a new, more natural sleeping posture, the first few nights may feel different — that's completely normal. Most people adjust within a few nights; for some it can take 1–2 weeks.</p>"
+          }
+        },
+        "f4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Which side should I use?",
+            "icon": "ruler",
+            "row_content": "<p>The pillow has two heights: a lower center (about 4.3\" / 11 cm) for back sleepers and higher side wings (about 5.1\" / 13 cm) for side sleepers. You can rotate it 180° and use whichever side feels best for you.</p>"
+          }
+        },
+        "f5": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is it hypoallergenic?",
+            "icon": "leaf",
+            "row_content": "<p>The pillow is made with latex-free memory foam and a breathable cover, which makes it a great choice for people with sensitive skin.</p>"
+          }
+        },
+        "f6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What payment methods do you accept?",
+            "icon": "lock",
+            "row_content": "<p>We accept all major credit and debit cards (Visa, Mastercard, American Express), PayPal, Apple Pay and Google Pay. All payments are processed securely with SSL encryption.</p>"
+          }
+        },
+        "f7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long does shipping take?",
+            "icon": "truck",
+            "row_content": "<p>Orders are processed within 1–3 business days. Delivery within the US typically takes 7–15 business days. As soon as your order ships, you'll receive an email with your tracking number.</p>"
+          }
+        },
+        "f8": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What if it's not right for me?",
+            "icon": "return",
+            "row_content": "<p>You have 100 nights to try your pillow at home. If you're not satisfied, contact us and we'll help you with a return and refund — no complicated questions.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "f1",
+        "f2",
+        "f3",
+        "f4",
+        "f5",
+        "f6",
+        "f7",
+        "f8"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Frequently asked questions",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "reviews": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "badges",
+    "problems",
+    "story",
+    "story2",
+    "positions",
+    "compare",
+    "guarantee",
+    "faq",
+    "reviews"
+  ]
+}

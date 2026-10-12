@@ -1,0 +1,110 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width section-{{ section.id }}-padding">
+    <div class="pv-guarantee">
+      <div class="pv-guarantee__badge">
+        <span class="pv-guarantee__number">{{ section.settings.number }}</span>
+        <span class="pv-guarantee__unit">{{ section.settings.unit }}</span>
+      </div>
+      <div>
+        {%- if section.settings.heading != blank -%}
+          <h2 class="h2 inline-richtext" style="margin-top:0">{{ section.settings.heading }}</h2>
+        {%- endif -%}
+        <div class="rte">{{ section.settings.text }}</div>
+        {%- if section.settings.button_label != blank -%}
+          <a class="button" style="margin-top:2rem" href="{{ section.settings.button_link | default: '#MainContent' }}">{{ section.settings.button_label }}</a>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Guarantee",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "number",
+      "label": "Badge number",
+      "default": "100"
+    },
+    {
+      "type": "text",
+      "id": "unit",
+      "label": "Badge text",
+      "default": "Night trial"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Try it risk-free for 100 nights"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Describe your guarantee.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-3"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 52
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 52
+    }
+  ],
+  "presets": [
+    {
+      "name": "Guarantee"
+    }
+  ]
+}
+{% endschema %}
