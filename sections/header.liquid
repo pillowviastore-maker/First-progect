@@ -205,7 +205,7 @@
             }}
           </div>
         {%- else -%}
-          {{ 'pillowvia-logo.png' | asset_url | image_tag: alt: 'Pillowvia', class: 'header__heading-logo pv-logo', width: 540, height: 114 }}
+          <img src="{{ 'pillowvia-logo.png' | asset_url }}" alt="{{ shop.name | escape }}" class="header__heading-logo pv-logo" width="540" height="114">
         {%- endif -%}
       </a>
       {%- if request.page_type == 'index' -%}
@@ -248,7 +248,7 @@
             }}
           </div>
         {%- else -%}
-          {{ 'pillowvia-logo.png' | asset_url | image_tag: alt: 'Pillowvia', class: 'header__heading-logo pv-logo', width: 540, height: 114 }}
+          <img src="{{ 'pillowvia-logo.png' | asset_url }}" alt="{{ shop.name | escape }}" class="header__heading-logo pv-logo" width="540" height="114">
         {%- endif -%}
       </a>
       {%- if request.page_type == 'index' -%}

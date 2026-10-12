@@ -147,9 +147,14 @@ body { -webkit-font-smoothing: antialiased; }
 .product__accordion .summary__title { align-items: center; }
 .product__accordion .summary__title .icon-accordion { display: none; }
 .product__accordion .accordion__title { font-weight: 700; font-size: 1.6rem; }
-.product__accordion summary .icon-caret {
-  width: 2.6rem; height: 2.6rem; padding: 0.8rem; border-radius: 50%; background: rgba(var(--color-foreground), 0.08); right: 0;
+.product__accordion summary .icon-caret { display: none; }
+.product__accordion summary { position: relative; padding-right: 4rem; }
+.product__accordion summary::after {
+  content: ""; position: absolute; right: 0; top: 50%; width: 2.6rem; height: 2.6rem; margin-top: -1.3rem; border-radius: 50%;
+  background: rgba(var(--color-foreground), 0.08) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23121212' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 1rem auto no-repeat;
+  transition: transform 0.2s ease;
 }
+.product__accordion details[open] > summary::after { transform: rotate(180deg); }
 .product__accordion .accordion__content { font-size: 1.5rem; }
 
 /* --------------------------------------------------------------------------
