@@ -62,3 +62,8 @@
 /* Product page tweaks */
 .product__info-container .icon-with-text { margin-top: 1.6rem; }
 .product-form__submit { border-radius: 0.8rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
+
+/* Sale price emphasis */
+.product .price--on-sale .price-item--sale { font-size: 2.6rem; font-weight: 700; }
+.product .price--on-sale .price__sale s { font-size: 1.8rem; opacity: 0.6; }
+.product .price__badge-sale { font-weight: 700; font-size: 1.3rem; padding: 0.5rem 1.2rem; }
