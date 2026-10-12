@@ -35,7 +35,8 @@
           "type": "pv_bundles",
           "settings": {
             "heading": "Bundle & save",
-            "default_qty": "1"
+            "default_qty": "1",
+            "show_option_2": false
           }
         },
         "buy_buttons": {
