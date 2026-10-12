@@ -24,10 +24,9 @@
           "type": "price"
         },
         "benefits": {
-          "type": "text",
+          "type": "custom_liquid",
           "settings": {
-            "text": "✓ Keeps your neck aligned all night<br>✓ Supports back, side & stomach sleepers<br>✓ 100% memory foam<br>✓ Removable, washable cover",
-            "text_style": "body"
+            "custom_liquid": "<ul class=\"pv-checklist\"><li>Keeps your neck aligned all night</li><li>Supports back, side & stomach sleepers</li><li>100% memory foam</li><li>Removable, washable cover</li></ul>"
           }
         },
         "variant_picker": {
