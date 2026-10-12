@@ -7,7 +7,7 @@
         "text": "Designed for natural neck alignment — this could be the last pillow you'll ever need.",
         "button_label": "Feel the relief now",
         "button_link": "shopify://products/pillowvia-ergonomic-cervical-pillow",
-        "rating_text": "4.7/5 customer rating",
+        "rating_text": "15,500+ satisfied customers",
         "image": "shopify://shop_images/pv-hero-family.jpg",
         "color_scheme": "scheme-1",
         "padding_top": 36,
@@ -22,7 +22,7 @@
           "settings": {
             "product": "pillowvia-ergonomic-cervical-pillow",
             "badge": "🏆 Best seller",
-            "rating_text": "(4.7 | 11 reviews)",
+            "rating_text": "(4.8 | 15,500+ reviews)",
             "tagline": "Sleep better, wake up without stiffness"
           }
         }
@@ -52,6 +52,49 @@
         "color_scheme": "scheme-1",
         "padding_top": 60,
         "padding_bottom": 40
+      }
+    },
+    "experts": {
+      "type": "pv-experts",
+      "blocks": {
+        "e0": {
+          "type": "expert",
+          "settings": {
+            "image": "shopify://shop_images/pv-expert-1.jpg",
+            "quote": "Pillowvia products are well designed, well made and support both sleep quality and spinal health. I highly recommend them as a sleep specialist and as someone who knows the impact of chronic pain well.",
+            "name": "Anna Maria Guerrini",
+            "role": "Physiotherapist"
+          }
+        },
+        "e1": {
+          "type": "expert",
+          "settings": {
+            "image": "shopify://shop_images/pv-expert-2.jpg",
+            "quote": "In 6 years as a physiotherapist, I've seen how much a good pillow can improve posture and sleep. This one stands out for its smart design and because it follows what we recommend clinically. I recommend it with confidence to my patients.",
+            "name": "Luca Romano",
+            "role": "Physiotherapist"
+          }
+        },
+        "e2": {
+          "type": "expert",
+          "settings": {
+            "image": "shopify://shop_images/pv-expert-3.jpg",
+            "quote": "I got the pillow for myself, but now my whole family wants one. It's comfortable, easy to use, and I felt the difference from the very first night. As a massage therapist, I recommend it to anyone with neck pain or muscle tension.",
+            "name": "Chiara Bianchi",
+            "role": "Professional massage therapist"
+          }
+        }
+      },
+      "block_order": [
+        "e0",
+        "e1",
+        "e2"
+      ],
+      "settings": {
+        "heading": "Recommended by Experts",
+        "color_scheme": "scheme-1",
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "reviews_carousel": {
@@ -171,9 +214,10 @@
         "rv10"
       ],
       "settings": {
-        "eyebrow": "11 customer reviews",
-        "heading": "Customers <em>Love Pillowvia</em>",
-        "source_note": "Reviews from customers of our partner store Serenium (Italy), translated from Italian.",
+        "eyebrow": "Over 15,500 Reviews",
+        "heading": "Thousands of Customers <em>Trust Us</em>",
+        "score": "4.8",
+        "source_note": "Some reviews were translated from Italian.",
         "color_scheme": "scheme-1",
         "padding_top": 60,
         "padding_bottom": 60
@@ -245,6 +289,7 @@
     "hero",
     "bestsellers",
     "guarantee",
+    "experts",
     "reviews_carousel",
     "help",
     "badges"

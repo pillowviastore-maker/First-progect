@@ -1,0 +1,114 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient{% if section.settings.wave %} pv-wave{% endif %}">
+  <div class="section-{{ section.id }}-padding">
+    <div class="page-width">{%- if section.settings.heading != blank -%}
+      <h2 class="pv-h pv-section-title inline-richtext">{{ section.settings.heading }}</h2>
+    {%- endif -%}</div>
+    <div class="pv-strip">
+      <div class="pv-strip__track">
+        {%- for i in (1..2) -%}
+          {%- for block in section.blocks -%}
+            {%- if block.settings.image != blank -%}
+              <div class="pv-strip__item"{% if i == 2 %} aria-hidden="true"{% else %} {{ block.shopify_attributes }}{% endif %}>
+                {{ block.settings.image | image_url: width: 600 | image_tag: loading: 'lazy', sizes: '(min-width: 750px) 20vw, 45vw', widths: '300, 450, 600' }}
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Scrolling photos",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "info": "Wrap words in italics to color them in the accent color."
+    },
+    {
+      "type": "checkbox",
+      "id": "wave",
+      "label": "Wave top edge",
+      "default": true
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 60
+    }
+  ],
+  "blocks": [
+    {
+      "type": "photo",
+      "name": "Photo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Scrolling photos",
+      "blocks": [
+        {
+          "type": "photo"
+        },
+        {
+          "type": "photo"
+        },
+        {
+          "type": "photo"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

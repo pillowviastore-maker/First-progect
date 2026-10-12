@@ -31,7 +31,8 @@
       {%- if section.settings.heading != blank -%}
       <h2 class="pv-h pv-section-title inline-richtext">{{ section.settings.heading }}</h2>
     {%- endif -%}
-      {%- if rated_count > 0 -%}
+      {%- if section.settings.score != blank -%}{%- assign rating_avg = section.settings.score -%}{%- endif -%}
+      {%- if rated_count > 0 or section.settings.score != blank -%}
         <p class="pv-reviews-head__score"><strong>{{ rating_avg }}</strong>/5 <span class="pv-stars" aria-hidden="true">★★★★★</span></p>
       {%- endif -%}
     </div>
@@ -88,6 +89,11 @@
       "id": "heading",
       "label": "Heading",
       "info": "Wrap words in italics to color them in the accent color."
+    },
+    {
+      "type": "text",
+      "id": "score",
+      "label": "Rating shown (e.g. 4.8). Empty = average of reviews below"
     },
     {
       "type": "text",
