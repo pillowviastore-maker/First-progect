@@ -102,6 +102,13 @@
         "price": {
           "type": "price"
         },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
         "buy": {
           "type": "buy_buttons",
           "settings": {
@@ -126,6 +133,7 @@
         "title",
         "subtitle",
         "price",
+        "variant_picker",
         "buy",
         "trust"
       ],
