@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" role="img" aria-label="Pillowvia">
+  <circle cx="60" cy="60" r="44" fill="#303D66"/>
+  <path d="M74 32 A30 30 0 1 0 86 74 A24 24 0 1 1 74 32 Z" fill="#FFFFFF"/>
+  <text x="122" y="80" font-family="Inter, Helvetica, Arial, sans-serif" font-size="58" font-weight="600" fill="#303D66" letter-spacing="0">pillowvia</text>
+</svg>
