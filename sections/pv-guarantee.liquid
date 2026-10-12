@@ -13,23 +13,21 @@
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
   <div class="page-width section-{{ section.id }}-padding">
-    <div class="pv-guarantee">
-      <div class="pv-guarantee__badge">
-        <span class="pv-guarantee__number">{{ section.settings.number }}</span>
-        <span class="pv-guarantee__unit">{{ section.settings.unit }}</span>
-      </div>
-      <div>
+    <div class="pv-guarantee pv-guarantee--{{ section.settings.style }}">
+      <img class="pv-guarantee__badge" src="{{ section.settings.badge | default: 'pv-badge-100.svg' | asset_url }}" alt="{{ section.settings.badge_alt | escape }}" width="200" height="200" loading="lazy">
+      <div class="pv-guarantee__content">
         {%- if section.settings.heading != blank -%}
-          <h2 class="h2 inline-richtext" style="margin-top:0">{{ section.settings.heading }}</h2>
+          <h2 class="pv-h pv-section-title inline-richtext">{{ section.settings.heading }}</h2>
         {%- endif -%}
         <div class="rte">{{ section.settings.text }}</div>
         {%- if section.settings.button_label != blank -%}
-          <a class="button" style="margin-top:2rem" href="{{ section.settings.button_link | default: '#MainContent' }}">{{ section.settings.button_label }}</a>
+          <a class="button pv-pill" href="{{ section.settings.button_link | default: '#MainContent' }}">{{ section.settings.button_label }}</a>
         {%- endif -%}
       </div>
     </div>
   </div>
 </div>
+
 {% schema %}
 {
   "name": "Guarantee",
@@ -37,22 +35,48 @@
   "class": "section",
   "settings": [
     {
-      "type": "text",
-      "id": "number",
-      "label": "Badge number",
-      "default": "100"
+      "type": "select",
+      "id": "style",
+      "label": "Style",
+      "options": [
+        {
+          "value": "box",
+          "label": "Navy box"
+        },
+        {
+          "value": "centered",
+          "label": "Centered"
+        }
+      ],
+      "default": "box"
+    },
+    {
+      "type": "select",
+      "id": "badge",
+      "label": "Badge",
+      "options": [
+        {
+          "value": "pv-badge-100.svg",
+          "label": "Seal"
+        },
+        {
+          "value": "pv-badge-100-round.svg",
+          "label": "Round"
+        }
+      ],
+      "default": "pv-badge-100.svg"
     },
     {
       "type": "text",
-      "id": "unit",
-      "label": "Badge text",
-      "default": "Night trial"
+      "id": "badge_alt",
+      "label": "Badge alt text",
+      "default": "100-night trial"
     },
     {
       "type": "inline_richtext",
       "id": "heading",
       "label": "Heading",
-      "default": "Try it risk-free for 100 nights"
+      "info": "Wrap words in italics to color them in the accent color."
     },
     {
       "type": "richtext",
@@ -74,7 +98,7 @@
       "type": "color_scheme",
       "id": "color_scheme",
       "label": "Color scheme",
-      "default": "scheme-3"
+      "default": "scheme-1"
     },
     {
       "type": "header",
@@ -88,7 +112,7 @@
       "step": 4,
       "unit": "px",
       "label": "Top padding",
-      "default": 52
+      "default": 60
     },
     {
       "type": "range",
@@ -98,7 +122,7 @@
       "step": 4,
       "unit": "px",
       "label": "Bottom padding",
-      "default": 52
+      "default": 60
     }
   ],
   "presets": [

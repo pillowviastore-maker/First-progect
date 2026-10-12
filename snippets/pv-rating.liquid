@@ -1,0 +1,10 @@
+{% comment %}
+  Rating summary line: "Excellent ★★★★★ 4.7/5 | 11 reviews"
+  Accepts: rating, count, label, class
+{% endcomment %}
+<a href="#reviews" class="pv-rating {{ class }}">
+  <strong>"{{ label | default: 'Excellent' }}"</strong>
+  <span class="pv-stars" aria-hidden="true">★★★★★</span>
+  <strong>{{ rating }}/5</strong>
+  <span class="pv-rating__count">| {{ count }} reviews</span>
+</a>

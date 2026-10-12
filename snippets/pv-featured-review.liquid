@@ -1,0 +1,10 @@
+{% comment %}
+  Highlighted customer quote box. Accepts: text, author, note, class
+{% endcomment %}
+<div class="pv-featured-review {{ class }}">
+  <p class="pv-featured-review__text">{{ text }}</p>
+  <p class="pv-featured-review__meta">
+    <strong>{{ author }}</strong>
+    {%- if note != blank -%}<span>{{ note }}</span>{%- endif -%}
+  </p>
+</div>

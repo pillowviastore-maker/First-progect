@@ -1,269 +1,57 @@
 {
   "sections": {
     "hero": {
-      "type": "image-banner",
-      "blocks": {
-        "h": {
-          "type": "heading",
-          "settings": {
-            "heading": "Wake up without the stiff neck",
-            "heading_size": "h0"
-          }
-        },
-        "t": {
-          "type": "text",
-          "settings": {
-            "text": "The ergonomic memory foam pillow that keeps your neck aligned all night.",
-            "text_style": "subtitle"
-          }
-        },
-        "b": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop now",
-            "button_link_1": "shopify://products/pillowvia-ergonomic-cervical-pillow",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "h",
-        "t",
-        "b"
-      ],
+      "type": "pv-hero",
       "settings": {
-        "image_overlay_opacity": 30,
-        "image_height": "large",
-        "desktop_content_position": "middle-left",
-        "show_text_box": false,
-        "image_behavior": "none",
-        "desktop_content_alignment": "left",
-        "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": true
-      }
-    },
-    "badges": {
-      "type": "pv-badges",
-      "blocks": {
-        "b0": {
-          "type": "badge",
-          "settings": {
-            "icon": "truck",
-            "text": "Free US shipping"
-          }
-        },
-        "b1": {
-          "type": "badge",
-          "settings": {
-            "icon": "return",
-            "text": "100-night trial"
-          }
-        },
-        "b2": {
-          "type": "badge",
-          "settings": {
-            "icon": "lock",
-            "text": "Secure payment"
-          }
-        }
-      },
-      "block_order": [
-        "b0",
-        "b1",
-        "b2"
-      ],
-      "settings": {
-        "color_scheme": "scheme-2",
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
-    "featured": {
-      "type": "featured-product",
-      "blocks": {
-        "title": {
-          "type": "title",
-          "settings": {
-            "heading_size": "h1"
-          }
-        },
-        "subtitle": {
-          "type": "text",
-          "settings": {
-            "text": "Ergonomic memory foam support for deeper, more comfortable sleep",
-            "text_style": "subtitle"
-          }
-        },
-        "price": {
-          "type": "price"
-        },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
-          }
-        },
-        "buy": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": false
-          }
-        },
-        "trust": {
-          "type": "icon-with-text",
-          "settings": {
-            "layout": "horizontal",
-            "icon_1": "truck",
-            "heading_1": "Free US shipping",
-            "icon_2": "return",
-            "heading_2": "100-night trial",
-            "icon_3": "lock",
-            "heading_3": "Secure checkout"
-          }
-        }
-      },
-      "block_order": [
-        "title",
-        "subtitle",
-        "price",
-        "variant_picker",
-        "buy",
-        "trust"
-      ],
-      "settings": {
-        "product": "pillowvia-ergonomic-cervical-pillow",
+        "heading": "The relief your body has been asking for",
+        "text": "Designed for natural neck alignment — this could be the last pillow you'll ever need.",
+        "button_label": "Feel the relief now",
+        "button_link": "shopify://products/pillowvia-ergonomic-cervical-pillow",
+        "rating_text": "4.7/5 customer rating",
+        "image": "shopify://shop_images/pv-hero-family.jpg",
         "color_scheme": "scheme-1",
-        "secondary_background": false,
-        "media_size": "large",
-        "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "media_position": "left",
-        "image_zoom": "lightbox",
-        "hide_variants": true,
-        "enable_video_looping": false,
-        "padding_top": 52,
+        "padding_top": 36,
         "padding_bottom": 52
       }
     },
-    "benefits": {
-      "type": "multicolumn",
-      "blocks": {
-        "c1": {
-          "type": "column",
-          "settings": {
-            "title": "Neck alignment all night",
-            "text": "<p>The contoured shape follows the natural curve of your neck.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "c2": {
-          "type": "column",
-          "settings": {
-            "title": "Every sleeping position",
-            "text": "<p>Two heights and a butterfly shape for back, side and stomach sleepers.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "c3": {
-          "type": "column",
-          "settings": {
-            "title": "Adaptive memory foam",
-            "text": "<p>Memory foam distributes pressure evenly for lasting comfort.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "c1",
-        "c2",
-        "c3"
-      ],
-      "settings": {
-        "title": "Why sleepers choose Pillowvia",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "scheme-2",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
-    "problems": {
-      "type": "pv-problems",
+    "bestsellers": {
+      "type": "pv-product-cards",
       "blocks": {
         "p1": {
-          "type": "problem",
+          "type": "product",
           "settings": {
-            "icon": "silhouette",
-            "title": "Neck stiffness",
-            "cause": "<p>Sleeping with your neck bent at an awkward angle for hours can leave it tense and stiff in the morning.</p>",
-            "solution": "<p>The contoured shape cradles the natural curve of your neck, helping keep your head and spine in line.</p>"
-          }
-        },
-        "p2": {
-          "type": "problem",
-          "settings": {
-            "icon": "heart",
-            "title": "Shoulder tension",
-            "cause": "<p>Flat or overstuffed pillows can push your shoulders into an uncomfortable position.</p>",
-            "solution": "<p>Ergonomic side grooves give your shoulders room to rest in a more natural position.</p>"
-          }
-        },
-        "p4": {
-          "type": "problem",
-          "settings": {
-            "icon": "stopwatch",
-            "title": "Restless nights",
-            "cause": "<p>Constant tossing and turning is often a sign of pressure points and poor support.</p>",
-            "solution": "<p>Adaptive memory foam distributes pressure evenly, so you can settle in and stay comfortable.</p>"
+            "product": "pillowvia-ergonomic-cervical-pillow",
+            "badge": "🏆 Best seller",
+            "rating_text": "(4.7 | 11 reviews)",
+            "tagline": "Sleep better, wake up without stiffness"
           }
         }
       },
       "block_order": [
-        "p1",
-        "p2",
-        "p4"
+        "p1"
       ],
       "settings": {
-        "heading": "Your pillow could be the reason you wake up sore",
-        "subheading": "",
-        "cause_label": "The cause",
-        "solution_label": "How Pillowvia helps",
-        "columns": "3",
-        "color_scheme": "scheme-1",
-        "padding_top": 60,
-        "padding_bottom": 60
+        "heading": "Our Best Sellers for Your Wellbeing",
+        "text": "Support, comfort and targeted relief to sleep better and take on the day.",
+        "button_label": "Shop now",
+        "color_scheme": "scheme-2",
+        "padding_top": 52,
+        "padding_bottom": 52
       }
     },
     "guarantee": {
       "type": "pv-guarantee",
       "settings": {
-        "number": "100",
-        "unit": "Night trial",
-        "heading": "Try it risk-free for 100 nights",
-        "text": "<p>Sleep on Pillowvia for up to 100 nights. If you're not completely satisfied, we'll refund you.</p>",
-        "button_label": "Shop now",
-        "button_link": "shopify://products/pillowvia-ergonomic-cervical-pillow",
-        "color_scheme": "scheme-3",
+        "style": "centered",
+        "badge": "pv-badge-100-round.svg",
+        "badge_alt": "100-night trial",
+        "heading": "Try It Risk-Free for 100 Nights",
+        "text": "<p><strong>Our promise:</strong> we believe so strongly in the quality of our products that we don't want you to spend a cent until you're 100% sure it works for you.</p><p>That's why we offer a “Results or Your Money Back” guarantee valid for 100 nights. Try the product at your own pace and decide based on the results. If you're not fully satisfied, we'll refund you.</p><p>In other words, you only pay if it truly makes a difference for you.</p>",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-1",
         "padding_top": 60,
-        "padding_bottom": 60
+        "padding_bottom": 40
       }
     },
     "reviews_carousel": {
@@ -367,51 +155,6 @@
             "text": "<p>I have back and neck problems and I use this pillow while reading or watching TV on the couch. It's memory foam and helps relieve the pain. I also use it for my back when sitting, and the pain goes away.</p>",
             "author": "Giuseppe"
           }
-        },
-        "rv11": {
-          "type": "review",
-          "settings": {
-            "rating": 0,
-            "title": "",
-            "text": "<p>Excellent pillow, I recommend it: I bought it more than 6 months ago and it really delivers good results.</p>",
-            "author": "Maria L."
-          }
-        },
-        "rv12": {
-          "type": "review",
-          "settings": {
-            "rating": 0,
-            "title": "",
-            "text": "<p>I'm 50 and I used to wake up sore every morning. I tried at least six pillows and none of them helped. This one did — THANK YOU!</p>",
-            "author": "Alessandra G."
-          }
-        },
-        "rv13": {
-          "type": "review",
-          "settings": {
-            "rating": 0,
-            "title": "",
-            "text": "<p>I thought it was just another pillow… and at first I didn't notice much. But after a few days I started sleeping better and my neck pain dropped a lot.</p>",
-            "author": "Camillo D."
-          }
-        },
-        "rv14": {
-          "type": "review",
-          "settings": {
-            "rating": 0,
-            "title": "",
-            "text": "<p>I've been using it for weeks and I no longer wake up with a stiff neck. You can really feel the difference.</p>",
-            "author": "Giovanna B."
-          }
-        },
-        "rv15": {
-          "type": "review",
-          "settings": {
-            "rating": 0,
-            "title": "",
-            "text": "<p>Honestly, I'm not someone who leaves reviews, but this pillow deserves 5 stars.</p>",
-            "author": "Simone V."
-          }
         }
       },
       "block_order": [
@@ -425,121 +168,85 @@
         "rv7",
         "rv8",
         "rv9",
-        "rv10",
-        "rv11",
-        "rv12",
-        "rv13",
-        "rv14",
-        "rv15"
+        "rv10"
       ],
       "settings": {
-        "heading": "What customers say",
-        "reviews_label": "reviews",
+        "eyebrow": "11 customer reviews",
+        "heading": "Customers <em>Love Pillowvia</em>",
         "source_note": "Reviews from customers of our partner store Serenium (Italy), translated from Italian.",
-        "color_scheme": "scheme-2",
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
-    "faq": {
-      "type": "collapsible-content",
-      "blocks": {
-        "f1": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Is a pillowcase included?",
-            "icon": "question_mark",
-            "row_content": "<p>Yes — every pillow comes with a soft, removable cover shaped to fit the ergonomic design. Standard pillowcases may not fit the contour as well, so we recommend using the included cover.</p>"
-          }
-        },
-        "f3": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "How long does it take to get used to it?",
-            "icon": "stopwatch",
-            "row_content": "<p>Because the pillow encourages a new, more natural sleeping posture, the first few nights may feel different — that's completely normal. Most people adjust within a few nights; for some it can take 1–2 weeks.</p>"
-          }
-        },
-        "f7": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "How long does shipping take?",
-            "icon": "truck",
-            "row_content": "<p>Orders are processed within 1–3 business days. Delivery within the US typically takes 7–15 business days. As soon as your order ships, you'll receive an email with your tracking number.</p>"
-          }
-        },
-        "f8": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "What if it's not right for me?",
-            "icon": "return",
-            "row_content": "<p>You have 100 nights to try your pillow at home. If you're not satisfied, contact us and we'll help you with a return and refund — no complicated questions.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "f1",
-        "f3",
-        "f7",
-        "f8"
-      ],
-      "settings": {
-        "caption": "",
-        "heading": "Frequently asked questions",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "layout": "none",
-        "container_color_scheme": "scheme-2",
         "color_scheme": "scheme-1",
-        "open_first_collapsible_row": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
         "padding_top": 60,
         "padding_bottom": 60
       }
     },
-    "newsletter": {
-      "type": "newsletter",
+    "help": {
+      "type": "pv-media-text",
+      "settings": {
+        "heading": "Need Help?",
+        "subheading": "",
+        "text": "<p>We're here for you and happy to answer any question.</p><p>Ran into a problem? Have other questions?</p><p>Let us know — we're at your service.</p>",
+        "button_label": "Contact us",
+        "button_link": "shopify://pages/contact",
+        "image": "shopify://shop_images/pv-support-team.jpg",
+        "layout": "image-left",
+        "card": false,
+        "center_text": true,
+        "color_scheme": "scheme-1",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "badges": {
+      "type": "pv-badges",
       "blocks": {
-        "h": {
-          "type": "heading",
+        "b1": {
+          "type": "badge",
           "settings": {
-            "heading": "Sleep better, starting tonight",
-            "heading_size": "h1"
+            "icon": "truck",
+            "text": "Tracked & secure delivery"
           }
         },
-        "p": {
-          "type": "paragraph",
+        "b2": {
+          "type": "badge",
           "settings": {
-            "text": "<p>Join our list for sleep tips and exclusive offers.</p>"
+            "icon": "box",
+            "text": "Easy, fast returns"
           }
         },
-        "e": {
-          "type": "email_form"
+        "b3": {
+          "type": "badge",
+          "settings": {
+            "icon": "check_mark",
+            "text": "Satisfied or refunded"
+          }
+        },
+        "b4": {
+          "type": "badge",
+          "settings": {
+            "icon": "chat_bubble",
+            "text": "Friendly support"
+          }
         }
       },
       "block_order": [
-        "h",
-        "p",
-        "e"
+        "b1",
+        "b2",
+        "b3",
+        "b4"
       ],
       "settings": {
-        "color_scheme": "scheme-2",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "color_scheme": "scheme-1",
+        "padding_top": 32,
+        "padding_bottom": 40
       }
     }
   },
   "order": [
     "hero",
-    "badges",
-    "featured",
-    "benefits",
-    "problems",
-    "reviews_carousel",
+    "bestsellers",
     "guarantee",
-    "faq",
-    "newsletter"
+    "reviews_carousel",
+    "help",
+    "badges"
   ]
 }

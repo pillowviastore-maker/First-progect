@@ -91,6 +91,7 @@
                 {{ 'products.product.add_to_cart' | t }}
               {%- endif -%}
             </span>
+            <span class="pv-atc-price">{{ product.selected_or_first_available_variant.price | money }}</span>
             {%- render 'loading-spinner' -%}
           </button>
           {%- if show_dynamic_checkout -%}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="100-night trial">
+  <defs><linearGradient id="pvG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4A5A8F"/><stop offset="1" stop-color="#232D52"/></linearGradient></defs>
+  <circle cx="100" cy="100" r="96" fill="#1D2440"/>
+  <circle cx="100" cy="100" r="90" fill="url(#pvG)"/>
+  <text x="100" y="102" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="64" fill="#FFFFFF">100</text>
+  <text x="100" y="132" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="17" letter-spacing="1" fill="#FFFFFF">NIGHT</text>
+  <text x="100" y="153" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="17" letter-spacing="1" fill="#FFFFFF">TRIAL</text>
+</svg>

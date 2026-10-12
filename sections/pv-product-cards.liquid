@@ -1,0 +1,147 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width section-{{ section.id }}-padding">
+    <div class="pv-cards-head">
+      <div>
+        {%- if section.settings.heading != blank -%}<h2 class="pv-h pv-section-title pv-section-title--left inline-richtext">{{ section.settings.heading }}</h2>{%- endif -%}
+        {%- if section.settings.text != blank -%}<p class="pv-cards-head__text">{{ section.settings.text }}</p>{%- endif -%}
+      </div>
+    </div>
+    <div class="pv-product-grid">
+      {%- for block in section.blocks -%}
+        {%- assign p = block.settings.product -%}
+        {%- if p != blank -%}
+          {%- assign v = p.selected_or_first_available_variant -%}
+          <a class="pv-product-card" href="{{ p.url }}" {{ block.shopify_attributes }}>
+            <div class="pv-product-card__media">
+              {%- if p.featured_media -%}
+                {{ p.featured_media | image_url: width: 900 | image_tag: loading: 'lazy', sizes: '(min-width: 750px) 33vw, 100vw', widths: '400, 600, 900', alt: p.title }}
+              {%- endif -%}
+              {%- if block.settings.badge != blank -%}<span class="pv-product-card__badge">{{ block.settings.badge }}</span>{%- endif -%}
+            </div>
+            {%- if block.settings.rating_text != blank -%}
+              <p class="pv-product-card__rating"><span class="pv-stars" aria-hidden="true">★★★★★</span> {{ block.settings.rating_text }}</p>
+            {%- endif -%}
+            <p class="pv-product-card__title">{{ p.title }}</p>
+            {%- if block.settings.tagline != blank -%}<p class="pv-product-card__tagline">{{ block.settings.tagline }}</p>{%- endif -%}
+            <p class="pv-product-card__price">
+              <span class="pv-price-now">{{ v.price | money }}</span>
+              {%- if v.compare_at_price > v.price -%}
+                <s class="pv-price-was">{{ v.compare_at_price | money }}</s>
+                <span class="pv-save">-{{ v.compare_at_price | minus: v.price | times: 100 | divided_by: v.compare_at_price }}%</span>
+              {%- endif -%}
+            </p>
+            <span class="button pv-pill pv-product-card__btn">{{ section.settings.button_label }}</span>
+          </a>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Product cards",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "info": "Wrap words in italics to color them in the accent color."
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Shop now"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 60
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "text",
+          "id": "badge",
+          "label": "Badge"
+        },
+        {
+          "type": "text",
+          "id": "rating_text",
+          "label": "Rating text"
+        },
+        {
+          "type": "text",
+          "id": "tagline",
+          "label": "Tagline"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product cards",
+      "blocks": [
+        {
+          "type": "product"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

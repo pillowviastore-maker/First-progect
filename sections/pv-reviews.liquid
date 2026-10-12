@@ -24,72 +24,53 @@
     assign rating_avg = rating_sum | times: 10 | divided_by: rated_count | divided_by: 10.0 | round: 1
   endif
 -%}
-
 <div id="reviews" class="color-{{ section.settings.color_scheme }} gradient">
   <div class="page-width section-{{ section.id }}-padding">
-    <div class="pv-section__header">
+    <div class="pv-reviews-head">
+      {%- if section.settings.eyebrow != blank -%}<p class="pv-reviews-head__eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
       {%- if section.settings.heading != blank -%}
-        <h2 class="h2 inline-richtext">{{ section.settings.heading }}</h2>
-      {%- endif -%}
+      <h2 class="pv-h pv-section-title inline-richtext">{{ section.settings.heading }}</h2>
+    {%- endif -%}
       {%- if rated_count > 0 -%}
-        <p class="pv-reviews__summary">
-          <span class="pv-stars" aria-hidden="true">★★★★★</span>
-          <strong>{{ rating_avg }}/5</strong>
-          <span>· {{ rated_count }} {{ section.settings.reviews_label }}</span>
-        </p>
-      {%- endif -%}
-      {%- if section.settings.source_note != blank -%}
-        <p class="pv-reviews__note">{{ section.settings.source_note }}</p>
+        <p class="pv-reviews-head__score"><strong>{{ rating_avg }}</strong>/5 <span class="pv-stars" aria-hidden="true">★★★★★</span></p>
       {%- endif -%}
     </div>
-
-    <div class="pv-reviews" data-pv-carousel>
-      <ul class="pv-reviews__track" role="list" tabindex="0" aria-label="{{ section.settings.heading | strip_html | escape }}">
+    <div class="pv-carousel" data-pv-carousel>
+      <button type="button" class="pv-carousel__btn pv-carousel__btn--prev" data-pv-prev aria-label="Previous reviews">‹</button>
+      <ul class="pv-carousel__track pv-reviews" role="list">
         {%- for block in section.blocks -%}
           <li class="pv-review" {{ block.shopify_attributes }}>
-            {%- if block.settings.rating > 0 -%}
-              <div class="pv-review__stars" aria-label="{{ block.settings.rating }} / 5">
-                {%- for i in (1..5) -%}
-                  <span class="{% if i > block.settings.rating %}pv-review__star--off{% endif %}" aria-hidden="true">★</span>
-                {%- endfor -%}
+            <div class="pv-review__top">
+              <span class="pv-avatar pv-avatar--{{ forloop.index | modulo: 5 }}">
+              {%- if block.settings.avatar != blank -%}
+                {{ block.settings.avatar | image_url: width: 120 | image_tag: loading: 'lazy', width: 60, height: 60, alt: block.settings.author }}
+              {%- else -%}
+                {{ block.settings.author | slice: 0 }}
+              {%- endif -%}
+            </span>
+              <div>
+                {%- if block.settings.rating > 0 -%}
+                  <p class="pv-review__stars" aria-label="{{ block.settings.rating }} out of 5">
+                    {%- for i in (1..5) -%}<span class="{% if i > block.settings.rating %}pv-star-off{% endif %}" aria-hidden="true">★</span>{%- endfor -%}
+                    <strong>{{ block.settings.rating }}/5</strong>
+                  </p>
+                {%- endif -%}
+                <p class="pv-review__author">{{ block.settings.author }}</p>
               </div>
-            {%- endif -%}
-            {%- if block.settings.title != blank -%}
-              <p class="pv-review__title">{{ block.settings.title }}</p>
-            {%- endif -%}
-            <div class="pv-review__text rte">{{ block.settings.text }}</div>
-            <p class="pv-review__author">{{ block.settings.author }}</p>
+            </div>
+            {%- if block.settings.title != blank -%}<p class="pv-review__title">{{ block.settings.title }}</p>{%- endif -%}
+            <div class="pv-review__text" data-pv-clamp>{{ block.settings.text }}</div>
+            <button type="button" class="pv-review__more" data-pv-more hidden>Read more</button>
           </li>
         {%- endfor -%}
       </ul>
-      <div class="pv-reviews__nav">
-        <button type="button" class="pv-reviews__btn" data-pv-prev aria-label="Previous reviews">‹</button>
-        <button type="button" class="pv-reviews__btn" data-pv-next aria-label="Next reviews">›</button>
-      </div>
+      <button type="button" class="pv-carousel__btn pv-carousel__btn--next" data-pv-next aria-label="Next reviews">›</button>
     </div>
+    {%- if section.settings.source_note != blank -%}
+      <p class="pv-note">{{ section.settings.source_note }}</p>
+    {%- endif -%}
   </div>
 </div>
-
-<script>
-  (function () {
-    document.querySelectorAll('[data-pv-carousel]').forEach(function (root) {
-      if (root.dataset.pvReady) return;
-      root.dataset.pvReady = '1';
-      var track = root.querySelector('.pv-reviews__track');
-      function step() {
-        var card = track.querySelector('.pv-review');
-        return card ? card.getBoundingClientRect().width + 16 : track.clientWidth;
-      }
-      root.querySelector('[data-pv-prev]').addEventListener('click', function () {
-        track.scrollBy({ left: -step(), behavior: 'smooth' });
-      });
-      root.querySelector('[data-pv-next]').addEventListener('click', function () {
-        var atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
-        track.scrollTo({ left: atEnd ? 0 : track.scrollLeft + step(), behavior: 'smooth' });
-      });
-    });
-  })();
-</script>
 
 {% schema %}
 {
@@ -97,31 +78,108 @@
   "tag": "section",
   "class": "section",
   "settings": [
-    { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "What customers say" },
-    { "type": "text", "id": "reviews_label", "label": "Reviews count label", "default": "reviews" },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Small text above heading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "info": "Wrap words in italics to color them in the accent color."
+    },
     {
       "type": "text",
       "id": "source_note",
       "label": "Source note",
       "info": "Say where these reviews come from, e.g. a partner store."
     },
-    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-2" },
-    { "type": "header", "content": "Section padding" },
-    { "type": "range", "id": "padding_top", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Top padding", "default": 60 },
-    { "type": "range", "id": "padding_bottom", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Bottom padding", "default": 60 }
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 60
+    }
   ],
   "blocks": [
     {
       "type": "review",
       "name": "Review",
       "settings": [
-        { "type": "range", "id": "rating", "min": 0, "max": 5, "step": 1, "label": "Rating (0 = hide stars)", "default": 5 },
-        { "type": "text", "id": "title", "label": "Title" },
-        { "type": "richtext", "id": "text", "label": "Review text", "default": "<p>Review text.</p>" },
-        { "type": "text", "id": "author", "label": "Author", "default": "Customer" }
+        {
+          "type": "image_picker",
+          "id": "avatar",
+          "label": "Photo (optional)"
+        },
+        {
+          "type": "range",
+          "id": "rating",
+          "min": 0,
+          "max": 5,
+          "step": 1,
+          "label": "Rating (0 = hide stars)",
+          "default": 5
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Review text",
+          "default": "<p>Review text.</p>"
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Author",
+          "default": "Customer"
+        }
       ]
     }
   ],
-  "presets": [{ "name": "Reviews carousel", "blocks": [{ "type": "review" }, { "type": "review" }, { "type": "review" }] }]
+  "presets": [
+    {
+      "name": "Reviews carousel",
+      "blocks": [
+        {
+          "type": "review"
+        },
+        {
+          "type": "review"
+        },
+        {
+          "type": "review"
+        }
+      ]
+    }
+  ]
 }
 {% endschema %}
