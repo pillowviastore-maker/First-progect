@@ -34,7 +34,23 @@
     });
   }
 
+  function initBundles(root) {
+    if (root.dataset.pvReady) return;
+    root.dataset.pvReady = '1';
+    var qty = root.querySelector('[data-pv-qty]');
+    var section = root.closest('section') || document;
+    function apply() {
+      var checked = root.querySelector('input[type=radio]:checked');
+      if (!checked) return;
+      qty.value = checked.value;
+      section.querySelectorAll('.pv-atc-price').forEach(function (el) { el.textContent = checked.dataset.total; });
+    }
+    root.addEventListener('change', apply);
+    apply();
+  }
+
   function init(scope) {
+    (scope || document).querySelectorAll('[data-pv-bundles]').forEach(initBundles);
     (scope || document).querySelectorAll('[data-pv-carousel]').forEach(initCarousel);
     (scope || document).querySelectorAll('[data-pv-clamp]').forEach(initClamp);
   }

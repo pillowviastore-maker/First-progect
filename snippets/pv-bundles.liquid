@@ -1,0 +1,56 @@
+{% comment %}
+  Quantity bundle picker (1 / 2 / 3 with one free). Sets the product form quantity.
+  Accepts: block, form_id
+{% endcomment %}
+{%- liquid
+  assign v = product.selected_or_first_available_variant
+  assign unit = v.price
+  assign unit_compare = v.compare_at_price | default: v.price
+  assign default_qty = block.settings.default_qty | plus: 0
+-%}
+<div class="pv-bundles" data-pv-bundles {{ block.shopify_attributes }}>
+  {%- if block.settings.heading != blank -%}
+    <p class="pv-bundles__heading"><span>{{ block.settings.heading }}</span></p>
+  {%- endif -%}
+  {%- for i in (1..3) -%}
+    {%- liquid
+      case i
+        when 1
+          assign qty = 1
+          assign paid = 1
+          assign title = block.settings.title_1
+          assign sub = block.settings.sub_1
+          assign badge = ''
+        when 2
+          assign qty = 2
+          assign paid = 2
+          assign title = block.settings.title_2
+          assign sub = block.settings.sub_2
+          assign badge = block.settings.badge_2
+        when 3
+          assign qty = 3
+          assign paid = 2
+          assign title = block.settings.title_3
+          assign sub = block.settings.sub_3
+          assign badge = block.settings.badge_3
+      endcase
+      assign total = unit | times: paid
+      assign was = unit_compare | times: qty
+      assign saved = was | minus: total
+    -%}
+    <label class="pv-bundle{% if i == 3 %} pv-bundle--best{% endif %}">
+      <input type="radio" name="pv-bundle-{{ section.id }}" value="{{ qty }}" data-total="{{ total | money | escape }}"{% if qty == default_qty %} checked{% endif %}>
+      {%- if badge != blank -%}<span class="pv-bundle__badge">{{ badge }}</span>{%- endif -%}
+      <span class="pv-bundle__radio" aria-hidden="true"></span>
+      <span class="pv-bundle__info">
+        <span class="pv-bundle__title">{{ title }}</span>
+        {%- if sub != blank -%}<span class="pv-bundle__sub">{{ sub }}</span>{%- endif -%}
+      </span>
+      <span class="pv-bundle__prices">
+        <span class="pv-bundle__price">{{ total | money }}</span>
+        {%- if saved > 0 -%}<s class="pv-bundle__was">{{ was | money }}</s>{%- endif -%}
+      </span>
+    </label>
+  {%- endfor -%}
+  <input type="hidden" name="quantity" value="{{ default_qty }}" form="{{ form_id }}" data-pv-qty>
+</div>

@@ -31,6 +31,13 @@
             "swatch_shape": "circle"
           }
         },
+        "bundles": {
+          "type": "pv_bundles",
+          "settings": {
+            "heading": "Bundle & save",
+            "default_qty": "1"
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -97,6 +104,7 @@
         "price",
         "dots",
         "variant_picker",
+        "bundles",
         "buy_buttons",
         "trust",
         "delivery",

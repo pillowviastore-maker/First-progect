@@ -366,3 +366,50 @@ body { -webkit-font-smoothing: antialiased; }
 .pv-strip__item img { width: 100%; height: 100%; object-fit: cover; display: block; }
 @keyframes pv-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 @media (prefers-reduced-motion: reduce) { .pv-strip__track { animation: none; } .pv-strip { overflow-x: auto; } }
+
+/* Quantity bundles */
+.pv-bundles { display: grid; gap: 1rem; }
+.pv-bundles__heading { display: flex; align-items: center; gap: 1rem; margin: 0 0 0.2rem; font-weight: 800; font-size: 1.4rem; text-transform: uppercase; letter-spacing: 0.06em; color: rgb(var(--pv-navy)); }
+.pv-bundles__heading::before, .pv-bundles__heading::after { content: ""; flex: 1; height: 1px; background: rgba(var(--pv-navy), 0.25); }
+.pv-bundle {
+  position: relative; display: flex; align-items: center; gap: 1.2rem; padding: 1.4rem 1.6rem; border-radius: 1.2rem; cursor: pointer;
+  border: 2px solid rgba(var(--color-foreground), 0.15); background: #fff; transition: border-color 0.15s, background 0.15s;
+}
+.pv-bundle input { position: absolute; opacity: 0; pointer-events: none; }
+.pv-bundle__radio { flex: 0 0 2rem; width: 2rem; height: 2rem; border-radius: 50%; border: 2px solid rgba(var(--color-foreground), 0.35); position: relative; }
+.pv-bundle:has(input:checked) { border-color: rgb(var(--pv-navy)); background: rgba(var(--pv-navy), 0.05); }
+.pv-bundle:has(input:checked) .pv-bundle__radio { border-color: rgb(var(--pv-navy)); }
+.pv-bundle:has(input:checked) .pv-bundle__radio::after { content: ""; position: absolute; inset: 0.3rem; border-radius: 50%; background: rgb(var(--pv-navy)); }
+.pv-bundle:has(input:focus-visible) { outline: 2px solid rgb(var(--pv-navy)); outline-offset: 2px; }
+.pv-bundle__info { flex: 1; display: flex; flex-direction: column; gap: 0.2rem; }
+.pv-bundle__title { font-weight: 800; font-size: 1.6rem; }
+.pv-bundle__sub { font-size: 1.3rem; opacity: 0.75; }
+.pv-bundle__prices { display: flex; flex-direction: column; align-items: flex-end; }
+.pv-bundle__price { font-weight: 800; font-size: 1.8rem; color: rgb(var(--pv-red)); }
+.pv-bundle__was { font-size: 1.3rem; opacity: 0.55; }
+.pv-bundle__badge {
+  position: absolute; top: -1.1rem; right: 1.4rem; background: rgb(var(--pv-navy)); color: #fff; font-size: 1.1rem; font-weight: 800;
+  letter-spacing: 0.04em; text-transform: uppercase; padding: 0.3rem 1rem; border-radius: 99rem;
+}
+.pv-bundle--best .pv-bundle__badge { background: rgb(var(--pv-red)); }
+
+/* Cart */
+.pv-cart-offer { margin: 0 0 1.4rem; padding: 1.2rem 1.4rem; border-radius: 1.2rem; background: rgba(var(--pv-red), 0.07); border: 1px dashed rgba(var(--pv-red), 0.45); }
+.pv-cart-offer--done { background: rgba(111, 207, 151, 0.15); border-color: rgba(60, 160, 100, 0.5); }
+.pv-cart-offer__text { margin: 0 0 0.8rem; font-size: 1.45rem; line-height: 1.4; }
+.pv-cart-offer__bar { height: 0.8rem; border-radius: 99rem; background: rgba(var(--color-foreground), 0.1); overflow: hidden; }
+.pv-cart-offer__bar span { display: block; height: 100%; border-radius: 99rem; background: rgb(var(--pv-red)); transition: width 0.3s ease; }
+.pv-cart-offer--done .pv-cart-offer__bar span { background: #3ca064; }
+.cart__checkout-button {
+  border-radius: 99rem !important; min-height: 5.6rem; font-size: 1.7rem; font-weight: 800; letter-spacing: 0.02em;
+  background: rgb(var(--pv-navy)) !important; color: #fff !important;
+}
+.cart__checkout-button::before, .cart__checkout-button::after { border-radius: 99rem !important; box-shadow: none !important; }
+.pv-cart-trust { margin-top: 1.2rem; text-align: center; }
+.pv-cart-trust__list { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.4rem 1.4rem; margin: 0 0 1rem; padding: 0; list-style: none; font-size: 1.25rem; }
+.pv-cart-trust__pay { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; margin: 0; padding: 0; list-style: none; }
+.pv-cart-trust__pay .icon { width: 3.8rem; height: 2.4rem; }
+.totals__total-value { font-weight: 800; }
+.cart-item .discounts__discount, .cart-drawer .discounts__discount { color: rgb(var(--pv-red)); font-weight: 700; }
+.drawer__heading { font-weight: 800; }
+.cart-item__price-wrapper .price--end, .cart-item__totals .price { font-weight: 700; }

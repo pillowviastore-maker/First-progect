@@ -238,6 +238,8 @@
                       %}
                     </div>
                   {%- endif -%}
+                {%- when 'pv_bundles' -%}
+                  {% render 'pv-bundles', block: block, form_id: product_form_id, product: product, section: section %}
                 {%- when 'pv_delivery' -%}
                   {% render 'pv-delivery', block: block %}
                 {%- when 'collapsible_tab' -%}
@@ -2214,6 +2216,87 @@
           "max": 40,
           "step": 1,
           "default": 18
+        }
+      ]
+    },
+    {
+      "type": "pv_bundles",
+      "name": "Quantity bundles",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Bundle & save"
+        },
+        {
+          "type": "select",
+          "id": "default_qty",
+          "label": "Selected by default",
+          "options": [
+            {
+              "value": "1",
+              "label": "1"
+            },
+            {
+              "value": "2",
+              "label": "2"
+            },
+            {
+              "value": "3",
+              "label": "3"
+            }
+          ],
+          "default": "1"
+        },
+        {
+          "type": "text",
+          "id": "title_1",
+          "label": "Option 1 title",
+          "default": "1 Pillow"
+        },
+        {
+          "type": "text",
+          "id": "sub_1",
+          "label": "Option 1 subtitle",
+          "default": "Standard price"
+        },
+        {
+          "type": "text",
+          "id": "title_2",
+          "label": "Option 2 title",
+          "default": "2 Pillows"
+        },
+        {
+          "type": "text",
+          "id": "sub_2",
+          "label": "Option 2 subtitle",
+          "default": "Perfect for couples"
+        },
+        {
+          "type": "text",
+          "id": "badge_2",
+          "label": "Option 2 badge",
+          "default": "Most popular"
+        },
+        {
+          "type": "text",
+          "id": "title_3",
+          "label": "Option 3 title",
+          "default": "Buy 2, Get 1 FREE"
+        },
+        {
+          "type": "text",
+          "id": "sub_3",
+          "label": "Option 3 subtitle",
+          "default": "3 pillows for the price of 2"
+        },
+        {
+          "type": "text",
+          "id": "badge_3",
+          "label": "Option 3 badge",
+          "default": "Best value"
         }
       ]
     }
