@@ -485,7 +485,7 @@ variant-selects.pv-picker-hidden { display: none !important; }
   .pv-subheading { font-size: 1.5rem; margin-bottom: 0.8rem; }
   .pv-split { gap: 1.6rem; }
   .pv-split__content p, .pv-guarantee__content p, .pv-acc__body p, .pv-photo-card p { font-size: 1.45rem; line-height: 1.5; margin: 0 0 0.8rem; }
-  .pv-split__media img, .pv-hero__media img { aspect-ratio: 16 / 10; object-fit: cover; width: 100%; height: auto; }
+  .pv-split__media img, .pv-hero__media img { width: 100%; height: auto; }
   .pv-hero__title { font-size: 2.8rem; }
   .pv-card-frame { padding: 1.6rem 1.4rem; }
   .pv-scroll-mobile > * { flex-basis: 70%; }
