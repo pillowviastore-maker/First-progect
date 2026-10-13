@@ -49,6 +49,11 @@ body { -webkit-font-smoothing: antialiased; }
   .header__heading { justify-self: center; }
   .header__heading-logo.pv-logo { width: 165px; max-width: none; }
 }
+@media screen and (max-width: 749px) {
+  .header__icon--account { display: none !important; }
+  .header { padding-left: 1rem; padding-right: 1rem; }
+  .header__heading-logo.pv-logo { width: 210px; }
+}
 
 /* --------------------------------------------------------------------------
    Product page
