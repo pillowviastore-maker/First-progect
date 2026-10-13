@@ -1,10 +1,20 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-product",
       "blocks": {
         "title": {
-          "type": "title"
+          "type": "title",
+          "settings": {}
         },
         "checklist": {
           "type": "custom_liquid",
@@ -13,10 +23,12 @@
           }
         },
         "featured_review": {
-          "type": "pv_featured_review"
+          "type": "pv_featured_review",
+          "settings": {}
         },
         "price": {
-          "type": "price"
+          "type": "price",
+          "settings": {}
         },
         "dots": {
           "type": "custom_liquid",
@@ -117,13 +129,13 @@
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
-        "media_position": "left",
-        "gallery_layout": "thumbnail_slider",
         "media_size": "large",
         "constrain_to_viewport": true,
         "media_fit": "contain",
-        "image_zoom": "lightbox",
+        "gallery_layout": "thumbnail_slider",
         "mobile_thumbnails": "show",
+        "media_position": "left",
+        "image_zoom": "lightbox",
         "hide_variants": true,
         "enable_video_looping": false,
         "padding_top": 16,
@@ -340,7 +352,6 @@
         "c1": {
           "type": "card",
           "settings": {
-            "title": "For side sleepers",
             "image": "shopify://shop_images/pv-sleep-side.jpg",
             "text": "<p>Raised sides keep your neck aligned.</p>"
           }
@@ -348,7 +359,6 @@
         "c2": {
           "type": "card",
           "settings": {
-            "title": "For stomach sleepers",
             "image": "shopify://shop_images/pv-sleep-stomach.jpg",
             "text": "<p>Low, gentle support for head and neck.</p>"
           }
@@ -356,7 +366,6 @@
         "c3": {
           "type": "card",
           "settings": {
-            "title": "For back sleepers",
             "image": "shopify://shop_images/pv-sleep-back.jpg",
             "text": "<p>Rest your head in the center for optimal comfort.</p>"
           }

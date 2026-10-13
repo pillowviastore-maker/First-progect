@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.footer.name",
   "type": "footer",
@@ -26,20 +35,12 @@
             "heading": "Need help?",
             "menu": "footer"
           }
-        },
-        "disclaimer": {
-          "type": "text",
-          "settings": {
-            "heading": "",
-            "subtext": "<p>Disclaimer: These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease.</p>"
-          }
         }
       },
       "block_order": [
         "logo",
         "support",
-        "help",
-        "disclaimer"
+        "help"
       ],
       "settings": {
         "color_scheme": "scheme-3",
