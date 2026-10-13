@@ -64,7 +64,8 @@ body { -webkit-font-smoothing: antialiased; }
 @media screen and (min-width: 990px) {
   .product--thumbnail_slider media-gallery { display: grid; grid-template-columns: 8.4rem 1fr; gap: 1.6rem; align-items: start; }
   .product--thumbnail_slider media-gallery > slider-component:not(.thumbnail-slider) { grid-column: 2; grid-row: 1; min-width: 0; }
-  .product--thumbnail_slider media-gallery > .thumbnail-slider { grid-column: 1; grid-row: 1; display: block; min-width: 0; }
+  .product--thumbnail_slider media-gallery > .thumbnail-slider { grid-column: 1; grid-row: 1; display: block; min-width: 0; position: relative; align-self: stretch; }
+  .product--thumbnail_slider media-gallery > .thumbnail-slider .thumbnail-list.slider--tablet-up { position: absolute; inset: 0; max-height: none !important; }
   .product--thumbnail_slider .thumbnail-slider .slider-button { display: none !important; }
   .product--thumbnail_slider .thumbnail-list.slider--tablet-up {
     flex-direction: column; flex-wrap: nowrap; overflow-x: hidden; overflow-y: auto; max-height: 64rem; padding: 0; gap: 1rem; scrollbar-width: none;
