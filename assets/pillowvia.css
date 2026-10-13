@@ -44,7 +44,11 @@ body { -webkit-font-smoothing: antialiased; }
   .header--middle-left .header__inline-menu { justify-self: center; }
 }
 .header__heading-logo.pv-logo { width: 230px; height: auto; max-width: 100%; }
-@media screen and (max-width: 749px) { .header__heading-logo.pv-logo { width: 185px; } }
+@media screen and (max-width: 989px) {
+  .header { grid-template-columns: auto 1fr auto !important; }
+  .header__heading { justify-self: center; }
+  .header__heading-logo.pv-logo { width: 180px; max-width: none; }
+}
 
 /* --------------------------------------------------------------------------
    Product page
