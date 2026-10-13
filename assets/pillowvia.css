@@ -47,7 +47,7 @@ body { -webkit-font-smoothing: antialiased; }
 @media screen and (max-width: 989px) {
   .header { grid-template-columns: auto 1fr auto !important; }
   .header__heading { justify-self: center; }
-  .header__heading-logo.pv-logo { width: 180px; max-width: none; }
+  .header__heading-logo.pv-logo { width: 165px; max-width: none; }
 }
 
 /* --------------------------------------------------------------------------
