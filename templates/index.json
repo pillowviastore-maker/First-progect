@@ -10,8 +10,8 @@
         "rating_text": "15,500+ satisfied customers",
         "image": "shopify://shop_images/pv-hero-family.jpg",
         "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 32
+        "padding_top": 24,
+        "padding_bottom": 20
       }
     },
     "bestsellers": {
@@ -23,7 +23,7 @@
             "product": "pillowvia-ergonomic-cervical-pillow",
             "badge": "🏆 Best seller",
             "rating_text": "(4.8 | 15,500+ reviews)",
-            "tagline": "Sleep better, wake up without stiffness"
+            "tagline": "Ergonomic memory-foam neck support"
           }
         }
       },
@@ -32,11 +32,11 @@
       ],
       "settings": {
         "heading": "Our Best Sellers for Your Wellbeing",
-        "text": "Support, comfort and targeted relief to sleep better and take on the day.",
+        "text": "Sleep better, wake up without stiffness.",
         "button_label": "Shop now",
         "color_scheme": "scheme-2",
-        "padding_top": 32,
-        "padding_bottom": 32
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
     "guarantee": {
@@ -46,12 +46,12 @@
         "badge": "pv-badge-100-round.svg",
         "badge_alt": "100-night trial",
         "heading": "Try It Risk-Free for 100 Nights",
-        "text": "<p><strong>Our promise:</strong> we believe so strongly in the quality of our products that we don't want you to spend a cent until you're 100% sure it works for you.</p><p>That's why we offer a “Results or Your Money Back” guarantee valid for 100 nights. Try the product at your own pace and decide based on the results. If you're not fully satisfied, we'll refund you.</p><p>In other words, you only pay if it truly makes a difference for you.</p>",
+        "text": "<p>Try it at home for <strong>100 nights</strong>. If it doesn't make a difference for you, <strong>we'll refund you</strong> — no questions asked.</p>",
         "button_label": "",
         "button_link": "",
         "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 24
+        "padding_top": 24,
+        "padding_bottom": 16
       }
     },
     "experts": {
@@ -61,7 +61,7 @@
           "type": "expert",
           "settings": {
             "image": "shopify://shop_images/pv-expert-1.jpg",
-            "quote": "Pillowvia products are well designed, well made and support both sleep quality and spinal health. I highly recommend them as a sleep specialist and as someone who knows the impact of chronic pain well.",
+            "quote": "Well designed, well made, and good for both sleep quality and spinal health. I highly recommend it.",
             "name": "Anna Maria Guerrini",
             "role": "Physiotherapist"
           }
@@ -70,7 +70,7 @@
           "type": "expert",
           "settings": {
             "image": "shopify://shop_images/pv-expert-2.jpg",
-            "quote": "In 6 years as a physiotherapist, I've seen how much a good pillow can improve posture and sleep. This one stands out for its smart design and because it follows what we recommend clinically. I recommend it with confidence to my patients.",
+            "quote": "A good pillow can really improve posture and sleep. This one stands out for its smart design — I recommend it to my patients.",
             "name": "Luca Romano",
             "role": "Physiotherapist"
           }
@@ -79,7 +79,7 @@
           "type": "expert",
           "settings": {
             "image": "shopify://shop_images/pv-expert-3.jpg",
-            "quote": "I got the pillow for myself, but now my whole family wants one. It's comfortable, easy to use, and I felt the difference from the very first night. As a massage therapist, I recommend it to anyone with neck pain or muscle tension.",
+            "quote": "I felt the difference from the very first night. I recommend it to anyone with neck pain or muscle tension.",
             "name": "Chiara Bianchi",
             "role": "Professional massage therapist"
           }
@@ -93,8 +93,8 @@
       "settings": {
         "heading": "Recommended by Experts",
         "color_scheme": "scheme-1",
-        "padding_top": 24,
-        "padding_bottom": 32
+        "padding_top": 16,
+        "padding_bottom": 20
       }
     },
     "reviews_carousel": {
@@ -217,10 +217,10 @@
         "eyebrow": "Over 15,500 Reviews",
         "heading": "Thousands of Customers <em>Trust Us</em>",
         "score": "4.8",
-        "source_note": "Some reviews were translated from Italian.",
+        "source_note": "",
         "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 24,
+        "padding_bottom": 24
       }
     },
     "help": {
@@ -228,7 +228,7 @@
       "settings": {
         "heading": "Need Help?",
         "subheading": "",
-        "text": "<p>We're here for you and happy to answer any question.</p><p>Ran into a problem? Have other questions?</p><p>Let us know — we're at your service.</p>",
+        "text": "<p>Questions or a problem with your order? We reply within 24 hours.</p>",
         "button_label": "Contact us",
         "button_link": "shopify://pages/contact",
         "image": "shopify://shop_images/pv-support-team.jpg",
@@ -236,8 +236,8 @@
         "card": false,
         "center_text": true,
         "color_scheme": "scheme-1",
-        "padding_top": 24,
-        "padding_bottom": 24
+        "padding_top": 16,
+        "padding_bottom": 16
       }
     },
     "badges": {
@@ -280,8 +280,8 @@
       ],
       "settings": {
         "color_scheme": "scheme-1",
-        "padding_top": 32,
-        "padding_bottom": 24
+        "padding_top": 20,
+        "padding_bottom": 16
       }
     }
   },

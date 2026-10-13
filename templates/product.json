@@ -126,8 +126,8 @@
         "mobile_thumbnails": "show",
         "hide_variants": true,
         "enable_video_looping": false,
-        "padding_top": 28,
-        "padding_bottom": 28,
+        "padding_top": 16,
+        "padding_bottom": 16,
         "pv_rating_label": "Excellent",
         "pv_rating": "4.8",
         "pv_review_count": "15,500+ reviews",
@@ -210,8 +210,8 @@
         "heading": "What Our <em>Customers Say</em>",
         "note": "",
         "color_scheme": "scheme-1",
-        "padding_top": 28,
-        "padding_bottom": 24
+        "padding_top": 16,
+        "padding_bottom": 16
       }
     },
     "pain": {
@@ -221,48 +221,48 @@
           "type": "item",
           "settings": {
             "title": "Neck Pain",
-            "cause": "Poor sleeping posture can force your neck into an unnatural position, causing stiffness, tension and discomfort.",
-            "solution": "Its ergonomic design helps keep your neck aligned, reducing pressure for a more comfortable rest every night."
+            "cause": "Bad posture strains your neck overnight.",
+            "solution": "Keeps your neck aligned while you sleep."
           }
         },
         "p1": {
           "type": "item",
           "settings": {
             "title": "Shoulder Tension",
-            "cause": "Traditional pillows can push your shoulders into stiff, uncomfortable positions while you rest.",
-            "solution": "Ergonomic side grooves help keep your shoulders in a more natural position, reducing tension and improving comfort."
+            "cause": "Flat pillows push your shoulders into stiff positions.",
+            "solution": "Side grooves let your shoulders rest naturally."
           }
         },
         "p2": {
           "type": "item",
           "settings": {
             "title": "Back Discomfort",
-            "cause": "A lack of proper support during sleep can increase pressure on your lower back.",
-            "solution": "Its ergonomic structure supports correct body alignment, reducing pressure and helping you keep a more natural posture."
+            "cause": "Poor support adds pressure on your lower back.",
+            "solution": "Supports natural spine alignment."
           }
         },
         "p3": {
           "type": "item",
           "settings": {
             "title": "Restless Sleep",
-            "cause": "Constant tossing and turning can be a sign of poor support and uncomfortable pressure points.",
-            "solution": "Adaptive memory foam distributes pressure evenly, giving ideal support to your head and neck."
+            "cause": "Tossing and turning means poor support.",
+            "solution": "Memory foam spreads pressure evenly."
           }
         },
         "p4": {
           "type": "item",
           "settings": {
             "title": "Morning Headaches",
-            "cause": "Poor neck and shoulder alignment can build up muscle tension while you rest.",
-            "solution": "It helps maintain optimal alignment, reducing tension for a more comfortable wake-up."
+            "cause": "Neck tension builds up during the night.",
+            "solution": "Better alignment, calmer wake-ups."
           }
         },
         "p5": {
           "type": "item",
           "settings": {
             "title": "Nighttime Breathing",
-            "cause": "An incorrect sleeping position can affect how comfortably you breathe at night.",
-            "solution": "Its ergonomic design encourages proper head and neck positioning for a calmer, quieter rest."
+            "cause": "A bad head position can affect breathing.",
+            "solution": "Keeps your head in a better position for quieter sleep."
           }
         }
       },
@@ -281,8 +281,8 @@
         "cause_label": "Cause:",
         "solution_label": "How Pillowvia helps:",
         "color_scheme": "scheme-1",
-        "padding_top": 24,
-        "padding_bottom": 32
+        "padding_top": 16,
+        "padding_bottom": 20
       }
     },
     "guarantee": {
@@ -292,37 +292,37 @@
         "badge": "pv-badge-100.svg",
         "badge_alt": "100-night trial",
         "heading": "Try It Risk-Free for 100 Nights",
-        "text": "<p>We believe in <strong>Pillowvia</strong> so much that we want you to try it <strong>without any worries.</strong></p><p>Sleep on your pillow for 100 nights and <strong>discover the comfort of Pillowvia.</strong> If you're not completely satisfied, we'll refund you.</p><p><strong>No risk. You only pay if Pillowvia is the right pillow for you.</strong></p>",
+        "text": "<p>Sleep on it for <strong>100 nights</strong>. Not completely satisfied? <strong>We'll refund you.</strong></p>",
         "button_label": "",
         "button_link": "",
         "color_scheme": "scheme-1",
-        "padding_top": 24,
-        "padding_bottom": 24
+        "padding_top": 16,
+        "padding_bottom": 16
       }
     },
     "goodbye": {
       "type": "pv-media-text",
       "settings": {
         "heading": "Say Goodbye to <em>Neck Pain</em>",
-        "subheading": "Do you wake up tired, tense or frustrated?",
-        "text": "<p>Every morning can feel like a battle: neck pain, stiff shoulders and broken sleep make you start the day already out of energy.</p><p>Tossing and turning, waking up with a headache or feeling tension in your back can be signs that <strong>your pillow isn't giving you the support you need</strong>.</p><p>Traditional pillows often fail to keep your neck and spine properly aligned, forcing your body into uncomfortable positions while you rest.</p><p>This cycle of poor sleep and morning discomfort doesn't just ruin your mornings — it can drain your focus and energy all day long.</p>",
-        "button_label": "Imagine waking up rested. Without the pain.",
+        "subheading": "Do you wake up tired and tense?",
+        "text": "<p>Neck pain, stiff shoulders and broken sleep drain your energy before the day even starts.</p><p>Often the reason is simple: <strong>your pillow doesn't support your neck</strong>.</p>",
+        "button_label": "Wake up rested — without the pain",
         "button_link": "",
         "image": "shopify://shop_images/pv-neck-pain-morning.jpg",
         "layout": "image-right",
         "card": true,
         "center_text": false,
         "color_scheme": "scheme-2",
-        "padding_top": 32,
-        "padding_bottom": 20
+        "padding_top": 20,
+        "padding_bottom": 12
       }
     },
     "protect": {
       "type": "pv-media-text",
       "settings": {
         "heading": "Protect Your Neck With <em>Pillowvia</em>",
-        "subheading": "Pillowvia is designed to give precise ergonomic neck support, helping keep your neck in its most natural position while you rest.",
-        "text": "<p>The right support helps <strong>reduce tension and discomfort</strong> for a more comfortable wake-up. Thanks to its ergonomic design, Pillowvia encourages <strong>proper neck alignment</strong> while you sleep.</p><p>It's an essential part of a more comfortable sleep routine, helping you improve the quality of your rest every night.</p>",
+        "subheading": "",
+        "text": "<p>Ergonomic support keeps your neck in its natural position, <strong>reducing tension</strong> for more comfortable mornings.</p>",
         "button_label": "",
         "button_link": "",
         "image": "shopify://shop_images/pv-why-choose.jpg",
@@ -330,8 +330,8 @@
         "card": true,
         "center_text": false,
         "color_scheme": "scheme-2",
-        "padding_top": 20,
-        "padding_bottom": 32
+        "padding_top": 12,
+        "padding_bottom": 20
       }
     },
     "positions": {
@@ -342,7 +342,7 @@
           "settings": {
             "title": "For side sleepers",
             "image": "shopify://shop_images/pv-sleep-side.jpg",
-            "text": "<p>If you sleep on your side, you need support that keeps your neck aligned. Pillowvia's side grooves give you room and comfort for a more natural position.</p>"
+            "text": "<p>Raised sides keep your neck aligned.</p>"
           }
         },
         "c2": {
@@ -350,7 +350,7 @@
           "settings": {
             "title": "For stomach sleepers",
             "image": "shopify://shop_images/pv-sleep-stomach.jpg",
-            "text": "<p>Sleeping on your stomach needs the right support. Pillowvia supports your head and neck while giving you space thanks to its unique ergonomic design.</p>"
+            "text": "<p>Low, gentle support for head and neck.</p>"
           }
         },
         "c3": {
@@ -358,7 +358,7 @@
           "settings": {
             "title": "For back sleepers",
             "image": "shopify://shop_images/pv-sleep-back.jpg",
-            "text": "<p><strong>Pillowvia</strong> is designed to give natural support to your head and neck when you sleep on your back. Simply rest your head in the center area for optimal comfort.</p>"
+            "text": "<p>Rest your head in the center for optimal comfort.</p>"
           }
         }
       },
@@ -370,25 +370,8 @@
       "settings": {
         "heading": "Made for <em>Every Sleeping</em> Position",
         "color_scheme": "scheme-1",
-        "padding_top": 32,
-        "padding_bottom": 32
-      }
-    },
-    "commitment": {
-      "type": "pv-media-text",
-      "settings": {
-        "heading": "Our <em>Commitment</em> to Your Wellbeing",
-        "subheading": "",
-        "text": "<p>Your wellbeing depends on how you sleep. That's why we created Pillowvia — an ergonomic solution designed to improve your rest naturally.</p><p><strong>Less time tossing and turning, more comfort while you rest.</strong></p>",
-        "button_label": "",
-        "button_link": "",
-        "image": "shopify://shop_images/pv-hero-family.jpg",
-        "layout": "image-right",
-        "card": true,
-        "center_text": false,
-        "color_scheme": "scheme-2",
-        "padding_top": 32,
-        "padding_bottom": 32
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
     "faq": {
@@ -397,64 +380,57 @@
         "q0": {
           "type": "question",
           "settings": {
-            "question": "Is a pillowcase included? Which one should I use?",
-            "answer": "<p>Yes! Every Pillowvia comes with a soft, removable cover shaped to fit the ergonomic design. Standard pillowcases may not fit the contour well, so we recommend using the included cover for the best results.</p>"
+            "question": "Is a pillowcase included?",
+            "answer": "<p>Yes — a soft, removable cover shaped to fit the pillow is included.</p>"
           }
         },
         "q1": {
           "type": "question",
           "settings": {
-            "question": "How do I clean the pillow and the cover?",
-            "answer": "<p>The <strong>cover</strong> is machine washable on a gentle cycle (up to 86°F / 30°C) and can be tumble dried on low. The <strong>memory foam is not machine washable</strong>: simply wipe it with a damp cloth and let it air dry. Avoid hot water, soaking or the dryer.</p>"
+            "question": "How do I clean it?",
+            "answer": "<p>Machine wash the cover on gentle (max 86°F / 30°C). Wipe the foam with a damp cloth — don't machine wash it.</p>"
           }
         },
         "q2": {
           "type": "question",
           "settings": {
-            "question": "Can I pay on delivery?",
-            "answer": "<p>We don't offer cash on delivery, but we accept all major secure payment methods: credit and debit cards (Visa, Mastercard, American Express), PayPal, Apple Pay and Google Pay. All payments are protected with SSL encryption.</p>"
+            "question": "How do I pay?",
+            "answer": "<p>Visa, Mastercard, Amex, PayPal, Apple Pay and Google Pay — all SSL-secured.</p>"
           }
         },
         "q3": {
           "type": "question",
           "settings": {
-            "question": "How long does it take to get used to Pillowvia?",
-            "answer": "<p>Pillowvia is designed to encourage a healthier neck and back posture, so the first few nights may feel new — that's completely normal. Many people feel more comfortable after the first night or two; others take 5–10 nights to fully adjust.</p>"
+            "question": "How long to get used to it?",
+            "answer": "<p>Most people feel comfortable after 1–2 nights; some take up to 10.</p>"
           }
         },
         "q4": {
           "type": "question",
           "settings": {
             "question": "Which side should I use?",
-            "answer": "<p>The pillow has two built-in heights: a lower center for back sleepers and higher sides for side sleepers or anyone who wants firmer support. You can rotate it 180° and use whichever side feels best.</p>"
+            "answer": "<p>Lower center for back sleepers, higher sides for side sleepers. Just rotate it.</p>"
           }
         },
         "q5": {
           "type": "question",
           "settings": {
             "question": "Is it hypoallergenic?",
-            "answer": "<p>Pillowvia is made with latex-free memory foam and a breathable cover, which makes it a great choice for people with sensitive skin.</p>"
+            "answer": "<p>Yes — latex-free memory foam with a breathable cover.</p>"
           }
         },
         "q6": {
           "type": "question",
           "settings": {
             "question": "What if it's not right for me?",
-            "answer": "<p>You have <strong>100 nights</strong> to try Pillowvia at home. If you don't notice a difference in your comfort, you can request a full refund — no complicated questions. See our <a href=\"/policies/refund-policy\">Refund Policy</a>.</p>"
+            "answer": "<p>You have <strong>100 nights</strong> to try it. Not happy? Get a full refund. See our <a href=\"/policies/refund-policy\">Refund Policy</a>.</p>"
           }
         },
         "q7": {
           "type": "question",
           "settings": {
-            "question": "How much does it cost and how do I order?",
-            "answer": "<p>The price is shown at the top of this page and may vary with current promotions. Ordering is simple: click <strong>Add to cart</strong>, complete checkout with your preferred payment method, and you'll get a confirmation email with all the details.</p>"
-          }
-        },
-        "q8": {
-          "type": "question",
-          "settings": {
             "question": "How long does delivery take?",
-            "answer": "<p>Shipping is free within the US. Orders are processed within 1–3 business days and typically arrive within 7–15 business days. You'll receive a tracking number by email as soon as your order ships.</p>"
+            "answer": "<p>Free US shipping. Processed in 1–3 business days, delivered in 7–15. Tracking sent by email.</p>"
           }
         }
       },
@@ -466,8 +442,7 @@
         "q4",
         "q5",
         "q6",
-        "q7",
-        "q8"
+        "q7"
       ],
       "settings": {
         "heading": "Still Have Questions?",
@@ -475,8 +450,8 @@
         "link": "",
         "wave": true,
         "color_scheme": "scheme-1",
-        "padding_top": 20,
-        "padding_bottom": 36
+        "padding_top": 12,
+        "padding_bottom": 24
       }
     },
     "strip": {
@@ -524,8 +499,8 @@
         "heading": "<em>55,000+ People</em> Love Pillowvia",
         "wave": true,
         "color_scheme": "scheme-1",
-        "padding_top": 20,
-        "padding_bottom": 24
+        "padding_top": 12,
+        "padding_bottom": 16
       }
     },
     "reviews_carousel": {
@@ -648,10 +623,10 @@
         "eyebrow": "Over 15,500 Reviews",
         "heading": "Thousands of Customers <em>Trust Us</em>",
         "score": "4.8",
-        "source_note": "Some reviews were translated from Italian.",
+        "source_note": "",
         "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 24,
+        "padding_bottom": 24
       }
     },
     "reviews": {
@@ -669,7 +644,6 @@
     "goodbye",
     "protect",
     "positions",
-    "commitment",
     "faq",
     "strip",
     "reviews_carousel",

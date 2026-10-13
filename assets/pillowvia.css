@@ -469,3 +469,26 @@ variant-selects.pv-picker-hidden { display: none !important; }
 }
 .pv-cart-offer__btn:hover { transform: translateY(-1px); }
 .pv-cart-offer__btn[aria-busy="true"] { opacity: 0.6; pointer-events: none; }
+
+/* Mobile-first compact layout */
+@media screen and (max-width: 749px) {
+  .pv-section-title, .pv-h.pv-section-title { font-size: 2.3rem; line-height: 1.2; margin-bottom: 1.4rem; }
+  .pv-subheading { font-size: 1.5rem; margin-bottom: 0.8rem; }
+  .pv-split { gap: 1.6rem; }
+  .pv-split__content p, .pv-guarantee__content p, .pv-acc__body p, .pv-photo-card p { font-size: 1.45rem; line-height: 1.5; margin: 0 0 0.8rem; }
+  .pv-split__media img, .pv-hero__media img { aspect-ratio: 16 / 10; object-fit: cover; width: 100%; height: auto; }
+  .pv-hero__title { font-size: 2.8rem; }
+  .pv-card-frame { padding: 1.6rem 1.4rem; }
+  .pv-scroll-mobile > * { flex-basis: 70%; }
+  .pv-photo-card { padding: 1rem; gap: 0.6rem; }
+  .pv-photo-card__title { font-size: 1.6rem; }
+  .pv-expert__photo { aspect-ratio: 1 / 1; }
+  .pv-expert__quote { font-size: 1.4rem; }
+  .pv-guarantee--box { padding: 1.8rem 1.6rem; }
+  .pv-guarantee__badge { width: 8.5rem; }
+  .pv-acc summary { padding: 1.1rem 1.4rem; font-size: 1.5rem; }
+  .pv-comment, .pv-review { padding: 1.4rem; }
+  .pv-review__text { font-size: 1.45rem; }
+  .pv-strip__item { width: 14rem; }
+  .product__accordion .accordion__title { font-size: 1.55rem; }
+}
