@@ -414,7 +414,7 @@ body { -webkit-font-smoothing: antialiased; }
   box-shadow: 0 0.6rem 1.6rem rgba(21, 148, 74, 0.35) !important; transition: transform 0.15s ease, filter 0.15s ease;
 }
 .cart__checkout-button:hover { transform: translateY(-1px); filter: brightness(1.06); }
-.cart__ctas { display: block !important; }
+.cart__ctas { display: block !important; margin-top: 1.2rem; }
 .cart-drawer .cart__ctas, .cart__footer .cart__ctas { width: 100%; }
 .cart__checkout-button::before, .cart__checkout-button::after { border-radius: 99rem !important; box-shadow: none !important; }
 .pv-cart-trust { margin-top: 1.2rem; text-align: center; }
