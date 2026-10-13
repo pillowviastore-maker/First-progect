@@ -1,20 +1,10 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "main": {
       "type": "main-product",
       "blocks": {
         "title": {
-          "type": "title",
-          "settings": {}
+          "type": "title"
         },
         "checklist": {
           "type": "custom_liquid",
@@ -23,12 +13,10 @@
           }
         },
         "featured_review": {
-          "type": "pv_featured_review",
-          "settings": {}
+          "type": "pv_featured_review"
         },
         "price": {
-          "type": "price",
-          "settings": {}
+          "type": "price"
         },
         "dots": {
           "type": "custom_liquid",
@@ -129,13 +117,13 @@
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
+        "media_position": "left",
+        "gallery_layout": "thumbnail_slider",
         "media_size": "large",
         "constrain_to_viewport": true,
         "media_fit": "contain",
-        "gallery_layout": "thumbnail_slider",
-        "mobile_thumbnails": "show",
-        "media_position": "left",
         "image_zoom": "lightbox",
+        "mobile_thumbnails": "show",
         "hide_variants": true,
         "enable_video_looping": false,
         "padding_top": 28,
@@ -222,8 +210,8 @@
         "heading": "What Our <em>Customers Say</em>",
         "note": "",
         "color_scheme": "scheme-1",
-        "padding_top": 48,
-        "padding_bottom": 40
+        "padding_top": 28,
+        "padding_bottom": 24
       }
     },
     "pain": {
@@ -293,8 +281,8 @@
         "cause_label": "Cause:",
         "solution_label": "How Pillowvia helps:",
         "color_scheme": "scheme-1",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 24,
+        "padding_bottom": 32
       }
     },
     "guarantee": {
@@ -308,8 +296,8 @@
         "button_label": "",
         "button_link": "",
         "color_scheme": "scheme-1",
-        "padding_top": 40,
-        "padding_bottom": 40
+        "padding_top": 24,
+        "padding_bottom": 24
       }
     },
     "goodbye": {
@@ -325,7 +313,7 @@
         "card": true,
         "center_text": false,
         "color_scheme": "scheme-2",
-        "padding_top": 52,
+        "padding_top": 32,
         "padding_bottom": 20
       }
     },
@@ -343,7 +331,7 @@
         "center_text": false,
         "color_scheme": "scheme-2",
         "padding_top": 20,
-        "padding_bottom": 52
+        "padding_bottom": 32
       }
     },
     "positions": {
@@ -352,24 +340,24 @@
         "c1": {
           "type": "card",
           "settings": {
-            "image": "shopify://shop_images/pv-sleep-side.jpg",
             "title": "For side sleepers",
+            "image": "shopify://shop_images/pv-sleep-side.jpg",
             "text": "<p>If you sleep on your side, you need support that keeps your neck aligned. Pillowvia's side grooves give you room and comfort for a more natural position.</p>"
           }
         },
         "c2": {
           "type": "card",
           "settings": {
-            "image": "shopify://shop_images/pv-sleep-stomach.jpg",
             "title": "For stomach sleepers",
+            "image": "shopify://shop_images/pv-sleep-stomach.jpg",
             "text": "<p>Sleeping on your stomach needs the right support. Pillowvia supports your head and neck while giving you space thanks to its unique ergonomic design.</p>"
           }
         },
         "c3": {
           "type": "card",
           "settings": {
-            "image": "shopify://shop_images/pv-sleep-back.jpg",
             "title": "For back sleepers",
+            "image": "shopify://shop_images/pv-sleep-back.jpg",
             "text": "<p><strong>Pillowvia</strong> is designed to give natural support to your head and neck when you sleep on your back. Simply rest your head in the center area for optimal comfort.</p>"
           }
         }
@@ -382,8 +370,8 @@
       "settings": {
         "heading": "Made for <em>Every Sleeping</em> Position",
         "color_scheme": "scheme-1",
-        "padding_top": 52,
-        "padding_bottom": 52
+        "padding_top": 32,
+        "padding_bottom": 32
       }
     },
     "commitment": {
@@ -399,8 +387,8 @@
         "card": true,
         "center_text": false,
         "color_scheme": "scheme-2",
-        "padding_top": 52,
-        "padding_bottom": 52
+        "padding_top": 32,
+        "padding_bottom": 32
       }
     },
     "faq": {
@@ -488,7 +476,7 @@
         "wave": true,
         "color_scheme": "scheme-1",
         "padding_top": 20,
-        "padding_bottom": 60
+        "padding_bottom": 36
       }
     },
     "strip": {
@@ -537,7 +525,7 @@
         "wave": true,
         "color_scheme": "scheme-1",
         "padding_top": 20,
-        "padding_bottom": 40
+        "padding_bottom": 24
       }
     },
     "reviews_carousel": {
@@ -662,8 +650,8 @@
         "score": "4.8",
         "source_note": "Some reviews were translated from Italian.",
         "color_scheme": "scheme-1",
-        "padding_top": 60,
-        "padding_bottom": 60
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "reviews": {

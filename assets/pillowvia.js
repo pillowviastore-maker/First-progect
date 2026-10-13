@@ -16,10 +16,21 @@
       var atStart = track.scrollLeft <= 4;
       track.scrollTo({ left: atStart ? track.scrollWidth : track.scrollLeft - step(), behavior: 'smooth' });
     });
-    if (next) next.addEventListener('click', function () {
+    function advance() {
       var atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
       track.scrollTo({ left: atEnd ? 0 : track.scrollLeft + step(), behavior: 'smooth' });
-    });
+    }
+    if (next) next.addEventListener('click', advance);
+
+    // Autoplay: move every 4s, pause while the visitor interacts or the carousel is off screen.
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var paused = false, visible = false;
+    ['mouseenter', 'touchstart', 'focusin'].forEach(function (ev) { root.addEventListener(ev, function () { paused = true; }, { passive: true }); });
+    ['mouseleave', 'touchend', 'focusout'].forEach(function (ev) { root.addEventListener(ev, function () { setTimeout(function () { paused = false; }, 2500); }, { passive: true }); });
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) { visible = entries[0].isIntersecting; }).observe(root);
+    } else { visible = true; }
+    setInterval(function () { if (!paused && visible && !document.hidden) advance(); }, 4000);
   }
 
   function initClamp(el) {
@@ -104,7 +115,39 @@
     syncColors();
   }
 
+  var REVEAL = '.pv-section-title, .pv-card-frame, .pv-split__media, .pv-split__content, .pv-photo-card, .pv-comment, .pv-review, .pv-acc, .pv-expert, .pv-guarantee, .pv-hero__content, .pv-hero__media, .pv-product-card, .pv-badge, .pv-strip';
+  var revealObserver = 'IntersectionObserver' in window ? new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('pv-in'); revealObserver.unobserve(en.target); } });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }) : null;
+
+  function initReveal(scope) {
+    if (!revealObserver || window.Shopify && Shopify.designMode) return;
+    (scope || document).querySelectorAll(REVEAL).forEach(function (el, i) {
+      if (el.classList.contains('pv-reveal')) return;
+      el.classList.add('pv-reveal');
+      el.style.transitionDelay = Math.min((i % 4) * 80, 240) + 'ms';
+      revealObserver.observe(el);
+    });
+  }
+
+  // "Add my FREE pillow" button in the cart: adds the missing pillows and refreshes the cart.
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('[data-pv-add-bundle]');
+    if (!btn) return;
+    btn.setAttribute('aria-busy', 'true');
+    var drawer = document.querySelector('cart-drawer');
+    var body = { items: [{ id: Number(btn.dataset.variant), quantity: Number(btn.dataset.qty) }] };
+    if (drawer) { body.sections = ['cart-drawer', 'cart-icon-bubble']; body.sections_url = window.location.pathname; }
+    fetch(window.Shopify && Shopify.routes ? Shopify.routes.root + 'cart/add.js' : '/cart/add.js', {
+      method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(body)
+    }).then(function (r) { return r.json(); }).then(function (res) {
+      if (drawer && res.sections && document.querySelector('.drawer__inner') && !document.querySelector('.cart__footer')) { drawer.renderContents(res); }
+      else { window.location.reload(); }
+    }).catch(function () { window.location.href = '/cart'; });
+  });
+
   function init(scope) {
+    initReveal(scope);
     (scope || document).querySelectorAll('[data-pv-bundles]').forEach(initBundles);
     (scope || document).querySelectorAll('[data-pv-carousel]').forEach(initCarousel);
     (scope || document).querySelectorAll('[data-pv-clamp]').forEach(initClamp);

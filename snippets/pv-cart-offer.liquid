@@ -1,9 +1,11 @@
 {% comment %} Buy 2, Get 1 FREE progress message for the cart. {% endcomment %}
 {%- liquid
   assign pv_qty = 0
+  assign pv_variant = blank
   for item in cart.items
     if item.product.handle == 'pillowvia-ergonomic-cervical-pillow'
       assign pv_qty = pv_qty | plus: item.quantity
+      assign pv_variant = item.variant_id
     endif
   endfor
   assign pv_rem = pv_qty | modulo: 3
@@ -20,5 +22,11 @@
     <div class="pv-cart-offer__bar" aria-hidden="true">
       <span style="width: {% if pv_rem == 0 %}100{% else %}{{ pv_rem | times: 100 | divided_by: 3 }}{% endif %}%"></span>
     </div>
+    {%- if pv_rem != 0 -%}
+      {%- assign pv_need = 3 | minus: pv_rem -%}
+      <button type="button" class="pv-cart-offer__btn" data-pv-add-bundle data-variant="{{ pv_variant }}" data-qty="{{ pv_need }}">
+        {%- if pv_need == 1 -%}🎁 Add my FREE pillow{%- else -%}🎁 Add 2 more — get 1 FREE{%- endif -%}
+      </button>
+    {%- endif -%}
   </div>
 {%- endif -%}
