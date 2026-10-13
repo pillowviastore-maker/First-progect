@@ -53,9 +53,18 @@
       return colors && checked && checked.value === '3';
     }
 
+    var picker = (root.closest('.product__info-container') || document).querySelector('variant-selects');
+
     function syncColors() {
       if (!colors) return;
-      colors.hidden = !multiColorActive();
+      var on = multiColorActive();
+      colors.hidden = !on;
+      if (on) {
+        colors.classList.remove('is-open');
+        void colors.offsetWidth;
+        colors.classList.add('is-open');
+      }
+      if (picker) picker.classList.toggle('pv-picker-hidden', on);
     }
 
     // When the free-pillow bundle is chosen, add each pillow as its own cart line

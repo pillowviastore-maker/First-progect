@@ -431,3 +431,7 @@ body { -webkit-font-smoothing: antialiased; }
 .pv-color-pill input:checked + span { background: rgb(var(--pv-navy)); border-color: rgb(var(--pv-navy)); color: #fff; }
 .pv-color-pill input:focus-visible + span { outline: 2px solid rgb(var(--pv-navy)); outline-offset: 2px; }
 .pv-color-pill.is-disabled { opacity: 0.4; cursor: not-allowed; }
+.pv-bundle-colors.is-open { animation: pv-slide-down 0.3s ease; }
+@keyframes pv-slide-down { from { opacity: 0; transform: translateY(-0.8rem); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .pv-bundle-colors.is-open { animation: none; } }
+variant-selects.pv-picker-hidden { display: none !important; }
