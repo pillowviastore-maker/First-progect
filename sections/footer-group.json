@@ -5,6 +5,14 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "logo": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/pv-logo-white.png",
+            "image_width": 190,
+            "alignment": ""
+          }
+        },
         "support": {
           "type": "text",
           "settings": {
@@ -28,6 +36,7 @@
         }
       },
       "block_order": [
+        "logo",
         "support",
         "help",
         "disclaimer"
