@@ -501,3 +501,8 @@ variant-selects.pv-picker-hidden { display: none !important; }
   .pv-strip__item { width: 14rem; }
   .product__accordion .accordion__title { font-size: 1.55rem; }
 }
+
+/* Trademark mark next to the logo */
+.header__heading-link { display: inline-flex; align-items: flex-start; }
+.pv-tm { font-size: 1.3rem; font-weight: 600; line-height: 1; color: rgb(var(--pv-navy)); margin: 0.2rem 0 0 0.2rem; top: 0; }
+@media screen and (max-width: 749px) { .pv-tm { font-size: 1.1rem; } }
