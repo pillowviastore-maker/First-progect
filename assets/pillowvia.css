@@ -107,7 +107,7 @@ body { -webkit-font-smoothing: antialiased; }
   font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 1.3rem; padding: 0.5rem 1.2rem;
 }
 .price .badge { position: static; }
-.product__info-container .product__tax { display: none !important; }
+.product__tax, .tax-note, .cart-drawer .tax-note { display: none !important; }
 
 /* Stock / shipping dots */
 .pv-dots { display: flex; flex-wrap: wrap; gap: 0.6rem 2rem; margin: 0; font-size: 1.4rem; }
