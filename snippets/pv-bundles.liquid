@@ -8,7 +8,7 @@
   assign unit_compare = v.compare_at_price | default: v.price
   assign default_qty = block.settings.default_qty | plus: 0
 -%}
-<div class="pv-bundles" data-pv-bundles {{ block.shopify_attributes }}>
+<div class="pv-bundles" data-pv-bundles data-form-id="{{ form_id }}" {{ block.shopify_attributes }}>
   {%- if block.settings.heading != blank -%}
     <p class="pv-bundles__heading"><span>{{ block.settings.heading }}</span></p>
   {%- endif -%}
@@ -53,5 +53,23 @@
       </span>
     </label>
   {%- endfor -%}
+  {%- if product.has_only_default_variant == false -%}
+    <div class="pv-bundle-colors" data-pv-colors hidden>
+      <p class="pv-bundle-colors__title">Choose a color for each pillow</p>
+      {%- for n in (1..3) -%}
+        <div class="pv-bundle-colors__row" data-pv-color-row>
+          <span class="pv-bundle-colors__label">Pillow {{ n }}{% if n == 3 %} <em>FREE 🎁</em>{% endif %}</span>
+          <span class="pv-bundle-colors__opts">
+            {%- for variant in product.variants -%}
+              <label class="pv-color-pill{% unless variant.available %} is-disabled{% endunless %}">
+                <input type="radio" name="pv-color-{{ section.id }}-{{ n }}" value="{{ variant.id }}"{% if variant.id == v.id %} checked{% endif %}{% unless variant.available %} disabled{% endunless %}>
+                <span>{{ variant.title | escape }}</span>
+              </label>
+            {%- endfor -%}
+          </span>
+        </div>
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
   <input type="hidden" name="quantity" value="{{ default_qty }}" form="{{ form_id }}" data-pv-qty>
 </div>

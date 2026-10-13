@@ -40,13 +40,59 @@
     var qty = root.querySelector('[data-pv-qty]');
     var section = root.closest('section') || document;
     function apply() {
-      var checked = root.querySelector('input[type=radio]:checked');
+      var checked = root.querySelector('input[name^="pv-bundle-"]:checked');
       if (!checked) return;
       qty.value = checked.value;
       section.querySelectorAll('.pv-atc-price').forEach(function (el) { el.textContent = checked.dataset.total; });
     }
-    root.addEventListener('change', apply);
+    var colors = root.querySelector('[data-pv-colors]');
+    var form = document.getElementById(root.dataset.formId);
+
+    function multiColorActive() {
+      var checked = root.querySelector('input[name^="pv-bundle-"]:checked');
+      return colors && checked && checked.value === '3';
+    }
+
+    function syncColors() {
+      if (!colors) return;
+      colors.hidden = !multiColorActive();
+    }
+
+    // When the free-pillow bundle is chosen, add each pillow as its own cart line
+    // so customers can mix colors. Dawn builds FormData synchronously in its
+    // submit handler, so we swap the inputs in the capture phase and restore after.
+    if (form && colors) {
+      document.addEventListener('submit', function (e) {
+        if (e.target !== form || !multiColorActive()) return;
+        var counts = {};
+        colors.querySelectorAll('[data-pv-color-row]').forEach(function (row) {
+          var pick = row.querySelector('input:checked');
+          if (pick) counts[pick.value] = (counts[pick.value] || 0) + 1;
+        });
+        var ids = Object.keys(counts);
+        if (!ids.length) return;
+        var disabled = [];
+        form.querySelectorAll('input[name="id"]').forEach(function (el) { if (!el.disabled) { el.disabled = true; disabled.push(el); } });
+        if (!qty.disabled) { qty.disabled = true; disabled.push(qty); }
+        var added = ids.map(function (id, i) {
+          var wrap = document.createElement('div');
+          wrap.hidden = true;
+          wrap.innerHTML = '<input name="items[' + i + '][id]" value="' + id + '"><input name="items[' + i + '][quantity]" value="' + counts[id] + '">';
+          form.appendChild(wrap);
+          return wrap;
+        });
+        setTimeout(function () {
+          added.forEach(function (w) { w.remove(); });
+          disabled.forEach(function (el) { el.disabled = false; });
+        }, 0);
+      }, true);
+    }
+
+    root.addEventListener('change', function (e) {
+      if (e.target.name && e.target.name.indexOf('pv-bundle-') === 0) { apply(); syncColors(); }
+    });
     apply();
+    syncColors();
   }
 
   function init(scope) {

@@ -417,3 +417,17 @@ body { -webkit-font-smoothing: antialiased; }
 .cart-item .discounts__discount, .cart-drawer .discounts__discount { color: rgb(var(--pv-red)); font-weight: 700; }
 .drawer__heading { font-weight: 800; }
 .cart-item__price-wrapper .price--end, .cart-item__totals .price { font-weight: 700; }
+
+/* Per-pillow color choice for the free-pillow bundle */
+.pv-bundle-colors { margin-top: 0.2rem; padding: 1.4rem 1.6rem; border-radius: 1.2rem; background: rgba(var(--pv-navy), 0.05); display: grid; gap: 1rem; }
+.pv-bundle-colors__title { margin: 0; font-weight: 800; font-size: 1.4rem; }
+.pv-bundle-colors__row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.pv-bundle-colors__label { font-weight: 700; font-size: 1.45rem; }
+.pv-bundle-colors__label em { font-style: normal; color: rgb(var(--pv-red)); font-weight: 800; margin-left: 0.4rem; }
+.pv-bundle-colors__opts { display: flex; gap: 0.6rem; }
+.pv-color-pill { position: relative; cursor: pointer; }
+.pv-color-pill input { position: absolute; opacity: 0; pointer-events: none; }
+.pv-color-pill span { display: inline-block; padding: 0.6rem 1.6rem; border-radius: 99rem; border: 1.5px solid rgba(var(--color-foreground), 0.3); background: #fff; font-weight: 600; font-size: 1.35rem; }
+.pv-color-pill input:checked + span { background: rgb(var(--pv-navy)); border-color: rgb(var(--pv-navy)); color: #fff; }
+.pv-color-pill input:focus-visible + span { outline: 2px solid rgb(var(--pv-navy)); outline-offset: 2px; }
+.pv-color-pill.is-disabled { opacity: 0.4; cursor: not-allowed; }
