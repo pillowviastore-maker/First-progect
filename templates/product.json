@@ -485,31 +485,31 @@
         "ph1": {
           "type": "photo",
           "settings": {
-            "image": "shopify://shop_images/pv-customer-1.jpg"
+            "image": "shopify://shop_images/pv-customer-clean-1.jpg"
           }
         },
         "ph2": {
           "type": "photo",
           "settings": {
-            "image": "shopify://shop_images/pv-customer-2.jpg"
+            "image": "shopify://shop_images/pv-customer-clean-2.jpg"
           }
         },
         "ph3": {
           "type": "photo",
           "settings": {
-            "image": "shopify://shop_images/pv-customer-3.jpg"
+            "image": "shopify://shop_images/pv-customer-clean-3.jpg"
           }
         },
         "ph4": {
           "type": "photo",
           "settings": {
-            "image": "shopify://shop_images/pv-customer-4.jpg"
+            "image": "shopify://shop_images/pv-customer-clean-4.jpg"
           }
         },
         "ph5": {
           "type": "photo",
           "settings": {
-            "image": "shopify://shop_images/pv-customer-5.jpg"
+            "image": "shopify://shop_images/pv-customer-clean-5.jpg"
           }
         }
       },
