@@ -504,5 +504,5 @@ variant-selects.pv-picker-hidden { display: none !important; }
 
 /* Trademark mark next to the logo */
 .header__heading-link { display: inline-flex; align-items: flex-start; }
-.pv-tm { font-size: 1.3rem; font-weight: 600; line-height: 1; color: rgb(var(--pv-navy)); margin: 0.2rem 0 0 0.2rem; top: 0; }
-@media screen and (max-width: 749px) { .pv-tm { font-size: 1.1rem; } }
+.pv-tm { font-size: 1.3rem; font-weight: 600; line-height: 1; color: rgb(var(--pv-navy)); margin: 0.4rem 0 0 -4.4rem; top: 0; }
+@media screen and (max-width: 749px) { .pv-tm { font-size: 1.1rem; margin: 0.3rem 0 0 -4rem; } }
