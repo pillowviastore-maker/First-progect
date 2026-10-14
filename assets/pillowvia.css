@@ -651,3 +651,12 @@ variant-selects.pv-picker-hidden { display: none !important; }
 .pv-quick-faq summary::after { content: '+'; position: absolute; right: 0.4rem; top: 50%; transform: translateY(-50%); font-size: 2rem; font-weight: 400; color: rgb(var(--pv-navy)); }
 .pv-quick-faq details[open] summary::after { content: '–'; }
 .pv-quick-faq details p { margin: 0 0 1.1rem; font-size: 1.4rem; line-height: 1.5; opacity: 0.85; }
+.pv-compare table { table-layout: fixed; }
+.pv-compare th:first-child, .pv-compare td:first-child { width: 50%; }
+.pv-compare .pv-compare__brand, .pv-compare th:last-child, .pv-compare td:last-child { width: 25%; }
+.pv-compare th { word-break: break-word; }
+@media screen and (max-width: 749px) {
+  .pv-compare thead th { font-size: 1.25rem; padding: 1rem 0.4rem; }
+  .pv-compare td:first-child { font-size: 1.35rem; line-height: 1.3; }
+  .pv-how__step.is-active { transform: none; }
+}
