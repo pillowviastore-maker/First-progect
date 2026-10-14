@@ -38,9 +38,13 @@
             "default_qty": "1",
             "show_option_2": true,
             "title_2": "2 Pillows",
-            "sub_2": "Only $34 each",
+            "sub_2": "Only $30 each",
             "badge_2": "Most popular",
-            "price_2": "67.99"
+            "price_2": "59.99",
+            "title_3": "Buy 2, Get 1 FREE",
+            "sub_3": "3 pillows — just $24 each",
+            "badge_3": "Best value",
+            "price_3": "71.99"
           }
         },
         "buy_buttons": {

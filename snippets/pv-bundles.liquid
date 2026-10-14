@@ -39,6 +39,9 @@
       if i == 2 and block.settings.price_2 != blank
         assign total = block.settings.price_2 | times: 100 | round
       endif
+      if i == 3 and block.settings.price_3 != blank
+        assign total = block.settings.price_3 | times: 100 | round
+      endif
       assign was = unit_compare | times: qty
       assign saved = was | minus: total
     -%}
