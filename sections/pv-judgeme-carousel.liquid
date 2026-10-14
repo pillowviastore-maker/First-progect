@@ -1,0 +1,114 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{%- liquid
+  assign p = section.settings.product | default: product
+  assign jm = p.metafields.judgeme.review_widget_data.value
+  assign total = p.metafields.reviews.rating_count.value | default: 0
+  assign avg = p.metafields.reviews.rating.value.rating | default: 0 | round: 1
+  assign avg_full = avg | round
+  assign min_len = section.settings.min_length
+  assign shown = 0
+  assign used = ','
+-%}
+
+{%- if total > 0 and jm != blank -%}
+<div id="reviews" class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width section-{{ section.id }}-padding">
+    <div class="pv-jm-head">
+      {%- if section.settings.heading != blank -%}
+        <h2 class="pv-h pv-section-title inline-richtext">{{ section.settings.heading }}</h2>
+      {%- endif -%}
+      <p class="pv-jm-head__score">
+        <strong>{{ avg }}</strong>
+        <span class="pv-stars" aria-hidden="true">
+          {%- for i in (1..5) -%}<span{% if i > avg_full %} class="pv-star-off"{% endif %}>★</span>{%- endfor -%}
+        </span>
+        <span class="pv-jm-head__count">Based on {{ total }} reviews</span>
+      </p>
+    </div>
+
+    <div class="pv-carousel" data-pv-carousel>
+      <button type="button" class="pv-carousel__btn pv-carousel__btn--prev" data-pv-prev aria-label="Previous reviews">‹</button>
+      <ul class="pv-carousel__track pv-reviews" role="list">
+        {%- for list in (1..2) -%}
+          {%- if list == 1 -%}{%- assign source = jm.reviews -%}{%- else -%}{%- assign source = jm.photo_gallery -%}{%- endif -%}
+          {%- for r in source -%}
+            {%- liquid
+              assign key = ',' | append: r.uuid | append: ','
+              assign text = r.body | default: r.body_html | strip_html | strip
+              assign words = text | split: ' '
+              assign longest = 0
+              for w in words
+                if w.size > longest
+                  assign longest = w.size
+                endif
+              endfor
+              if used contains key or r.rating < section.settings.min_rating or text.size < min_len or longest > 25 or shown >= section.settings.max_reviews
+                continue
+              endif
+              assign used = used | append: r.uuid | append: ','
+              assign shown = shown | plus: 1
+            -%}
+            <li class="pv-review pv-jm-card">
+              {%- if r.pictures_urls.size > 0 -%}
+                <div class="pv-jm-card__photo">
+                  <img src="{{ r.pictures_urls[0].compact | default: r.pictures_urls[0].original }}" alt="Photo from {{ r.reviewer_name | escape }}" loading="lazy" width="400" height="400">
+                  {%- if r.pictures_urls.size > 1 -%}<span class="pv-jm-card__more">+{{ r.pictures_urls.size | minus: 1 }}</span>{%- endif -%}
+                </div>
+              {%- endif -%}
+              <p class="pv-review__stars" aria-label="{{ r.rating }} out of 5">
+                {%- for i in (1..5) -%}<span class="{% if i > r.rating %}pv-star-off{% endif %}" aria-hidden="true">★</span>{%- endfor -%}
+              </p>
+              <div class="pv-review__text" data-pv-clamp>{{ text | escape }}</div>
+              <button type="button" class="pv-review__more" data-pv-more hidden>Read more</button>
+              <p class="pv-jm-card__author">
+                <span class="pv-avatar pv-avatar--{{ shown | modulo: 5 }}">{{ r.reviewer_initial | default: r.reviewer_name | slice: 0 }}</span>
+                <span><strong>{{ r.reviewer_name }}</strong>
+                  {%- if r.verified_buyer -%}<small class="pv-jm-card__badge">✔ Verified buyer</small>
+                  {%- elsif r.transparency_badges contains 'review_collected_from_another_provider' -%}<small class="pv-jm-card__badge pv-jm-card__badge--muted">Imported review</small>{%- endif -%}
+                </span>
+              </p>
+            </li>
+          {%- endfor -%}
+        {%- endfor -%}
+      </ul>
+      <button type="button" class="pv-carousel__btn pv-carousel__btn--next" data-pv-next aria-label="Next reviews">›</button>
+    </div>
+
+    <div class="pv-jm-actions">
+      <button type="button" class="pv-jm-toggle" data-pv-jm-toggle aria-expanded="false">See all {{ total }} reviews</button>
+    </div>
+  </div>
+</div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Judge.me reviews carousel",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "product", "id": "product", "label": "Product (empty = current product)" },
+    { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "What Our <em>Customers Say</em>" },
+    { "type": "range", "id": "min_rating", "min": 1, "max": 5, "step": 1, "label": "Minimum stars shown in carousel", "default": 4,
+      "info": "All reviews stay available in the full Judge.me list under the button." },
+    { "type": "range", "id": "min_length", "min": 0, "max": 120, "step": 10, "label": "Minimum review length (characters)", "default": 40 },
+    { "type": "range", "id": "max_reviews", "min": 3, "max": 15, "step": 1, "label": "Max reviews in carousel", "default": 10 },
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-1" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Top padding", "default": 24 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Bottom padding", "default": 16 }
+  ],
+  "presets": [{ "name": "Judge.me reviews carousel" }]
+}
+{% endschema %}

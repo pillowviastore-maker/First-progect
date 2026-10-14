@@ -1,20 +1,10 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "main": {
       "type": "main-product",
       "blocks": {
         "title": {
-          "type": "title",
-          "settings": {}
+          "type": "title"
         },
         "checklist": {
           "type": "custom_liquid",
@@ -23,12 +13,10 @@
           }
         },
         "featured_review": {
-          "type": "pv_featured_review",
-          "settings": {}
+          "type": "pv_featured_review"
         },
         "price": {
-          "type": "price",
-          "settings": {}
+          "type": "price"
         },
         "dots": {
           "type": "custom_liquid",
@@ -129,13 +117,13 @@
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
+        "media_position": "left",
+        "gallery_layout": "thumbnail_slider",
         "media_size": "large",
         "constrain_to_viewport": true,
         "media_fit": "contain",
-        "gallery_layout": "thumbnail_slider",
-        "mobile_thumbnails": "show",
-        "media_position": "left",
         "image_zoom": "lightbox",
+        "mobile_thumbnails": "show",
         "hide_variants": true,
         "enable_video_looping": false,
         "padding_top": 16,
@@ -352,24 +340,24 @@
         "c1": {
           "type": "card",
           "settings": {
-            "image": "shopify://shop_images/pv-sleep-side.jpg",
             "title": "For side sleepers",
+            "image": "shopify://shop_images/pv-sleep-side.jpg",
             "text": "<p>Raised sides keep your neck aligned.</p>"
           }
         },
         "c2": {
           "type": "card",
           "settings": {
-            "image": "shopify://shop_images/pv-sleep-stomach.jpg",
             "title": "For stomach sleepers",
+            "image": "shopify://shop_images/pv-sleep-stomach.jpg",
             "text": "<p>Low, gentle support for head and neck.</p>"
           }
         },
         "c3": {
           "type": "card",
           "settings": {
-            "image": "shopify://shop_images/pv-sleep-back.jpg",
             "title": "For back sleepers",
+            "image": "shopify://shop_images/pv-sleep-back.jpg",
             "text": "<p>Rest your head in the center for optimal comfort.</p>"
           }
         }
@@ -515,136 +503,16 @@
         "padding_bottom": 16
       }
     },
-    "reviews_carousel": {
-      "type": "pv-reviews",
-      "blocks": {
-        "rv0": {
-          "type": "review",
-          "settings": {
-            "rating": 5,
-            "title": "Worth every penny",
-            "text": "<p>Worth every penny! My neck pain has decreased significantly since I started using this pillow.</p>",
-            "author": "Andrea"
-          }
-        },
-        "rv1": {
-          "type": "review",
-          "settings": {
-            "rating": 4,
-            "title": "Customer service",
-            "text": "<p>I ordered an extra pillowcase that didn't arrive at first, but customer support was very kind and reshipped it for free. Great service — 4 stars only because of the small initial hiccup.</p>",
-            "author": "Giorgio"
-          }
-        },
-        "rv2": {
-          "type": "review",
-          "settings": {
-            "rating": 5,
-            "title": "Neck pain gone!",
-            "text": "<p>I'm very happy with my pillow. Since I started using it, my neck pain has disappeared. I had swelling at the base of my neck and now it's gone. It's been fantastic, thank you! 👍</p>",
-            "author": "Lucia"
-          }
-        },
-        "rv3": {
-          "type": "review",
-          "settings": {
-            "rating": 3,
-            "title": "Good, but it takes time",
-            "text": "<p>The pillow is good, but it took me a few days to get used to it. I sleep better now, but it wasn't an immediate change.</p>",
-            "author": "Luca"
-          }
-        },
-        "rv4": {
-          "type": "review",
-          "settings": {
-            "rating": 5,
-            "title": "No adjustment period",
-            "text": "<p>I was afraid I'd have to put up with weeks of neck and shoulder pain to get used to it, but that wasn't the case. I fall asleep faster and almost never wake up with neck or back pain anymore. It really made a difference for me.</p>",
-            "author": "Serena"
-          }
-        },
-        "rv5": {
-          "type": "review",
-          "settings": {
-            "rating": 5,
-            "title": "Happy with my purchase",
-            "text": "<p>I'm really happy with my pillow. Thank you!</p>",
-            "author": "Martina"
-          }
-        },
-        "rv6": {
-          "type": "review",
-          "settings": {
-            "rating": 5,
-            "title": "The best pillow for my husband",
-            "text": "<p>Finally a pillow that really relieves neck pain. My husband had suffered for years: after a few days of use he told me it's the best pillow he's ever tried. He no longer has pain at night. It really makes a difference. We highly recommend it!</p>",
-            "author": "Francesca"
-          }
-        },
-        "rv7": {
-          "type": "review",
-          "settings": {
-            "rating": 5,
-            "title": "No more stiffness",
-            "text": "<p>I wake up without stiffness. 10/10</p>",
-            "author": "Simone"
-          }
-        },
-        "rv8": {
-          "type": "review",
-          "settings": {
-            "rating": 5,
-            "title": "The best pillow I've tried",
-            "text": "<p>No neck pain. I must have tried at least ten, including a water pillow. This is without a doubt the best pillow I've ever had.</p>",
-            "author": "Davide"
-          }
-        },
-        "rv9": {
-          "type": "review",
-          "settings": {
-            "rating": 5,
-            "title": "Neck pain gone",
-            "text": "<p>I suffered from neck pain for years, but this pillow has really made a difference. I wake up pain-free and finally rested!</p>",
-            "author": "Laura"
-          }
-        },
-        "rv10": {
-          "type": "review",
-          "settings": {
-            "rating": 5,
-            "title": "I use it on the couch too",
-            "text": "<p>I have back and neck problems and I use this pillow while reading or watching TV on the couch. It's memory foam and helps relieve the pain. I also use it for my back when sitting, and the pain goes away.</p>",
-            "author": "Giuseppe"
-          }
-        }
-      },
-      "block_order": [
-        "rv0",
-        "rv1",
-        "rv2",
-        "rv3",
-        "rv4",
-        "rv5",
-        "rv6",
-        "rv7",
-        "rv8",
-        "rv9",
-        "rv10"
-      ],
+    "jm_reviews": {
+      "type": "pv-judgeme-carousel",
       "settings": {
-        "eyebrow": "Customer stories",
-        "heading": "What Customers <em>Are Saying</em>",
-        "score": "",
-        "source_note": "",
+        "heading": "What Our <em>Customers Say</em>",
+        "min_rating": 4,
+        "min_length": 40,
+        "max_reviews": 10,
         "color_scheme": "scheme-1",
         "padding_top": 24,
-        "padding_bottom": 24
-      }
-    },
-    "reviews": {
-      "type": "apps",
-      "settings": {
-        "include_margins": true
+        "padding_bottom": 16
       }
     },
     "1791940368e67f90e7": {
@@ -678,8 +546,7 @@
     "positions",
     "faq",
     "strip",
-    "reviews_carousel",
-    "reviews",
+    "jm_reviews",
     "1791940368e67f90e7"
   ]
 }

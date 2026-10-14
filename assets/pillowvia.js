@@ -146,8 +146,27 @@
     }).catch(function () { window.location.href = '/cart'; });
   });
 
+  // Judge.me: keep the full review list collapsed under the carousel button
+  function initJudgeme() {
+    var btn = document.querySelector('[data-pv-jm-toggle]');
+    var widget = document.querySelector('.jdgm-review-widget, .jdgm-widget.jdgm-review-widget');
+    var section = widget && widget.closest('.shopify-section');
+    if (!btn) return;
+    if (!section) { btn.hidden = true; return; }
+    if (window.Shopify && Shopify.designMode) return;
+    section.classList.add('pv-jm-collapsed');
+    btn.addEventListener('click', function () {
+      var open = section.classList.toggle('pv-jm-collapsed') === false;
+      btn.setAttribute('aria-expanded', open);
+      btn.textContent = open ? 'Hide reviews' : btn.dataset.label;
+      if (open) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    btn.dataset.label = btn.textContent;
+  }
+
   function init(scope) {
     initReveal(scope);
+    if (!scope) initJudgeme();
     (scope || document).querySelectorAll('[data-pv-bundles]').forEach(initBundles);
     (scope || document).querySelectorAll('[data-pv-carousel]').forEach(initCarousel);
     (scope || document).querySelectorAll('[data-pv-clamp]').forEach(initClamp);

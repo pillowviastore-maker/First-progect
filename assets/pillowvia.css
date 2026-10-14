@@ -537,3 +537,25 @@ variant-selects.pv-picker-hidden { display: none !important; }
 .jdgm-review-widget .jm-review-widget-minimal-header__title { font-weight: 800 !important; font-size: 2.4rem !important; color: rgb(var(--pv-navy)) !important; text-align: center; width: 100%; }
 .jdgm-review-widget [class*="star"] { color: #f5b301 !important; fill: #f5b301 !important; }
 .jdgm-review-widget .jdgm-empty-state { display: none !important; }
+
+/* Judge.me reviews carousel */
+.pv-jm-head { text-align: center; margin-bottom: 1.6rem; }
+.pv-jm-head .pv-section-title { margin-bottom: 0.6rem; }
+.pv-jm-head__score { display: inline-flex; align-items: center; gap: 0.8rem; flex-wrap: wrap; justify-content: center; margin: 0; font-size: 1.5rem; }
+.pv-jm-head__score strong { font-size: 2.6rem; color: rgb(var(--pv-navy)); line-height: 1; }
+.pv-jm-head__score .pv-stars { font-size: 1.9rem; letter-spacing: 0.1rem; }
+.pv-jm-head__count { opacity: 0.75; }
+.pv-jm-card { display: flex; flex-direction: column; gap: 0.8rem; }
+.pv-jm-card__photo { position: relative; border-radius: 1.2rem; overflow: hidden; aspect-ratio: 4 / 3; background: var(--pv-soft, #f3f5fa); margin: -0.4rem -0.4rem 0.2rem; }
+.pv-jm-card__photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.pv-jm-card__more { position: absolute; right: 0.8rem; bottom: 0.8rem; background: rgba(0, 0, 0, 0.6); color: #fff; border-radius: 99rem; padding: 0.2rem 0.8rem; font-size: 1.2rem; font-weight: 700; }
+.pv-jm-card .pv-review__stars { margin: 0; }
+.pv-jm-card__author { display: flex; align-items: center; gap: 0.8rem; margin: auto 0 0; font-size: 1.4rem; line-height: 1.3; }
+.pv-jm-card__author .pv-avatar { width: 3.4rem; height: 3.4rem; font-size: 1.4rem; flex: 0 0 auto; }
+.pv-jm-card__author > span:last-child { display: flex; flex-direction: column; }
+.pv-jm-card__badge { font-size: 1.15rem; color: #15944a; font-weight: 600; }
+.pv-jm-card__badge--muted { color: rgba(var(--color-foreground), 0.55); font-weight: 500; }
+.pv-jm-actions { text-align: center; margin-top: 1.2rem; }
+.pv-jm-toggle { border: 2px solid rgb(var(--pv-navy)); background: transparent; color: rgb(var(--pv-navy)); border-radius: 99rem; padding: 1rem 2.4rem; font: inherit; font-weight: 700; font-size: 1.5rem; cursor: pointer; }
+.pv-jm-toggle:hover { background: rgb(var(--pv-navy)); color: #fff; }
+.shopify-section.pv-jm-collapsed { display: none; }
