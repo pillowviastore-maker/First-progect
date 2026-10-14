@@ -59,9 +59,21 @@
     var colors = root.querySelector('[data-pv-colors]');
     var form = document.getElementById(root.dataset.formId);
 
-    function multiColorActive() {
+    function bundleQty() {
       var checked = root.querySelector('input[name^="pv-bundle-"]:checked');
-      return colors && checked && checked.value === '3';
+      return checked ? parseInt(checked.value, 10) || 1 : 1;
+    }
+
+    function multiColorActive() {
+      return !!colors && bundleQty() >= 2;
+    }
+
+    // Only the rows for the chosen number of pillows count
+    function activeRows() {
+      var n = bundleQty();
+      return Array.prototype.filter.call(colors.querySelectorAll('[data-pv-color-row]'), function (row) {
+        return parseInt(row.dataset.n, 10) <= n;
+      });
     }
 
     var picker = (root.closest('.product__info-container') || document).querySelector('variant-selects');
@@ -70,6 +82,8 @@
       if (!colors) return;
       var on = multiColorActive();
       colors.hidden = !on;
+      var n = bundleQty();
+      colors.querySelectorAll('[data-pv-color-row]').forEach(function (row) { row.hidden = parseInt(row.dataset.n, 10) > n; });
       if (on) {
         colors.classList.remove('is-open');
         void colors.offsetWidth;
@@ -80,25 +94,25 @@
     }
 
     // Express buttons (Shop Pay / Apple Pay / Google Pay) buy a single variant,
-    // so hide them while the customer is mixing colors in the free-pillow bundle.
+    // so hide them while the customer is mixing colors in a bundle.
     function syncQuickPay() {
       var mixed = false;
       if (multiColorActive()) {
         var seen = {};
-        colors.querySelectorAll('[data-pv-color-row] input:checked').forEach(function (el) { seen[el.value] = 1; });
+        activeRows().forEach(function (row) { var el = row.querySelector('input:checked'); if (el) seen[el.value] = 1; });
         mixed = Object.keys(seen).length > 1;
       }
       section.classList.toggle('pv-no-quickpay', mixed);
     }
 
-    // When the free-pillow bundle is chosen, add each pillow as its own cart line
+    // When a 2- or 3-pillow bundle is chosen, add each color as its own cart line
     // so customers can mix colors. Dawn builds FormData synchronously in its
     // submit handler, so we swap the inputs in the capture phase and restore after.
     if (form && colors) {
       document.addEventListener('submit', function (e) {
         if (e.target !== form || !multiColorActive()) return;
         var counts = {};
-        colors.querySelectorAll('[data-pv-color-row]').forEach(function (row) {
+        activeRows().forEach(function (row) {
           var pick = row.querySelector('input:checked');
           if (pick) counts[pick.value] = (counts[pick.value] || 0) + 1;
         });

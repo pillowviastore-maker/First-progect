@@ -1,4 +1,4 @@
-{% comment %} Buy 2, Get 1 FREE progress message for the cart. {% endcomment %}
+{% comment %} Bundle progress message for the cart: 2 for $67.99, Buy 2 Get 1 FREE. {% endcomment %}
 {%- liquid
   assign pv_qty = 0
   assign pv_variant = blank
@@ -15,9 +15,9 @@
     {%- if pv_rem == 0 -%}
       <p class="pv-cart-offer__text">🎉 <strong>Your FREE pillow has been applied!</strong></p>
     {%- elsif pv_rem == 1 -%}
-      <p class="pv-cart-offer__text">🎁 <strong>Buy 2, Get 1 FREE</strong> — add 2 more pillows and one is on us!</p>
+      <p class="pv-cart-offer__text">🎁 Add 1 more — <strong>2 pillows for $67.99</strong>. Or add 2 more and get one <strong>FREE!</strong></p>
     {%- else -%}
-      <p class="pv-cart-offer__text">🎁 Add <strong>1 more pillow</strong> — it's <strong>FREE!</strong></p>
+      <p class="pv-cart-offer__text">{% if pv_qty == 2 %}✅ <strong>2-pillow price applied!</strong> {% endif %}🎁 Add <strong>1 more pillow</strong> — it's <strong>FREE!</strong></p>
     {%- endif -%}
     <div class="pv-cart-offer__bar" aria-hidden="true">
       <span style="width: {% if pv_rem == 0 %}100{% else %}{{ pv_rem | times: 100 | divided_by: 3 }}{% endif %}%"></span>

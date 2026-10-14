@@ -36,7 +36,11 @@
           "settings": {
             "heading": "Bundle & save",
             "default_qty": "1",
-            "show_option_2": false
+            "show_option_2": true,
+            "title_2": "2 Pillows",
+            "sub_2": "Only $34 each",
+            "badge_2": "Most popular",
+            "price_2": "67.99"
           }
         },
         "buy_buttons": {

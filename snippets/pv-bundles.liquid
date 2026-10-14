@@ -1,5 +1,5 @@
 {% comment %}
-  Quantity bundle picker (1 / 2 / 3 with one free). Sets the product form quantity.
+  Quantity bundle picker (1 / 2 at a bundle price / 3 with one free). Sets the product form quantity.
   Accepts: block, form_id
 {% endcomment %}
 {%- liquid
@@ -36,6 +36,9 @@
           assign badge = block.settings.badge_3
       endcase
       assign total = unit | times: paid
+      if i == 2 and block.settings.price_2 != blank
+        assign total = block.settings.price_2 | times: 100 | round
+      endif
       assign was = unit_compare | times: qty
       assign saved = was | minus: total
     -%}
@@ -57,7 +60,7 @@
     <div class="pv-bundle-colors" data-pv-colors hidden>
       <p class="pv-bundle-colors__title">Choose a color for each pillow</p>
       {%- for n in (1..3) -%}
-        <div class="pv-bundle-colors__row" data-pv-color-row>
+        <div class="pv-bundle-colors__row" data-pv-color-row data-n="{{ n }}">
           <span class="pv-bundle-colors__label">Pillow {{ n }}{% if n == 3 %} <em>FREE 🎁</em>{% endif %}</span>
           <span class="pv-bundle-colors__opts">
             {%- for variant in product.variants -%}
