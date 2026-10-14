@@ -15,9 +15,9 @@
     {%- if pv_rem == 0 -%}
       <p class="pv-cart-offer__text">🎉 <strong>2+1 FREE applied!</strong></p>
     {%- elsif pv_rem == 1 -%}
-      <p class="pv-cart-offer__text">🔥 Get <strong>2+1 FREE</strong> — best value!</p>
+      <p class="pv-cart-offer__text">⬆️ <strong>Upgrade to 2+1 FREE</strong> — best value!</p>
     {%- else -%}
-      <p class="pv-cart-offer__text">🔥 Get <strong>2+1 FREE</strong> — only $12 more!</p>
+      <p class="pv-cart-offer__text">⬆️ <strong>Upgrade to 2+1 FREE</strong> — only $12 more!</p>
     {%- endif -%}
     <div class="pv-cart-offer__bar" aria-hidden="true">
       <span style="width: {% if pv_rem == 0 %}100{% else %}{{ pv_rem | times: 100 | divided_by: 3 }}{% endif %}%"></span>
@@ -25,7 +25,7 @@
     {%- if pv_rem != 0 -%}
       {%- assign pv_need = 3 | minus: pv_rem -%}
       <button type="button" class="pv-cart-offer__btn" data-pv-add-bundle data-variant="{{ pv_variant }}" data-qty="{{ pv_need }}">
-        {%- if pv_need == 1 -%}Upgrade to 2+1 FREE{%- else -%}Get 2+1 FREE{%- endif -%}
+        ⬆️ Upgrade now
       </button>
     {%- endif -%}
   </div>
