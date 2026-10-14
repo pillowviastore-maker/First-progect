@@ -17,7 +17,7 @@
     {%- elsif pv_rem == 1 -%}
       <p class="pv-cart-offer__text">⬆️ <strong>Upgrade to 2+1 FREE</strong> — best value!</p>
     {%- else -%}
-      <p class="pv-cart-offer__text">⬆️ <strong>Upgrade to 2+1 FREE</strong> — only $12 more!</p>
+      <p class="pv-cart-offer__text">⬆️ <strong>Upgrade to 2+1 FREE</strong></p>
     {%- endif -%}
     <div class="pv-cart-offer__bar" aria-hidden="true">
       <span style="width: {% if pv_rem == 0 %}100{% else %}{{ pv_rem | times: 100 | divided_by: 3 }}{% endif %}%"></span>
