@@ -584,3 +584,9 @@ variant-selects.pv-picker-hidden { display: none !important; }
   .pv-bundle-colors__opts { gap: 0.4rem; }
   .pv-color-pill span { padding: 0.6rem 1.1rem; font-size: 1.3rem; }
 }
+
+/* Keep all pillow color rows on one line: "FREE" sits under "Pillow 3" */
+.pv-bundle-colors__row { flex-wrap: nowrap; }
+.pv-bundle-colors__label { flex: 0 0 auto; line-height: 1.2; }
+.pv-bundle-colors__label em { display: block; margin-left: 0; font-size: 1.15rem; }
+.pv-bundle-colors__opts { flex-wrap: nowrap; justify-content: flex-end; }
