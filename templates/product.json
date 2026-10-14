@@ -48,7 +48,15 @@
           "settings": {
             "heading": "Bundle & save",
             "default_qty": "1",
-            "show_option_2": false
+            "title_1": "1 Pillow",
+            "sub_1": "Standard price",
+            "show_option_2": false,
+            "title_2": "2 Pillows",
+            "sub_2": "Perfect for couples",
+            "badge_2": "Most popular",
+            "title_3": "Buy 2, Get 1 FREE",
+            "sub_3": "3 pillows for the price of 2",
+            "badge_3": "Best value"
           }
         },
         "buy_buttons": {
@@ -90,7 +98,8 @@
           "settings": {
             "heading": "Specifications",
             "icon": "none",
-            "content": "<ul><li><strong>Pillow:</strong> approx. 24\" × 16\" × 5.5\" (60 × 41 × 14 cm)</li><li><strong>Cover:</strong> approx. 25\" × 16\" (63 × 41 cm)</li><li><strong>Fill:</strong> 100% memory foam</li><li><strong>Cover:</strong> removable, washable, with zipper and breathable mesh sides</li></ul><p><em>Dimensions are approximate and may vary slightly.</em></p>"
+            "content": "<ul><li><strong>Pillow:</strong> approx. 24\" × 16\" × 5.5\" (60 × 41 × 14 cm)</li><li><strong>Cover:</strong> approx. 25\" × 16\" (63 × 41 cm)</li><li><strong>Fill:</strong> 100% memory foam</li><li><strong>Cover:</strong> removable, washable, with zipper and breathable mesh sides</li></ul><p><em>Dimensions are approximate and may vary slightly.</em></p>",
+            "page": ""
           }
         },
         "returns": {
@@ -98,7 +107,8 @@
           "settings": {
             "heading": "Returns & Refunds",
             "icon": "none",
-            "content": "<p>We're sure you'll love your pillow. If for any reason you're not 100% satisfied, you can request an easy return within <strong>100 days of delivery</strong>. Just email us at <a href=\"mailto:pillowviastore@gmail.com\">pillowviastore@gmail.com</a> and our team will help you quickly.</p>"
+            "content": "<p>We're sure you'll love your pillow. If for any reason you're not 100% satisfied, you can request an easy return within <strong>100 days of delivery</strong>. Just email us at <a href=\"mailto:pillowviastore@gmail.com\">pillowviastore@gmail.com</a> and our team will help you quickly.</p>",
+            "page": ""
           }
         },
         "care": {
@@ -106,7 +116,8 @@
           "settings": {
             "heading": "Washing Instructions",
             "icon": "none",
-            "content": "<p>Remove the cover and machine wash on a gentle cycle at <strong>86–104°F (30–40°C)</strong>. Let it air dry completely before putting it back on the pillow. The foam can be <strong>wiped clean with a damp cloth</strong>.</p>"
+            "content": "<p>Remove the cover and machine wash on a gentle cycle at <strong>86–104°F (30–40°C)</strong>. Let it air dry completely before putting it back on the pillow. The foam can be <strong>wiped clean with a damp cloth</strong>.</p>",
+            "page": ""
           }
         }
       },
@@ -646,6 +657,26 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "1791940368e67f90e7": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_dkd67p": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_dkd67p"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -659,6 +690,7 @@
     "faq",
     "strip",
     "reviews_carousel",
-    "reviews"
+    "reviews",
+    "1791940368e67f90e7"
   ]
 }
