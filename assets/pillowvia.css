@@ -529,3 +529,11 @@ variant-selects.pv-picker-hidden { display: none !important; }
   border-radius: 99rem !important; font-weight: 700 !important; padding: 1.1rem 2.4rem !important;
 }
 .jdgm-histogram__bar-content { background: #f5b301 !important; }
+.jdgm-review-widget .jm-button--primary {
+  background: rgb(var(--pv-navy)) !important; border-color: rgb(var(--pv-navy)) !important; color: #fff !important;
+  border-radius: 99rem !important; font-weight: 700 !important; padding: 1.2rem 2.8rem !important; box-shadow: 0 0.4rem 1.2rem rgba(48, 61, 102, 0.25);
+}
+.jdgm-review-widget .jm-button:not(.jm-button--primary) { border-radius: 99rem !important; }
+.jdgm-review-widget .jm-review-widget-minimal-header__title { font-weight: 800 !important; font-size: 2.4rem !important; color: rgb(var(--pv-navy)) !important; text-align: center; width: 100%; }
+.jdgm-review-widget [class*="star"] { color: #f5b301 !important; fill: #f5b301 !important; }
+.jdgm-review-widget .jdgm-empty-state { display: none !important; }
