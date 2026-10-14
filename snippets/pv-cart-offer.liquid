@@ -17,7 +17,7 @@
     {%- elsif pv_rem == 1 -%}
       <p class="pv-cart-offer__text">🎁 <strong>Buy 2, Get 1 FREE</strong> — add 2 more and get <strong>3 for $71.99!</strong></p>
     {%- else -%}
-      <p class="pv-cart-offer__text">🎁 <strong>Buy 2, Get 1 FREE</strong> — add 1 more and get <strong>3 for $71.99!</strong></p>
+      <p class="pv-cart-offer__text">💡 <strong>Upgrade your deal:</strong> switch to <strong>Buy 2, Get 1 FREE</strong> — 3 pillows for <strong>$71.99</strong>, only <strong>$12 more</strong> and you save more!</p>
     {%- endif -%}
     <div class="pv-cart-offer__bar" aria-hidden="true">
       <span style="width: {% if pv_rem == 0 %}100{% else %}{{ pv_rem | times: 100 | divided_by: 3 }}{% endif %}%"></span>
@@ -25,7 +25,7 @@
     {%- if pv_rem != 0 -%}
       {%- assign pv_need = 3 | minus: pv_rem -%}
       <button type="button" class="pv-cart-offer__btn" data-pv-add-bundle data-variant="{{ pv_variant }}" data-qty="{{ pv_need }}">
-        {%- if pv_need == 1 -%}🎁 Add my FREE pillow{%- else -%}🎁 Add 2 more — get 1 FREE{%- endif -%}
+        {%- if pv_need == 1 -%}⬆️ Upgrade to 3 for $71.99{%- else -%}🎁 Add 2 more — get 1 FREE{%- endif -%}
       </button>
     {%- endif -%}
   </div>
