@@ -78,7 +78,7 @@
       <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
         {%- if section.settings.pv_rating != blank -%}
           <div class="pv-mobile-head medium-hide large-up-hide">
-            {% render 'pv-rating', rating: section.settings.pv_rating, count: section.settings.pv_review_count, label: section.settings.pv_rating_label %}
+            {% render 'pv-rating', product: product, rating: section.settings.pv_rating, count: section.settings.pv_review_count, label: section.settings.pv_rating_label %}
             <h2 class="h1 pv-mobile-head__title">{{ product.title | escape }}</h2>
           </div>
         {%- endif -%}
@@ -113,7 +113,7 @@
                   </p>
                 {%- when 'title' -%}
                   {%- if section.settings.pv_rating != blank -%}
-                    {% render 'pv-rating', rating: section.settings.pv_rating, count: section.settings.pv_review_count, label: section.settings.pv_rating_label, class: 'small-hide' %}
+                    {% render 'pv-rating', product: product, rating: section.settings.pv_rating, count: section.settings.pv_review_count, label: section.settings.pv_rating_label, class: 'small-hide' %}
                   {%- endif -%}
                   <div class="product__title{% if section.settings.pv_rating != blank %} small-hide{% endif %}" {{ block.shopify_attributes }}>
                     <h1>{{ product.title | escape }}</h1>

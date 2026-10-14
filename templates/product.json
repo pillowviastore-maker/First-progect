@@ -130,7 +130,7 @@
         "padding_bottom": 16,
         "pv_rating_label": "Excellent",
         "pv_rating": "4.8",
-        "pv_review_count": "15,500+ reviews",
+        "pv_review_count": "reviews",
         "pv_review_text": "",
         "pv_review_author": "Andrea",
         "pv_review_note": "Verified purchase"
@@ -496,7 +496,7 @@
         "ph5"
       ],
       "settings": {
-        "heading": "<em>55,000+ People</em> Love Pillowvia",
+        "heading": "<em>Real People.</em> Better Sleep.",
         "wave": true,
         "color_scheme": "scheme-1",
         "padding_top": 12,
@@ -620,9 +620,9 @@
         "rv10"
       ],
       "settings": {
-        "eyebrow": "Over 15,500 Reviews",
-        "heading": "Thousands of Customers <em>Trust Us</em>",
-        "score": "4.8",
+        "eyebrow": "Customer stories",
+        "heading": "What Customers <em>Are Saying</em>",
+        "score": "",
         "source_note": "",
         "color_scheme": "scheme-1",
         "padding_top": 24,

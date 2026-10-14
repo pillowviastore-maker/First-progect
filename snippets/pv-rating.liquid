@@ -1,10 +1,30 @@
 {% comment %}
   Rating summary line: "Excellent ★★★★★ 4.7/5 | 11 reviews"
-  Accepts: rating, count, label, class
+  Accepts: rating, count, label, class, product (uses Judge.me / Shopify review metafields when present)
 {% endcomment %}
+{%- liquid
+  assign pv_r = rating
+  assign pv_c = count
+  assign pv_l = label | default: 'Excellent'
+  if product and product.metafields.reviews.rating_count.value > 0
+    assign pv_r = product.metafields.reviews.rating.value.rating | round: 1
+    assign pv_n = product.metafields.reviews.rating_count.value
+    assign pv_c = pv_n | append: ' reviews'
+    if pv_r >= 4.5
+      assign pv_l = 'Excellent'
+    elsif pv_r >= 4.0
+      assign pv_l = 'Great'
+    else
+      assign pv_l = ''
+    endif
+  endif
+  assign pv_full = pv_r | plus: 0 | round
+-%}
 <a href="#reviews" class="pv-rating {{ class }}">
-  <strong>"{{ label | default: 'Excellent' }}"</strong>
-  <span class="pv-stars" aria-hidden="true">★★★★★</span>
-  <strong>{{ rating }}/5</strong>
-  <span class="pv-rating__count">| {{ count }}</span>
+  {%- if pv_l != blank -%}<strong>"{{ pv_l }}"</strong>{%- endif -%}
+  <span class="pv-stars" aria-hidden="true">
+    {%- for i in (1..5) -%}<span{% if i > pv_full %} class="pv-star-off"{% endif %}>★</span>{%- endfor -%}
+  </span>
+  <strong>{{ pv_r }}/5</strong>
+  <span class="pv-rating__count">| {{ pv_c }}</span>
 </a>

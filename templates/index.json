@@ -7,7 +7,7 @@
         "text": "Designed for natural neck alignment — this could be the last pillow you'll ever need.",
         "button_label": "Feel the relief now",
         "button_link": "shopify://products/pillowvia-ergonomic-cervical-pillow",
-        "rating_text": "15,500+ satisfied customers",
+        "rating_text": "100-night money-back guarantee",
         "image": "shopify://shop_images/pv-hero-family.jpg",
         "color_scheme": "scheme-1",
         "padding_top": 24,
@@ -22,7 +22,7 @@
           "settings": {
             "product": "pillowvia-ergonomic-cervical-pillow",
             "badge": "🏆 Best seller",
-            "rating_text": "(4.8 | 15,500+ reviews)",
+            "rating_text": "",
             "tagline": "Ergonomic memory-foam neck support"
           }
         }
@@ -214,9 +214,9 @@
         "rv10"
       ],
       "settings": {
-        "eyebrow": "Over 15,500 Reviews",
-        "heading": "Thousands of Customers <em>Trust Us</em>",
-        "score": "4.8",
+        "eyebrow": "Customer stories",
+        "heading": "What Customers <em>Are Saying</em>",
+        "score": "",
         "source_note": "",
         "color_scheme": "scheme-1",
         "padding_top": 24,

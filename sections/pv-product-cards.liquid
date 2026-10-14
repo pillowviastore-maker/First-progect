@@ -31,7 +31,11 @@
               {%- endif -%}
               {%- if block.settings.badge != blank -%}<span class="pv-product-card__badge">{{ block.settings.badge }}</span>{%- endif -%}
             </div>
-            {%- if block.settings.rating_text != blank -%}
+            {%- if p.metafields.reviews.rating_count.value > 0 -%}
+              {%- assign pc_r = p.metafields.reviews.rating.value.rating | round: 1 -%}
+              {%- assign pc_full = pc_r | round -%}
+              <p class="pv-product-card__rating"><span class="pv-stars" aria-hidden="true">{%- for i in (1..5) -%}<span{% if i > pc_full %} class="pv-star-off"{% endif %}>★</span>{%- endfor -%}</span> ({{ pc_r }} | {{ p.metafields.reviews.rating_count.value }} reviews)</p>
+            {%- elsif block.settings.rating_text != blank -%}
               <p class="pv-product-card__rating"><span class="pv-stars" aria-hidden="true">★★★★★</span> {{ block.settings.rating_text }}</p>
             {%- endif -%}
             <p class="pv-product-card__title">{{ p.title }}</p>
