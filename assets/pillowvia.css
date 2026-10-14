@@ -576,3 +576,11 @@ variant-selects.pv-picker-hidden { display: none !important; }
 .product-form__buttons .shopify-payment-button__button--unbranded:hover { transform: translateY(-1px); }
 .shopify-payment-button[aria-busy="true"] { opacity: 0.6; pointer-events: none; }
 .product-form__buttons .shopify-payment-button__more-options { font-size: 1.3rem; text-decoration: underline; }
+
+/* Three colors per pillow row on small phones */
+@media screen and (max-width: 749px) {
+  .pv-bundle-colors { padding: 1.2rem; }
+  .pv-bundle-colors__row { gap: 0.6rem; }
+  .pv-bundle-colors__opts { gap: 0.4rem; }
+  .pv-color-pill span { padding: 0.6rem 1.1rem; font-size: 1.3rem; }
+}
