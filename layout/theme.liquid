@@ -19,6 +19,11 @@
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
 
+    {%- comment -%} Homepage SEO: used when the store preferences leave the homepage title/description empty {%- endcomment -%}
+    {%- if request.page_type == 'index' -%}
+      {%- if page_title == blank or page_title == shop.name -%}{%- assign page_title = 'Pillowvia | Ergonomic Memory Foam Cervical Pillow – Free US Shipping' -%}{%- endif -%}
+      {%- if page_description == blank -%}{%- assign page_description = 'Sleep better with Pillowvia, the contoured memory foam pillow that supports your head, neck and shoulders. Free US shipping and a 100-night money-back guarantee.' -%}{%- endif -%}
+    {%- endif -%}
     <title>
       {{ page_title }}
       {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
