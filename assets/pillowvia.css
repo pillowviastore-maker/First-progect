@@ -559,3 +559,9 @@ variant-selects.pv-picker-hidden { display: none !important; }
 .pv-jm-toggle { border: 2px solid rgb(var(--pv-navy)); background: transparent; color: rgb(var(--pv-navy)); border-radius: 99rem; padding: 1rem 2.4rem; font: inherit; font-weight: 700; font-size: 1.5rem; cursor: pointer; }
 .pv-jm-toggle:hover { background: rgb(var(--pv-navy)); color: #fff; }
 .shopify-section.pv-jm-collapsed { display: none; }
+
+/* Express checkout buttons under Add to cart */
+.pv-no-quickpay .shopify-payment-button { display: none !important; }
+.product-form__buttons .shopify-payment-button { margin-top: 1rem; }
+.product-form__buttons .shopify-payment-button__button { border-radius: 99rem !important; min-height: 5.2rem; overflow: hidden; }
+.product-form__buttons .shopify-payment-button__more-options { font-size: 1.3rem; text-decoration: underline; }

@@ -76,6 +76,19 @@
         colors.classList.add('is-open');
       }
       if (picker) picker.classList.toggle('pv-picker-hidden', on);
+      syncQuickPay();
+    }
+
+    // Express buttons (Shop Pay / Apple Pay / Google Pay) buy a single variant,
+    // so hide them while the customer is mixing colors in the free-pillow bundle.
+    function syncQuickPay() {
+      var mixed = false;
+      if (multiColorActive()) {
+        var seen = {};
+        colors.querySelectorAll('[data-pv-color-row] input:checked').forEach(function (el) { seen[el.value] = 1; });
+        mixed = Object.keys(seen).length > 1;
+      }
+      section.classList.toggle('pv-no-quickpay', mixed);
     }
 
     // When the free-pillow bundle is chosen, add each pillow as its own cart line
@@ -110,6 +123,7 @@
 
     root.addEventListener('change', function (e) {
       if (e.target.name && e.target.name.indexOf('pv-bundle-') === 0) { apply(); syncColors(); }
+      else if (e.target.closest && e.target.closest('[data-pv-colors]')) syncQuickPay();
     });
     apply();
     syncColors();
