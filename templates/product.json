@@ -527,7 +527,7 @@
           "type": "question",
           "settings": {
             "question": "How do I pay?",
-            "answer": "<p>Visa, Mastercard, Amex, PayPal, Apple Pay and Google Pay — all SSL-secured.</p>"
+            "answer": "<p>Visa, Mastercard, Amex, Apple Pay, Google Pay and Shop Pay — all SSL-secured.</p>"
           }
         },
         "q3": {
