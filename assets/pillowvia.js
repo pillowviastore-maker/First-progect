@@ -93,44 +93,52 @@
       syncQuickPay();
     }
 
-    // Express buttons (Shop Pay / Apple Pay / Google Pay) buy a single variant,
-    // so hide them while the customer is mixing colors in a bundle.
-    function syncQuickPay() {
-      var mixed = false;
-      if (multiColorActive()) {
-        var seen = {};
-        activeRows().forEach(function (row) { var el = row.querySelector('input:checked'); if (el) seen[el.value] = 1; });
-        mixed = Object.keys(seen).length > 1;
-      }
-      section.classList.toggle('pv-no-quickpay', mixed);
-      section.querySelectorAll('[data-pv-buy-now]').forEach(function (btn) { btn.hidden = !mixed; });
+    // Express buttons (Shop Pay / Apple Pay / Google Pay) can only buy one variant.
+    // When colors are mixed we keep them visible but take over the click: add every
+    // pillow to the cart, then open checkout (straight into Shop Pay when that was tapped).
+    function mixedColors() {
+      if (!multiColorActive()) return null;
+      var counts = {};
+      activeRows().forEach(function (row) {
+        var pick = row.querySelector('input:checked');
+        if (pick) counts[pick.value] = (counts[pick.value] || 0) + 1;
+      });
+      return Object.keys(counts).length > 1 ? counts : null;
     }
 
-    // Mixed colors: add every pillow to the cart and go straight to checkout,
-    // where Shop Pay / Apple Pay / Google Pay are offered as express options.
-    section.querySelectorAll('[data-pv-buy-now]').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var counts = {};
-        activeRows().forEach(function (row) {
-          var pick = row.querySelector('input:checked');
-          if (pick) counts[pick.value] = (counts[pick.value] || 0) + 1;
+    function syncQuickPay() {}
+
+    function buyMixed(counts, shopPay, busyEl) {
+      var items = Object.keys(counts).map(function (id) { return { id: parseInt(id, 10), quantity: counts[id] }; });
+      var base = window.Shopify && Shopify.routes ? Shopify.routes.root : '/';
+      if (busyEl) busyEl.setAttribute('aria-busy', 'true');
+      fetch(base + 'cart/add.js', {
+        method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify({ items: items })
+      }).then(function (r) {
+        if (!r.ok) throw new Error('add failed');
+        window.location.href = base + 'checkout' + (shopPay ? '?payment=shop_pay' : '');
+      }).catch(function () { window.location.href = base + 'cart'; });
+    }
+
+    section.querySelectorAll('.shopify-payment-button').forEach(function (wrap) {
+      wrap.addEventListener('click', function (e) {
+        var counts = mixedColors();
+        if (!counts) return;
+        e.preventDefault();
+        e.stopPropagation();
+        var path = e.composedPath ? e.composedPath() : [e.target];
+        var shopPay = path.some(function (el) {
+          var id = ((el.tagName || '') + ' ' + (el.className && el.className.baseVal === undefined ? el.className : '') + ' ' + ((el.getAttribute && el.getAttribute('aria-label')) || '')).toLowerCase();
+          return /shop-?pay|shop pay|buy with shop/.test(id);
         });
-        var items = Object.keys(counts).map(function (id) { return { id: parseInt(id, 10), quantity: counts[id] }; });
-        if (!items.length) return;
-        btn.setAttribute('aria-busy', 'true');
-        var root = window.Shopify && Shopify.routes ? Shopify.routes.root : '/';
-        fetch(root + 'cart/add.js', {
-          method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify({ items: items })
-        }).then(function (r) {
-          if (!r.ok) throw new Error('add failed');
-          window.location.href = root + 'checkout';
-        }).catch(function () { btn.removeAttribute('aria-busy'); window.location.href = root + 'cart'; });
-      });
+        if (!shopPay) {
+          var html = wrap.innerHTML.toLowerCase();
+          shopPay = /shop-?pay|shop_pay/.test(html) && !/apple|google|paypal/.test(html);
+        }
+        buyMixed(counts, shopPay, wrap);
+      }, true);
     });
 
-    // When a 2- or 3-pillow bundle is chosen, add each color as its own cart line
-    // so customers can mix colors. Dawn builds FormData synchronously in its
-    // submit handler, so we swap the inputs in the capture phase and restore after.
     if (form && colors) {
       document.addEventListener('submit', function (e) {
         if (e.target !== form || !multiColorActive()) return;
