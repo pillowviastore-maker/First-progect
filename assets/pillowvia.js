@@ -103,7 +103,30 @@
         mixed = Object.keys(seen).length > 1;
       }
       section.classList.toggle('pv-no-quickpay', mixed);
+      section.querySelectorAll('[data-pv-buy-now]').forEach(function (btn) { btn.hidden = !mixed; });
     }
+
+    // Mixed colors: add every pillow to the cart and go straight to checkout,
+    // where Shop Pay / Apple Pay / Google Pay are offered as express options.
+    section.querySelectorAll('[data-pv-buy-now]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var counts = {};
+        activeRows().forEach(function (row) {
+          var pick = row.querySelector('input:checked');
+          if (pick) counts[pick.value] = (counts[pick.value] || 0) + 1;
+        });
+        var items = Object.keys(counts).map(function (id) { return { id: parseInt(id, 10), quantity: counts[id] }; });
+        if (!items.length) return;
+        btn.setAttribute('aria-busy', 'true');
+        var root = window.Shopify && Shopify.routes ? Shopify.routes.root : '/';
+        fetch(root + 'cart/add.js', {
+          method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify({ items: items })
+        }).then(function (r) {
+          if (!r.ok) throw new Error('add failed');
+          window.location.href = root + 'checkout';
+        }).catch(function () { btn.removeAttribute('aria-busy'); window.location.href = root + 'cart'; });
+      });
+    });
 
     // When a 2- or 3-pillow bundle is chosen, add each color as its own cart line
     // so customers can mix colors. Dawn builds FormData synchronously in its

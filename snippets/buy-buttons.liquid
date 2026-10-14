@@ -96,6 +96,7 @@
           </button>
           {%- if show_dynamic_checkout -%}
             {{ form | payment_button }}
+            <button type="button" class="pv-buy-now" data-pv-buy-now hidden>Buy it now</button>
           {%- endif -%}
         </div>
       {%- endform -%}

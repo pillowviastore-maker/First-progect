@@ -563,5 +563,20 @@ variant-selects.pv-picker-hidden { display: none !important; }
 /* Express checkout buttons under Add to cart */
 .pv-no-quickpay .shopify-payment-button { display: none !important; }
 .product-form__buttons .shopify-payment-button { margin-top: 1rem; }
-.product-form__buttons .shopify-payment-button__button { border-radius: 99rem !important; min-height: 5.2rem; overflow: hidden; }
+.product-form__buttons .shopify-payment-button {
+  --shopify-accelerated-checkout-button-border-radius: 99rem;
+  --shopify-accelerated-checkout-button-block-size: 6rem;
+  --shopify-accelerated-checkout-inline-alignment: center;
+}
+.product-form__buttons .shopify-payment-button__button { border-radius: 99rem !important; min-height: 6rem; overflow: hidden; }
+.product-form__buttons .shopify-payment-button__button--unbranded,
+.pv-buy-now {
+  width: 100%; min-height: 6rem; border: 0; border-radius: 99rem !important; cursor: pointer;
+  background: rgb(var(--pv-navy)) !important; color: #fff !important; font: inherit; font-size: 1.7rem; font-weight: 800; letter-spacing: 0.03em; text-transform: uppercase;
+  box-shadow: 0 0.6rem 1.6rem rgba(48, 61, 102, 0.3); transition: transform 0.15s ease;
+}
+.pv-buy-now { margin-top: 1rem; }
+.pv-buy-now[hidden] { display: none !important; }
+.pv-buy-now:hover, .product-form__buttons .shopify-payment-button__button--unbranded:hover { transform: translateY(-1px); }
+.pv-buy-now[aria-busy="true"] { opacity: 0.6; pointer-events: none; }
 .product-form__buttons .shopify-payment-button__more-options { font-size: 1.3rem; text-decoration: underline; }
