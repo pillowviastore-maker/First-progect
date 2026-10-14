@@ -75,6 +75,12 @@
             "max_days": 18
           }
         },
+        "quick_faq": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"pv-quick-faq\"><p class=\"pv-quick-faq__title\">Quick answers</p><details><summary>When will I get it?</summary><p>Free US shipping. Orders ship in 1–3 business days and usually arrive in 7–15 business days, with tracking by email.</p></details><details><summary>What if it's not right for me?</summary><p>Try it for 100 nights. Not happy? Email us and get a full refund — see our <a href=\"/policies/refund-policy\">Refund Policy</a>.</p></details><details><summary>How long does it take to get used to?</summary><p>Most people feel comfortable after 1–2 nights; some need up to 10 nights to adjust.</p></details></div>"
+          }
+        },
         "description": {
           "type": "custom_liquid",
           "settings": {
@@ -117,6 +123,7 @@
         "buy_buttons",
         "trust",
         "delivery",
+        "quick_faq",
         "description",
         "specs",
         "returns",
@@ -382,6 +389,123 @@
         "padding_bottom": 20
       }
     },
+    "how": {
+      "type": "pv-how",
+      "blocks": {
+        "s1": {
+          "type": "step",
+          "settings": {
+            "title": "Rest your neck in the contour",
+            "text": "The curved edge fills the gap under your neck and keeps it in a natural line with your spine."
+          }
+        },
+        "s2": {
+          "type": "step",
+          "settings": {
+            "title": "Pick your height",
+            "text": "Lower center for back sleepers, higher sides for side sleepers — just rotate the pillow."
+          }
+        },
+        "s3": {
+          "type": "step",
+          "settings": {
+            "title": "Let the memory foam adapt",
+            "text": "The foam slowly shapes to you and spreads pressure evenly, so you can relax all night."
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "settings": {
+        "heading": "How <em>Pillowvia</em> Works",
+        "media_alt_match": "alignment",
+        "color_scheme": "scheme-1",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "compare": {
+      "type": "pv-comparison",
+      "blocks": {
+        "r0": {
+          "type": "row",
+          "settings": {
+            "feature": "Ergonomic neck contour",
+            "brand": true,
+            "other": false
+          }
+        },
+        "r1": {
+          "type": "row",
+          "settings": {
+            "feature": "Two heights in one pillow",
+            "brand": true,
+            "other": false
+          }
+        },
+        "r2": {
+          "type": "row",
+          "settings": {
+            "feature": "Cutouts for shoulders & arms",
+            "brand": true,
+            "other": false
+          }
+        },
+        "r3": {
+          "type": "row",
+          "settings": {
+            "feature": "Memory foam that adapts to you",
+            "brand": true,
+            "other": false
+          }
+        },
+        "r4": {
+          "type": "row",
+          "settings": {
+            "feature": "Breathable mesh sides",
+            "brand": true,
+            "other": false
+          }
+        },
+        "r5": {
+          "type": "row",
+          "settings": {
+            "feature": "Removable, washable cover",
+            "brand": true,
+            "other": true
+          }
+        },
+        "r6": {
+          "type": "row",
+          "settings": {
+            "feature": "100-night money-back guarantee",
+            "brand": true,
+            "other": false
+          }
+        }
+      },
+      "block_order": [
+        "r0",
+        "r1",
+        "r2",
+        "r3",
+        "r4",
+        "r5",
+        "r6"
+      ],
+      "settings": {
+        "heading": "Pillowvia vs. <em>a Regular Pillow</em>",
+        "subheading": "",
+        "brand_label": "Pillowvia",
+        "other_label": "Regular pillow",
+        "color_scheme": "scheme-1",
+        "padding_top": 20,
+        "padding_bottom": 24
+      }
+    },
     "faq": {
       "type": "pv-faq",
       "blocks": {
@@ -551,7 +675,9 @@
     "guarantee",
     "goodbye",
     "protect",
+    "how",
     "positions",
+    "compare",
     "faq",
     "strip",
     "jm_reviews",

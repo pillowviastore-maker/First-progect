@@ -590,3 +590,64 @@ variant-selects.pv-picker-hidden { display: none !important; }
 .pv-bundle-colors__label { flex: 0 0 auto; line-height: 1.2; }
 .pv-bundle-colors__label em { display: block; margin-left: 0; font-size: 1.15rem; }
 .pv-bundle-colors__opts { flex-wrap: nowrap; justify-content: flex-end; }
+
+/* Mobile sticky Add to cart */
+.pv-sticky-atc { display: none; }
+@media screen and (max-width: 749px) {
+  .pv-sticky-atc {
+    display: flex; align-items: center; gap: 1rem; position: fixed; left: 0; right: 0; bottom: 0; z-index: 90;
+    padding: 1rem 1.2rem calc(1rem + env(safe-area-inset-bottom)); background: #fff;
+    box-shadow: 0 -0.4rem 1.6rem rgba(0, 0, 0, 0.12); transform: translateY(110%); transition: transform 0.25s ease;
+  }
+  .pv-sticky-atc.is-visible { transform: none; }
+  .pv-sticky-atc__info { display: flex; flex-direction: column; min-width: 0; flex: 1 1 auto; line-height: 1.25; }
+  .pv-sticky-atc__title { font-size: 1.3rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .pv-sticky-atc__price { font-size: 1.7rem; font-weight: 800; color: rgb(var(--pv-red)); }
+  .pv-sticky-atc__btn {
+    flex: 0 0 auto; min-height: 4.8rem; padding: 0 2.2rem; border: 0; border-radius: 99rem; cursor: pointer;
+    background: #ffc72c; color: #121212; font: inherit; font-size: 1.5rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.02em;
+    box-shadow: 0 0.4rem 1.2rem rgba(255, 170, 0, 0.4);
+  }
+}
+
+/* How it works */
+.pv-how { display: grid; gap: 2rem; align-items: center; }
+@media screen and (min-width: 750px) { .pv-how { grid-template-columns: 1fr 1fr; gap: 4rem; } }
+.pv-how__media img, .pv-how__media video { width: 100%; height: auto; display: block; border-radius: 1.6rem; }
+.pv-how__steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; }
+.pv-how__step { display: flex; gap: 1.4rem; align-items: flex-start; padding: 1.4rem 1.6rem; border-radius: 1.4rem; background: var(--pv-soft, #f3f5fa);
+  border: 2px solid transparent; transition: border-color 0.3s ease, background 0.3s ease, transform 0.3s ease; }
+.pv-how__step.is-active { border-color: rgb(var(--pv-navy)); background: #fff; transform: translateX(0.4rem); box-shadow: 0 0.4rem 1.4rem rgba(48, 61, 102, 0.12); }
+.pv-how__num { flex: 0 0 3.4rem; height: 3.4rem; border-radius: 50%; display: grid; place-items: center; font-weight: 800; color: #fff; background: rgb(var(--pv-navy)); }
+.pv-how__title { margin: 0 0 0.2rem; font-weight: 800; font-size: 1.7rem; }
+.pv-how__text { margin: 0; font-size: 1.45rem; line-height: 1.45; opacity: 0.85; }
+@media (prefers-reduced-motion: reduce) { .pv-how__step { transition: none; } .pv-how__step.is-active { transform: none; } }
+
+/* Comparison table */
+.pv-compare__sub { text-align: center; margin: -0.6rem 0 1.6rem; opacity: 0.8; }
+.pv-compare { max-width: 72rem; margin: 0 auto; border-radius: 1.6rem; overflow: hidden; box-shadow: 0 0.6rem 2rem rgba(0, 0, 0, 0.08); background: #fff; }
+.pv-compare table { width: 100%; border-collapse: collapse; font-size: 1.5rem; }
+.pv-compare th, .pv-compare td { padding: 1.2rem 1.4rem; text-align: center; border-bottom: 1px solid rgba(var(--color-foreground), 0.08); }
+.pv-compare tr:last-child td { border-bottom: 0; }
+.pv-compare td:first-child, .pv-compare th:first-child { text-align: left; font-weight: 600; }
+.pv-compare thead th { font-weight: 800; font-size: 1.5rem; background: #f6f7fb; }
+.pv-compare .pv-compare__brand { background: rgba(var(--pv-navy), 0.06); width: 28%; }
+.pv-compare thead .pv-compare__brand { background: rgb(var(--pv-navy)); color: #fff; }
+.pv-compare__yes, .pv-compare__no { display: inline-grid; place-items: center; width: 2.8rem; height: 2.8rem; border-radius: 50%; font-weight: 800; font-size: 1.5rem; }
+.pv-compare__yes { background: #22b45e; color: #fff; }
+.pv-compare__no { background: rgba(var(--color-foreground), 0.08); color: rgba(var(--color-foreground), 0.45); }
+@media screen and (max-width: 749px) {
+  .pv-compare table { font-size: 1.35rem; }
+  .pv-compare th, .pv-compare td { padding: 1rem 0.8rem; }
+  .pv-compare .pv-compare__brand { width: 24%; }
+}
+
+/* Quick answers under the buy button */
+.pv-quick-faq { margin-top: 0.4rem; }
+.pv-quick-faq__title { margin: 0 0 0.6rem; font-weight: 800; font-size: 1.5rem; }
+.pv-quick-faq details { border-bottom: 1px solid rgba(var(--color-foreground), 0.1); }
+.pv-quick-faq summary { list-style: none; cursor: pointer; padding: 1rem 2.6rem 1rem 0; position: relative; font-weight: 600; font-size: 1.45rem; }
+.pv-quick-faq summary::-webkit-details-marker { display: none; }
+.pv-quick-faq summary::after { content: '+'; position: absolute; right: 0.4rem; top: 50%; transform: translateY(-50%); font-size: 2rem; font-weight: 400; color: rgb(var(--pv-navy)); }
+.pv-quick-faq details[open] summary::after { content: '–'; }
+.pv-quick-faq details p { margin: 0 0 1.1rem; font-size: 1.4rem; line-height: 1.5; opacity: 0.85; }

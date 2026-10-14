@@ -1,0 +1,82 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{%- liquid
+  assign fallback = blank
+  if section.settings.image == blank and product
+    for m in product.media
+      assign alt = m.alt | downcase
+      if alt contains section.settings.media_alt_match
+        assign fallback = m
+        break
+      endif
+    endfor
+  endif
+-%}
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width section-{{ section.id }}-padding">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="pv-h pv-section-title inline-richtext">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+    <div class="pv-how" data-pv-how>
+      <div class="pv-how__media">
+        {%- if section.settings.video != blank -%}
+          {{ section.settings.video | video_tag: autoplay: true, loop: true, muted: true, controls: false, playsinline: true, image_size: '1000x', class: 'pv-rounded' }}
+        {%- elsif section.settings.image != blank -%}
+          {{ section.settings.image | image_url: width: 1000 | image_tag: loading: 'lazy', sizes: '(min-width: 990px) 45vw, 100vw', widths: '450, 700, 1000', class: 'pv-rounded' }}
+        {%- elsif fallback != blank -%}
+          {{ fallback | image_url: width: 1000 | image_tag: loading: 'lazy', sizes: '(min-width: 990px) 45vw, 100vw', widths: '450, 700, 1000', class: 'pv-rounded' }}
+        {%- endif -%}
+      </div>
+      <ol class="pv-how__steps">
+        {%- for block in section.blocks -%}
+          <li class="pv-how__step{% if forloop.first %} is-active{% endif %}" {{ block.shopify_attributes }}>
+            <span class="pv-how__num" aria-hidden="true">{{ forloop.index }}</span>
+            <div>
+              <p class="pv-how__title">{{ block.settings.title }}</p>
+              {%- if block.settings.text != blank -%}<p class="pv-how__text">{{ block.settings.text }}</p>{%- endif -%}
+            </div>
+          </li>
+        {%- endfor -%}
+      </ol>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "How it works",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "How <em>Pillowvia</em> Works" },
+    { "type": "video", "id": "video", "label": "Video (optional)", "info": "Short muted loop. Shown instead of the image when set." },
+    { "type": "image_picker", "id": "image", "label": "Image" },
+    { "type": "text", "id": "media_alt_match", "label": "No image: use the product photo whose alt text contains", "default": "alignment" },
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-1" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Top padding", "default": 24 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Bottom padding", "default": 24 }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "Step" },
+        { "type": "text", "id": "text", "label": "Text" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "How it works", "blocks": [{ "type": "step" }, { "type": "step" }, { "type": "step" }] }]
+}
+{% endschema %}

@@ -223,9 +223,59 @@
     btn.dataset.label = btn.textContent;
   }
 
+  // Mobile sticky "Add to cart" bar: appears once the main button scrolls out of view
+  // and simply presses the real button, so bundles and colors stay respected.
+  function initStickyAtc() {
+    var main = document.querySelector('.product__info-container .product-form__submit');
+    if (!main || document.querySelector('.pv-sticky-atc')) return;
+    var title = document.querySelector('.product__title h1, .product__title h2');
+    var bar = document.createElement('div');
+    bar.className = 'pv-sticky-atc';
+    bar.setAttribute('aria-hidden', 'true');
+    bar.innerHTML = '<div class="pv-sticky-atc__info"><span class="pv-sticky-atc__title"></span><span class="pv-sticky-atc__price"></span></div>' +
+      '<button type="button" class="pv-sticky-atc__btn" tabindex="-1">Add to cart</button>';
+    bar.querySelector('.pv-sticky-atc__title').textContent = title ? title.textContent.trim().replace(/\s+/g, ' ') : '';
+    document.body.appendChild(bar);
+    var price = bar.querySelector('.pv-sticky-atc__price');
+    var src = main.querySelector('.pv-atc-price');
+    function syncPrice() { price.textContent = src ? src.textContent : ''; }
+    syncPrice();
+    if (src && 'MutationObserver' in window) new MutationObserver(syncPrice).observe(src, { childList: true, characterData: true, subtree: true });
+    bar.querySelector('button').addEventListener('click', function () { main.click(); });
+    var footer = document.querySelector('.footer, footer');
+    function update() {
+      var r = main.getBoundingClientRect();
+      var past = r.bottom < 0;
+      var nearFooter = footer && footer.getBoundingClientRect().top < window.innerHeight;
+      var show = past && !nearFooter && !main.disabled && !document.body.classList.contains('overflow-hidden');
+      bar.classList.toggle('is-visible', show);
+      bar.setAttribute('aria-hidden', show ? 'false' : 'true');
+      bar.querySelector('button').tabIndex = show ? 0 : -1;
+    }
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  }
+
+  // How it works: highlight the steps one after another while the block is on screen
+  function initHow(root) {
+    if (root.dataset.pvReady) return;
+    root.dataset.pvReady = '1';
+    var steps = root.querySelectorAll('.pv-how__step');
+    if (steps.length < 2 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var i = 0, timer = null;
+    function go() { steps[i].classList.remove('is-active'); i = (i + 1) % steps.length; steps[i].classList.add('is-active'); }
+    if (!('IntersectionObserver' in window)) { timer = setInterval(go, 2800); return; }
+    new IntersectionObserver(function (en) {
+      if (en[0].isIntersecting) { if (!timer) timer = setInterval(go, 2800); }
+      else { clearInterval(timer); timer = null; }
+    }, { threshold: 0.3 }).observe(root);
+  }
+
   function init(scope) {
     initReveal(scope);
-    if (!scope) initJudgeme();
+    (scope || document).querySelectorAll('[data-pv-how]').forEach(initHow);
+    if (!scope) { initJudgeme(); initStickyAtc(); }
     (scope || document).querySelectorAll('[data-pv-bundles]').forEach(initBundles);
     (scope || document).querySelectorAll('[data-pv-carousel]').forEach(initCarousel);
     (scope || document).querySelectorAll('[data-pv-clamp]').forEach(initClamp);

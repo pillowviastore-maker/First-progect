@@ -13,15 +13,11 @@
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
   <div class="page-width section-{{ section.id }}-padding">
-    {%- if section.settings.heading != blank or section.settings.subheading != blank -%}
-      <div class="pv-section__header">
-        {%- if section.settings.heading != blank -%}
-          <h2 class="h2 inline-richtext">{{ section.settings.heading }}</h2>
-        {%- endif -%}
-        {%- if section.settings.subheading != blank -%}
-          <p class="pv-section__subheading inline-richtext">{{ section.settings.subheading }}</p>
-        {%- endif -%}
-      </div>
+    {%- if section.settings.heading != blank -%}
+      <h2 class="pv-h pv-section-title inline-richtext">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+    {%- if section.settings.subheading != blank -%}
+      <p class="pv-compare__sub inline-richtext">{{ section.settings.subheading }}</p>
     {%- endif -%}
     <div class="pv-compare">
       <table>

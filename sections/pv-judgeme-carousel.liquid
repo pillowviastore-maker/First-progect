@@ -63,7 +63,13 @@
             <li class="pv-review pv-jm-card">
               {%- if r.pictures_urls.size > 0 -%}
                 <div class="pv-jm-card__photo">
-                  <img src="{{ r.pictures_urls[0].compact | default: r.pictures_urls[0].original }}" alt="Photo from {{ r.reviewer_name | escape }}" loading="lazy" width="400" height="400">
+                  {%- liquid
+                    assign pic = r.pictures_urls[0].compact | default: r.pictures_urls[0].original
+                    if pic contains 'aliexpress-media.com' and pic contains '.jpg'
+                      assign pic = pic | split: '.jpg' | first | append: '.jpg_480x480q75.jpg'
+                    endif
+                  -%}
+                  <img src="{{ pic }}" alt="Photo from {{ r.reviewer_name | escape }}" loading="lazy" decoding="async" width="400" height="400">
                   {%- if r.pictures_urls.size > 1 -%}<span class="pv-jm-card__more">+{{ r.pictures_urls.size | minus: 1 }}</span>{%- endif -%}
                 </div>
               {%- endif -%}
