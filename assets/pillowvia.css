@@ -502,3 +502,21 @@ variant-selects.pv-picker-hidden { display: none !important; }
   .product__accordion .accordion__title { font-size: 1.55rem; }
 }
 
+
+/* Track your order */
+.pv-track { text-align: center; max-width: 56rem; margin: 0 auto; }
+.pv-track__icon { font-size: 4rem; display: block; margin-bottom: 0.4rem; }
+.pv-track__text p { margin: 0 0 1.6rem; }
+.pv-track__form { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+.pv-track__input { flex: 1 1 22rem; min-height: 5rem; padding: 0 1.6rem; border: 2px solid rgba(var(--color-foreground), 0.2); border-radius: 99rem; font: inherit; font-size: 1.6rem; }
+.pv-track__input:focus { outline: none; border-color: rgb(var(--pv-navy)); }
+.pv-track__btn { flex: 0 0 auto; min-height: 5rem; padding: 0 3rem; border: 0; border-radius: 99rem; cursor: pointer; font-weight: 800; font-size: 1.6rem; color: #fff;
+  background: linear-gradient(180deg, #22b45e, #15944a); box-shadow: 0 0.6rem 1.6rem rgba(21, 148, 74, 0.3); }
+@media screen and (max-width: 749px) { .pv-track__btn { flex-basis: 100%; } }
+.pv-track__error { color: rgb(var(--pv-red)); margin: 0.8rem 0 0; font-size: 1.4rem; }
+.pv-track__steps { list-style: none; padding: 0; margin: 2.8rem 0 2rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem; counter-reset: pvstep; }
+.pv-track__steps li { background: var(--pv-soft, #f3f5fa); border-radius: 1.2rem; padding: 1.4rem 0.8rem; display: flex; flex-direction: column; gap: 0.4rem; font-size: 1.3rem; line-height: 1.35; }
+.pv-track__steps li::before { counter-increment: pvstep; content: counter(pvstep); width: 2.8rem; height: 2.8rem; margin: 0 auto 0.4rem; border-radius: 50%;
+  background: rgb(var(--pv-navy)); color: #fff; display: grid; place-items: center; font-weight: 800; }
+.pv-track__steps strong { font-size: 1.45rem; }
+.pv-track__help { font-size: 1.4rem; opacity: 0.85; }

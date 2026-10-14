@@ -1,0 +1,17 @@
+{
+  "sections": {
+    "track": {
+      "type": "pv-track",
+      "settings": {
+        "heading": "Track Your Order",
+        "text": "<p>Enter the tracking number from your shipping confirmation email to see where your package is.</p>",
+        "placeholder": "e.g. LP00123456789CN",
+        "button_label": "Track",
+        "color_scheme": "scheme-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": ["track"]
+}
