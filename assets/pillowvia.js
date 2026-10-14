@@ -212,6 +212,25 @@
     var section = widget && widget.closest('.shopify-section');
     if (!btn) return;
     if (!section) { btn.hidden = true; return; }
+    // AliExpress review photos come in full size; ask the CDN for a 480px copy instead
+    function shrink(img) {
+      var u = img.getAttribute('src') || '';
+      if (/aliexpress-media\.com\/.+\.jpg$/i.test(u)) img.setAttribute('src', u + '_480x480q75.jpg');
+      var ss = img.getAttribute('srcset');
+      if (ss && ss.indexOf('aliexpress-media.com') > -1) img.removeAttribute('srcset');
+    }
+    section.querySelectorAll('img').forEach(shrink);
+    if ('MutationObserver' in window) {
+      new MutationObserver(function (list) {
+        list.forEach(function (m) {
+          m.addedNodes.forEach(function (n) {
+            if (n.nodeType !== 1) return;
+            if (n.tagName === 'IMG') shrink(n); else n.querySelectorAll && n.querySelectorAll('img').forEach(shrink);
+          });
+          if (m.type === 'attributes' && m.target.tagName === 'IMG') shrink(m.target);
+        });
+      }).observe(section, { childList: true, subtree: true, attributes: true, attributeFilter: ['src'] });
+    }
     if (window.Shopify && Shopify.designMode) return;
     section.classList.add('pv-jm-collapsed');
     btn.addEventListener('click', function () {
