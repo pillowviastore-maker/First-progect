@@ -215,7 +215,7 @@
     // AliExpress review photos come in full size; ask the CDN for a 480px copy instead
     function shrink(img) {
       var u = img.getAttribute('src') || '';
-      if (/aliexpress-media\.com\/.+\.jpg$/i.test(u)) img.setAttribute('src', u + '_480x480q75.jpg');
+      if (/aliexpress-media\.com\/.+\.jpg$/i.test(u) && u.indexOf('.jpg_') === -1) img.setAttribute('src', u + '_480x480q75.jpg');
       var ss = img.getAttribute('srcset');
       if (ss && ss.indexOf('aliexpress-media.com') > -1) img.removeAttribute('srcset');
     }
