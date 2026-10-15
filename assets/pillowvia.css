@@ -683,7 +683,7 @@ variant-selects.pv-picker-hidden { display: none !important; }
 }
 .pv-split__content .pv-section-title::after { margin-left: 0; }
 /* Cart deal progress bar */
-.pv-cart-offer__bar span { background: rgb(var(--pv-purple)); }
+.pv-cart-offer__bar span { background: rgb(var(--pv-red)); }
 .pv-cart-offer--done .pv-cart-offer__bar span { background: #3ca064; }
 /* How it works step numbers */
 .pv-how__num { background: rgb(var(--pv-purple)); }
