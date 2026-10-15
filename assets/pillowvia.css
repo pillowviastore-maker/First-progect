@@ -660,3 +660,31 @@ variant-selects.pv-picker-hidden { display: none !important; }
   .pv-compare td:first-child { font-size: 1.35rem; line-height: 1.3; }
   .pv-how__step.is-active { transform: none; }
 }
+
+/* Brand purple accents (logo wave color) */
+:root { --pv-purple: 139, 92, 246; }
+/* Selected color: main picker + per-pillow bundle picker */
+.product-form__input--pill input[type="radio"]:checked + label,
+.pv-color-pill input:checked + span { background: rgb(var(--pv-purple)); border-color: rgb(var(--pv-purple)); color: #fff; }
+.pv-color-pill input:focus-visible + span { outline-color: rgb(var(--pv-purple)); }
+/* Selected bundle frame + radio */
+.pv-bundle:has(input:checked) { border-color: rgb(var(--pv-purple)); background: rgba(var(--pv-purple), 0.06); }
+.pv-bundle:has(input:checked) .pv-bundle__radio { border-color: rgb(var(--pv-purple)); }
+.pv-bundle:has(input:checked) .pv-bundle__radio::after { background: rgb(var(--pv-purple)); }
+.pv-bundle:has(input:focus-visible) { outline-color: rgb(var(--pv-purple)); }
+.pv-bundle--popular .pv-bundle__badge { background: rgb(var(--pv-purple)); }
+.pv-bundle-colors { background: rgba(var(--pv-purple), 0.06); }
+/* Links in text */
+.rte a, .pv-quick-faq a, .pv-track__help a, .pv-review__more { color: rgb(var(--pv-purple)); text-decoration-color: rgba(var(--pv-purple), 0.5); }
+/* Wave under section headings, like the logo */
+.pv-section-title::after {
+  content: ""; display: block; width: 7.2rem; height: 0.9rem; margin: 0.8rem auto 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 72 9'%3E%3Cpath d='M2 6.5C14 1 24 1 36 4.5S58 8 70 2.5' fill='none' stroke='%238B5CF6' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+.pv-split__content .pv-section-title::after { margin-left: 0; }
+/* Cart deal progress bar */
+.pv-cart-offer__bar span { background: rgb(var(--pv-purple)); }
+.pv-cart-offer--done .pv-cart-offer__bar span { background: #3ca064; }
+/* How it works step numbers */
+.pv-how__num { background: rgb(var(--pv-purple)); }
+.pv-how__step.is-active { border-color: rgb(var(--pv-purple)); box-shadow: 0 0.4rem 1.4rem rgba(var(--pv-purple), 0.18); }

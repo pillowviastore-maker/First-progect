@@ -45,7 +45,7 @@
       assign was = unit_compare | times: qty
       assign saved = was | minus: total
     -%}
-    <label class="pv-bundle{% if i == 3 %} pv-bundle--best{% endif %}">
+    <label class="pv-bundle{% if i == 3 %} pv-bundle--best{% elsif i == 2 %} pv-bundle--popular{% endif %}">
       <input type="radio" name="pv-bundle-{{ section.id }}" value="{{ qty }}" data-total="{{ total | money | escape }}"{% if qty == default_qty %} checked{% endif %}>
       {%- if badge != blank -%}<span class="pv-bundle__badge">{{ badge }}</span>{%- endif -%}
       <span class="pv-bundle__radio" aria-hidden="true"></span>
