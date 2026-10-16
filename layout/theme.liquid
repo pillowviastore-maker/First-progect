@@ -19,6 +19,21 @@
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
 
+    {%- comment -%} Speed: let mobile browsers start loading the main product photo before the rest of the page {%- endcomment -%}
+    {%- if request.page_type == 'product' -%}
+      {%- assign pv_lcp = product.selected_or_first_available_variant.featured_media | default: product.featured_media -%}
+      {%- if pv_lcp and pv_lcp.media_type == 'image' -%}
+        {%- capture pv_lcp_srcset -%}
+          {%- assign pv_widths = '246,493,600,713,823,990' | split: ',' -%}
+          {%- for w in pv_widths -%}
+            {%- assign wi = w | plus: 0 -%}
+            {%- if wi <= pv_lcp.preview_image.width -%}{{ pv_lcp.preview_image | image_url: width: wi }} {{ wi }}w{% unless forloop.last %}, {% endunless %}{%- endif -%}
+          {%- endfor -%}
+        {%- endcapture -%}
+        <link rel="preload" as="image" fetchpriority="high" media="(max-width: 749px)" href="{{ pv_lcp.preview_image | image_url: width: 823 }}" imagesrcset="{{ pv_lcp_srcset | strip }}" imagesizes="calc(100vw - 4rem)">
+      {%- endif -%}
+    {%- endif -%}
+
     {%- comment -%} Homepage SEO: used when the store preferences leave the homepage title/description empty {%- endcomment -%}
     {%- if request.page_type == 'index' -%}
       {%- if page_title == blank or page_title == shop.name -%}{%- assign page_title = 'Pillowvia | Ergonomic Memory Foam Cervical Pillow – Free US Shipping' -%}{%- endif -%}
