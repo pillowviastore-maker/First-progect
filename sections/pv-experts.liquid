@@ -21,7 +21,7 @@
         <div class="pv-expert" {{ block.shopify_attributes }}>
           <div class="pv-expert__photo">
             {%- if block.settings.image != blank -%}
-              {{ block.settings.image | image_url: width: 700 | image_tag: loading: 'lazy', sizes: '(min-width: 750px) 25vw, 70vw', widths: '240, 350, 500, 700', alt: block.settings.name }}
+              {{ block.settings.image | image_url: width: 700 | image_tag: loading: 'lazy', sizes: '(min-width: 750px) 25vw, 70vw', widths: '350, 500, 700', alt: block.settings.name }}
             {%- endif -%}
           </div>
           <p class="pv-expert__quote">{{ block.settings.quote }}</p>

@@ -27,7 +27,7 @@
           <a class="pv-product-card" href="{{ p.url }}" {{ block.shopify_attributes }}>
             <div class="pv-product-card__media">
               {%- if p.featured_media -%}
-                {{ p.featured_media | image_url: width: 900 | image_tag: loading: 'lazy', sizes: '(min-width: 750px) 33vw, 100vw', widths: '300, 400, 600, 900', alt: p.title }}
+                {{ p.featured_media | image_url: width: 900 | image_tag: loading: 'lazy', sizes: '(min-width: 750px) 33vw, 100vw', widths: '400, 600, 900', alt: p.title }}
               {%- endif -%}
               {%- if block.settings.badge != blank -%}<span class="pv-product-card__badge">{{ block.settings.badge }}</span>{%- endif -%}
             </div>
