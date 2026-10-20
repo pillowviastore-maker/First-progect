@@ -1,4 +1,4 @@
-{% comment %} Buy 2, Get 1 FREE (3 for $74.99) progress message for the cart. {% endcomment %}
+{% comment %} 2 achetés = 1 offert (3 pour 74,90 €) progress message for the cart. {% endcomment %}
 {%- liquid
   assign pv_qty = 0
   assign pv_variant = blank
@@ -13,11 +13,11 @@
 {%- if pv_qty > 0 -%}
   <div class="pv-cart-offer{% if pv_rem == 0 %} pv-cart-offer--done{% endif %}">
     {%- if pv_rem == 0 -%}
-      <p class="pv-cart-offer__text">🎉 <strong>2+1 FREE applied!</strong></p>
+      <p class="pv-cart-offer__text">🎉 <strong>Offre 2+1 OFFERT appliquée !</strong></p>
     {%- elsif pv_rem == 1 -%}
-      <p class="pv-cart-offer__text">⬆️ <strong>Upgrade to 2+1 FREE</strong> — best value!</p>
+      <p class="pv-cart-offer__text">⬆️ <strong>Passez à 2+1 OFFERT</strong> — la meilleure offre !</p>
     {%- else -%}
-      <p class="pv-cart-offer__text">⬆️ <strong>Upgrade to 2+1 FREE</strong> — our best deal, biggest savings!</p>
+      <p class="pv-cart-offer__text">⬆️ <strong>Passez à 2+1 OFFERT</strong> — notre meilleure offre, la plus grosse économie !</p>
     {%- endif -%}
     <div class="pv-cart-offer__bar" aria-hidden="true">
       <span style="width: {% if pv_rem == 0 %}100{% else %}{{ pv_rem | times: 100 | divided_by: 3 }}{% endif %}%"></span>
@@ -25,7 +25,7 @@
     {%- if pv_rem != 0 -%}
       {%- assign pv_need = 3 | minus: pv_rem -%}
       <button type="button" class="pv-cart-offer__btn" data-pv-add-bundle data-variant="{{ pv_variant }}" data-qty="{{ pv_need }}">
-        ⬆️ Upgrade now
+        ⬆️ J'en profite
       </button>
     {%- endif -%}
   </div>

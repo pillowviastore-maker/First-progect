@@ -61,10 +61,10 @@
   {%- endfor -%}
   {%- if product.has_only_default_variant == false -%}
     <div class="pv-bundle-colors" data-pv-colors hidden>
-      <p class="pv-bundle-colors__title">Choose a color for each pillow</p>
+      <p class="pv-bundle-colors__title">Choisissez une couleur pour chaque oreiller</p>
       {%- for n in (1..3) -%}
         <div class="pv-bundle-colors__row" data-pv-color-row data-n="{{ n }}">
-          <span class="pv-bundle-colors__label">Pillow {{ n }}{% if n == 3 %} <em>FREE 🎁</em>{% endif %}</span>
+          <span class="pv-bundle-colors__label">Oreiller {{ n }}{% if n == 3 %} <em>OFFERT 🎁</em>{% endif %}</span>
           <span class="pv-bundle-colors__opts">
             {%- for variant in product.variants -%}
               <label class="pv-color-pill{% unless variant.available %} is-disabled{% endunless %}">

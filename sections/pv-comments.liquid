@@ -17,7 +17,7 @@
       <h2 class="pv-h pv-section-title inline-richtext">{{ section.settings.heading }}</h2>
     {%- endif -%}
     <div class="pv-carousel" data-pv-carousel>
-      <button type="button" class="pv-carousel__btn pv-carousel__btn--prev" data-pv-prev aria-label="Previous">‹</button>
+      <button type="button" class="pv-carousel__btn pv-carousel__btn--prev" data-pv-prev aria-label="Précédent">‹</button>
       <ul class="pv-carousel__track pv-comments" role="list">
         {%- for block in section.blocks -%}
           <li class="pv-comment" {{ block.shopify_attributes }}>
@@ -33,7 +33,7 @@
           </li>
         {%- endfor -%}
       </ul>
-      <button type="button" class="pv-carousel__btn pv-carousel__btn--next" data-pv-next aria-label="Next">›</button>
+      <button type="button" class="pv-carousel__btn pv-carousel__btn--next" data-pv-next aria-label="Suivant">›</button>
     </div>
     {%- if section.settings.note != blank -%}
       <p class="pv-note">{{ section.settings.note }}</p>

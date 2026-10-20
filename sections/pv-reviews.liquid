@@ -37,7 +37,7 @@
       {%- endif -%}
     </div>
     <div class="pv-carousel" data-pv-carousel>
-      <button type="button" class="pv-carousel__btn pv-carousel__btn--prev" data-pv-prev aria-label="Previous reviews">‹</button>
+      <button type="button" class="pv-carousel__btn pv-carousel__btn--prev" data-pv-prev aria-label="Avis précédents">‹</button>
       <ul class="pv-carousel__track pv-reviews" role="list">
         {%- for block in section.blocks -%}
           <li class="pv-review" {{ block.shopify_attributes }}>
@@ -61,11 +61,11 @@
             </div>
             {%- if block.settings.title != blank -%}<p class="pv-review__title">{{ block.settings.title }}</p>{%- endif -%}
             <div class="pv-review__text" data-pv-clamp>{{ block.settings.text }}</div>
-            <button type="button" class="pv-review__more" data-pv-more hidden>Read more</button>
+            <button type="button" class="pv-review__more" data-pv-more hidden>Lire la suite</button>
           </li>
         {%- endfor -%}
       </ul>
-      <button type="button" class="pv-carousel__btn pv-carousel__btn--next" data-pv-next aria-label="Next reviews">›</button>
+      <button type="button" class="pv-carousel__btn pv-carousel__btn--next" data-pv-next aria-label="Avis suivants">›</button>
     </div>
     {%- if section.settings.source_note != blank -%}
       <p class="pv-note">{{ section.settings.source_note }}</p>

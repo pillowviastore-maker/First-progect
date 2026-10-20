@@ -8,14 +8,14 @@
         "a1": {
           "type": "announcement",
           "settings": {
-            "text": "SALE — 50% OFF + FREE US SHIPPING",
+            "text": "PROMO — -50 % + LIVRAISON OFFERTE",
             "link": "shopify://products/pillowvia-ergonomic-cervical-pillow"
           }
         },
         "a2": {
           "type": "announcement",
           "settings": {
-            "text": "BUY 2 GET 1 FREE — LIMITED TIME!",
+            "text": "2 ACHETÉS = 1 OFFERT — DURÉE LIMITÉE !",
             "link": "shopify://products/pillowvia-ergonomic-cervical-pillow"
           }
         }

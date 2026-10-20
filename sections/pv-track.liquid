@@ -18,20 +18,20 @@
       <h1 class="pv-h pv-section-title">{{ section.settings.heading }}</h1>
       {%- if section.settings.text != blank -%}<div class="pv-track__text rte">{{ section.settings.text }}</div>{%- endif -%}
       <form class="pv-track__form" data-pv-track>
-        <label class="visually-hidden" for="PvTrack-{{ section.id }}">Tracking number</label>
+        <label class="visually-hidden" for="PvTrack-{{ section.id }}">Numéro de suivi</label>
         <input id="PvTrack-{{ section.id }}" class="pv-track__input" type="text" name="tracking" required autocomplete="off"
                placeholder="{{ section.settings.placeholder | escape }}">
         <button type="submit" class="pv-track__btn">{{ section.settings.button_label }}</button>
       </form>
-      <p class="pv-track__error" data-pv-track-error hidden>Please enter your tracking number.</p>
+      <p class="pv-track__error" data-pv-track-error hidden>Veuillez saisir votre numéro de suivi.</p>
       <ol class="pv-track__steps">
-        <li><strong>Order placed</strong><span>Processed in 1–3 business days</span></li>
-        <li><strong>Shipped</strong><span>Tracking number sent by email</span></li>
-        <li><strong>Delivered</strong><span>Usually 7–15 business days</span></li>
+        <li><strong>Commande passée</strong><span>Préparée sous 1 à 3 jours ouvrés</span></li>
+        <li><strong>Expédiée</strong><span>Numéro de suivi envoyé par e-mail</span></li>
+        <li><strong>Livrée</strong><span>Généralement en 7 à 15 jours ouvrés</span></li>
       </ol>
       <p class="pv-track__help">
-        No tracking email yet? <a href="{{ routes.account_url }}">Sign in to see your orders</a> or email us at
-        <a href="mailto:{{ shop.email }}">{{ shop.email }}</a> with your order number.
+        Pas encore reçu l'e-mail de suivi ? <a href="{{ routes.account_url }}">Connectez-vous pour voir vos commandes</a> ou écrivez-nous à
+        <a href="mailto:{{ shop.email }}">{{ shop.email }}</a> en indiquant votre numéro de commande.
       </p>
     </div>
   </div>
@@ -47,7 +47,7 @@
       var num = form.tracking.value.replace(/[^A-Za-z0-9,]/g, '');
       if (!num) { err.hidden = false; return; }
       err.hidden = true;
-      window.open('https://t.17track.net/en#nums=' + encodeURIComponent(num), '_blank', 'noopener');
+      window.open('https://t.17track.net/fr#nums=' + encodeURIComponent(num), '_blank', 'noopener');
     });
   })();
 </script>

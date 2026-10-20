@@ -9,11 +9,11 @@
   if product and product.metafields.reviews.rating_count.value > 0
     assign pv_r = product.metafields.reviews.rating.value.rating | round: 1
     assign pv_n = product.metafields.reviews.rating_count.value
-    assign pv_c = pv_n | append: ' reviews'
+    assign pv_c = pv_n | append: ' avis'
     if pv_r >= 4.5
       assign pv_l = 'Excellent'
     elsif pv_r >= 4.0
-      assign pv_l = 'Great'
+      assign pv_l = 'Très bien'
     else
       assign pv_l = ''
     endif

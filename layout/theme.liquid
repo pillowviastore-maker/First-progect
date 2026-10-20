@@ -22,7 +22,7 @@
     {%- comment -%} Homepage SEO: used when the store preferences leave the homepage title/description empty {%- endcomment -%}
     {%- if request.page_type == 'index' -%}
       {%- if page_title == blank or page_title == shop.name -%}{%- assign page_title = 'Pillowvia | Ergonomic Memory Foam Cervical Pillow – Free US Shipping' -%}{%- endif -%}
-      {%- if page_description == blank -%}{%- assign page_description = 'Sleep better with Pillowvia, the contoured memory foam pillow that supports your head, neck and shoulders. Free US shipping and a 100-night money-back guarantee.' -%}{%- endif -%}
+      {%- if page_description == blank -%}{%- assign page_description = 'Dormez mieux avec Pillowvia, l’oreiller ergonomique en mousse à mémoire de forme qui soutient la tête, la nuque et les épaules. Livraison offerte en France et satisfait ou remboursé pendant 100 nuits.' -%}{%- endif -%}
     {%- endif -%}
     <title>
       {{ page_title }}

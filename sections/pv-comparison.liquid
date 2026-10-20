@@ -33,10 +33,10 @@
             <tr {{ block.shopify_attributes }}>
               <td>{{ block.settings.feature }}</td>
               <td class="pv-compare__brand">
-                {%- if block.settings.brand -%}<span class="pv-compare__yes" aria-label="Yes">✓</span>{%- else -%}<span class="pv-compare__no" aria-label="No">✕</span>{%- endif -%}
+                {%- if block.settings.brand -%}<span class="pv-compare__yes" aria-label="Oui">✓</span>{%- else -%}<span class="pv-compare__no" aria-label="Non">✕</span>{%- endif -%}
               </td>
               <td>
-                {%- if block.settings.other -%}<span class="pv-compare__yes" aria-label="Yes">✓</span>{%- else -%}<span class="pv-compare__no" aria-label="No">✕</span>{%- endif -%}
+                {%- if block.settings.other -%}<span class="pv-compare__yes" aria-label="Oui">✓</span>{%- else -%}<span class="pv-compare__no" aria-label="Non">✕</span>{%- endif -%}
               </td>
             </tr>
           {%- endfor -%}

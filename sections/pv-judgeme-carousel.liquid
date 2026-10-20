@@ -34,12 +34,12 @@
         <span class="pv-stars" aria-hidden="true">
           {%- for i in (1..5) -%}<span{% if i > avg_full %} class="pv-star-off"{% endif %}>★</span>{%- endfor -%}
         </span>
-        <span class="pv-jm-head__count">Based on {{ total }} reviews</span>
+        <span class="pv-jm-head__count">Basé sur {{ total }} avis</span>
       </p>
     </div>
 
     <div class="pv-carousel" data-pv-carousel>
-      <button type="button" class="pv-carousel__btn pv-carousel__btn--prev" data-pv-prev aria-label="Previous reviews">‹</button>
+      <button type="button" class="pv-carousel__btn pv-carousel__btn--prev" data-pv-prev aria-label="Avis précédents">‹</button>
       <ul class="pv-carousel__track pv-reviews" role="list">
         {%- for list in (1..2) -%}
           {%- if list == 1 -%}{%- assign source = jm.reviews -%}{%- else -%}{%- assign source = jm.photo_gallery -%}{%- endif -%}
@@ -69,31 +69,31 @@
                       assign pic = pic | split: '.jpg' | first | append: '.jpg_480x480q75.jpg'
                     endif
                   -%}
-                  <img src="{{ pic }}" alt="Photo from {{ r.reviewer_name | escape }}" loading="lazy" decoding="async" width="400" height="400">
+                  <img src="{{ pic }}" alt="Photo de {{ r.reviewer_name | escape }}" loading="lazy" decoding="async" width="400" height="400">
                   {%- if r.pictures_urls.size > 1 -%}<span class="pv-jm-card__more">+{{ r.pictures_urls.size | minus: 1 }}</span>{%- endif -%}
                 </div>
               {%- endif -%}
-              <p class="pv-review__stars" aria-label="{{ r.rating }} out of 5">
+              <p class="pv-review__stars" aria-label="{{ r.rating }} sur 5">
                 {%- for i in (1..5) -%}<span class="{% if i > r.rating %}pv-star-off{% endif %}" aria-hidden="true">★</span>{%- endfor -%}
               </p>
               <div class="pv-review__text" data-pv-clamp>{{ text | escape }}</div>
-              <button type="button" class="pv-review__more" data-pv-more hidden>Read more</button>
+              <button type="button" class="pv-review__more" data-pv-more hidden>Lire la suite</button>
               <p class="pv-jm-card__author">
                 <span class="pv-avatar pv-avatar--{{ shown | modulo: 5 }}">{{ r.reviewer_initial | default: r.reviewer_name | slice: 0 }}</span>
                 <span><strong>{{ r.reviewer_name }}</strong>
-                  {%- if r.verified_buyer -%}<small class="pv-jm-card__badge">✔ Verified buyer</small>
-                  {%- elsif r.transparency_badges contains 'review_collected_from_another_provider' -%}<small class="pv-jm-card__badge pv-jm-card__badge--muted">Imported review</small>{%- endif -%}
+                  {%- if r.verified_buyer -%}<small class="pv-jm-card__badge">✔ Acheteur vérifié</small>
+                  {%- elsif r.transparency_badges contains 'review_collected_from_another_provider' -%}<small class="pv-jm-card__badge pv-jm-card__badge--muted">Avis importé</small>{%- endif -%}
                 </span>
               </p>
             </li>
           {%- endfor -%}
         {%- endfor -%}
       </ul>
-      <button type="button" class="pv-carousel__btn pv-carousel__btn--next" data-pv-next aria-label="Next reviews">›</button>
+      <button type="button" class="pv-carousel__btn pv-carousel__btn--next" data-pv-next aria-label="Avis suivants">›</button>
     </div>
 
     <div class="pv-jm-actions">
-      <button type="button" class="pv-jm-toggle" data-pv-jm-toggle aria-expanded="false">See all {{ total }} reviews</button>
+      <button type="button" class="pv-jm-toggle" data-pv-jm-toggle aria-expanded="false">Voir les {{ total }} avis</button>
     </div>
   </div>
 </div>

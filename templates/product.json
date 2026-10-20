@@ -9,7 +9,7 @@
         "checklist": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<ul class=\"pv-checklist\"><li>All-night neck alignment</li><li>Neck relief and less snoring</li><li>Fits every sleeping position</li><li>Breathable, washable cover</li></ul>"
+            "custom_liquid": "<ul class=\"pv-checklist\"><li>Nuque alignée toute la nuit</li><li>Nuque soulagée, sommeil plus calme</li><li>Adapté à toutes les positions de sommeil</li><li>Housse respirante et lavable</li></ul>"
           }
         },
         "featured_review": {
@@ -21,7 +21,7 @@
         "dots": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<p class=\"pv-dots\"><span>In stock — ready to ship</span><span>Free US shipping</span></p>"
+            "custom_liquid": "<p class=\"pv-dots\"><span>En stock — expédié rapidement</span><span>Livraison offerte en France</span></p>"
           }
         },
         "variant_picker": {
@@ -34,17 +34,17 @@
         "bundles": {
           "type": "pv_bundles",
           "settings": {
-            "heading": "Bundle & save",
+            "heading": "Achetez plus, économisez plus",
             "default_qty": "1",
             "show_option_2": true,
-            "title_2": "2 Pillows — 34% OFF",
-            "sub_2": "Only $31.50 each",
-            "badge_2": "Most popular",
-            "price_2": "62.99",
-            "title_3": "Buy 2, Get 1 FREE",
-            "sub_3": "3 pillows — just $25 each",
-            "badge_3": "Best value",
-            "price_3": "74.99"
+            "title_2": "2 oreillers — -35 %",
+            "sub_2": "Seulement 32,45 € l'unité",
+            "badge_2": "Le plus populaire",
+            "price_2": "64.90",
+            "title_3": "2 achetés = 1 OFFERT",
+            "sub_3": "3 oreillers — à peine 24,97 € l'unité",
+            "badge_3": "Meilleure offre",
+            "price_3": "74.90"
           }
         },
         "buy_buttons": {
@@ -59,9 +59,9 @@
           "settings": {
             "layout": "horizontal",
             "icon_1": "return",
-            "heading_1": "100-Night Money-Back Guarantee",
+            "heading_1": "Satisfait ou remboursé 100 nuits",
             "icon_2": "lock",
-            "heading_2": "Secure checkout",
+            "heading_2": "Paiement sécurisé",
             "icon_3": "none",
             "heading_3": ""
           }
@@ -69,8 +69,8 @@
         "delivery": {
           "type": "pv_delivery",
           "settings": {
-            "heading": "FREE shipping on all US orders",
-            "text": "Order today — estimated delivery",
+            "heading": "Livraison OFFERTE en France",
+            "text": "Commandez aujourd'hui — livraison estimée",
             "min_days": 8,
             "max_days": 18
           }
@@ -78,7 +78,7 @@
         "quick_faq": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"pv-quick-faq\"><p class=\"pv-quick-faq__title\">Quick answers</p><details><summary>When will I get it?</summary><p>Free US shipping. Orders ship in 1–3 business days and usually arrive in 7–15 business days, with tracking by email.</p></details><details><summary>What if it's not right for me?</summary><p>Try it for 100 nights. Not happy? Email us and get a full refund — see our <a href=\"/policies/refund-policy\">Refund Policy</a>.</p></details><details><summary>How long does it take to get used to?</summary><p>Most people feel comfortable after 1–2 nights; some need up to 10 nights to adjust.</p></details></div>"
+            "custom_liquid": "<div class=\"pv-quick-faq\"><p class=\"pv-quick-faq__title\">Réponses rapides</p><details><summary>Quand vais-je le recevoir ?</summary><p>Livraison offerte en France. Les commandes sont expédiées sous 1 à 3 jours ouvrés et arrivent généralement en 7 à 15 jours ouvrés, avec suivi par e-mail.</p></details><details><summary>Et s'il ne me convient pas ?</summary><p>Essayez-le pendant 100 nuits. Pas satisfait ? Écrivez-nous et soyez intégralement remboursé — voir notre <a href=\"/policies/refund-policy\">politique de remboursement</a>.</p></details><details><summary>Combien de temps pour s'y habituer ?</summary><p>La plupart des gens s'y sentent bien après 1 à 2 nuits ; certains ont besoin de 10 nuits.</p></details></div>"
           }
         },
         "description": {
@@ -90,25 +90,25 @@
         "specs": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Specifications",
+            "heading": "Caractéristiques",
             "icon": "none",
-            "content": "<ul><li><strong>Pillow:</strong> approx. 24\" × 16\" × 5.5\" (60 × 41 × 14 cm)</li><li><strong>Cover:</strong> approx. 25\" × 16\" (63 × 41 cm)</li><li><strong>Fill:</strong> 100% memory foam</li><li><strong>Cover:</strong> removable, washable, with zipper and breathable mesh sides</li></ul><p><em>Dimensions are approximate and may vary slightly.</em></p>"
+            "content": "<ul><li><strong>Oreiller :</strong> env. 60 × 41 × 14 cm</li><li><strong>Housse :</strong> env. 63 × 41 cm</li><li><strong>Garnissage :</strong> 100 % mousse à mémoire de forme</li><li><strong>Housse :</strong> amovible, lavable, avec fermeture éclair et côtés en maille respirante</li></ul><p><em>Les dimensions sont approximatives et peuvent légèrement varier.</em></p>"
           }
         },
         "returns": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Returns & Refunds",
+            "heading": "Retours et remboursements",
             "icon": "none",
-            "content": "<p>We're sure you'll love your pillow. If for any reason you're not 100% satisfied, you can request an easy return within <strong>100 days of delivery</strong>. Just email us at <a href=\"mailto:pillowviastore@gmail.com\">pillowviastore@gmail.com</a> and our team will help you quickly.</p>"
+            "content": "<p>Nous sommes sûrs que vous allez adorer votre oreiller. Si, pour une raison quelconque, vous n'êtes pas satisfait à 100 %, vous pouvez demander un retour simple dans les <strong>100 jours suivant la livraison</strong>. Écrivez-nous à <a href=\"mailto:pillowviastore@gmail.com\">pillowviastore@gmail.com</a> et notre équipe vous aidera rapidement. Vous disposez également du droit légal de rétractation de 14 jours.</p>"
           }
         },
         "care": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Washing Instructions",
+            "heading": "Conseils d'entretien",
             "icon": "none",
-            "content": "<p>Remove the cover and machine wash on a gentle cycle at <strong>86–104°F (30–40°C)</strong>. Let it air dry completely before putting it back on the pillow. The foam can be <strong>wiped clean with a damp cloth</strong>.</p>"
+            "content": "<p>Retirez la housse et lavez-la en machine en cycle délicat à <strong>30–40 °C</strong>. Laissez-la sécher complètement à l'air libre avant de la remettre sur l'oreiller. La mousse se nettoie <strong>avec un chiffon humide</strong>.</p>"
           }
         }
       },
@@ -145,10 +145,10 @@
         "padding_bottom": 16,
         "pv_rating_label": "Excellent",
         "pv_rating": "4.8",
-        "pv_review_count": "reviews",
+        "pv_review_count": "avis",
         "pv_review_text": "",
         "pv_review_author": "Andrea",
-        "pv_review_note": "Verified purchase"
+        "pv_review_note": "Achat vérifié"
       }
     },
     "comments": {
@@ -157,56 +157,56 @@
         "c0": {
           "type": "comment",
           "settings": {
-            "text": "Really great product. In two nights it relieved my neck pain — I recommend it, thank you ❤️",
+            "text": "Vraiment un super produit. En deux nuits, il a soulagé ma nuque — je le recommande, merci ❤️",
             "author": "Patrizia G."
           }
         },
         "c1": {
           "type": "comment",
           "settings": {
-            "text": "I have it too and I'm very happy with it. Highly recommended for anyone with a stiff neck.",
+            "text": "Je l'ai aussi et j'en suis très contente. Je le recommande vivement à tous ceux qui ont la nuque raide.",
             "author": "Angela T."
           }
         },
         "c2": {
           "type": "comment",
           "settings": {
-            "text": "It arrived two days ago and I have to say it's really great — I already feel relief and sleep all night without tossing and turning.",
+            "text": "Il est arrivé il y a deux jours et je dois dire qu'il est vraiment génial — je me sens déjà soulagé et je dors toute la nuit sans me retourner.",
             "author": "Francesco B."
           }
         },
         "c3": {
           "type": "comment",
           "settings": {
-            "text": "I've only used it for two nights and I already feel a difference, especially in my left shoulder, which is the worst.",
+            "text": "Je ne l'utilise que depuis deux nuits et je sens déjà la différence, surtout à l'épaule gauche, la plus douloureuse.",
             "author": "Antonietta S."
           }
         },
         "c4": {
           "type": "comment",
           "settings": {
-            "text": "I confirm everything — I've been using it for a week and have no neck pain.",
+            "text": "Je confirme tout — je l'utilise depuis une semaine et je n'ai plus mal à la nuque.",
             "author": "Lucy T."
           }
         },
         "c5": {
           "type": "comment",
           "settings": {
-            "text": "Excellent pillow, I recommend it: I bought it more than 6 months ago and it really delivers.",
+            "text": "Excellent oreiller, je le recommande : je l'ai acheté il y a plus de 6 mois et il tient vraiment ses promesses.",
             "author": "Maria L."
           }
         },
         "c6": {
           "type": "comment",
           "settings": {
-            "text": "I'm 50 and I used to wake up sore every morning. I tried at least six pillows and none of them helped. This one did — THANK YOU!",
+            "text": "J'ai 50 ans et je me réveillais endolorie tous les matins. J'ai essayé au moins six oreillers et aucun ne m'a aidée. Celui-ci, oui — MERCI !",
             "author": "Alessandra G."
           }
         },
         "c7": {
           "type": "comment",
           "settings": {
-            "text": "I've been using it for weeks and I no longer wake up with a stiff neck. You can really feel the difference.",
+            "text": "Je l'utilise depuis des semaines et je ne me réveille plus avec la nuque raide. On sent vraiment la différence.",
             "author": "Giovanna B."
           }
         }
@@ -222,7 +222,7 @@
         "c7"
       ],
       "settings": {
-        "heading": "What Our <em>Customers Say</em>",
+        "heading": "Ce que disent <em>nos clients</em>",
         "note": "",
         "color_scheme": "scheme-1",
         "padding_top": 16,
@@ -235,49 +235,49 @@
         "p0": {
           "type": "item",
           "settings": {
-            "title": "Neck Pain",
-            "cause": "Bad posture strains your neck overnight.",
-            "solution": "Keeps your neck aligned while you sleep."
+            "title": "Douleurs cervicales",
+            "cause": "Une mauvaise posture sollicite votre nuque toute la nuit.",
+            "solution": "Garde votre nuque alignée pendant votre sommeil."
           }
         },
         "p1": {
           "type": "item",
           "settings": {
-            "title": "Shoulder Tension",
-            "cause": "Flat pillows push your shoulders into stiff positions.",
-            "solution": "Side grooves let your shoulders rest naturally."
+            "title": "Tensions dans les épaules",
+            "cause": "Les oreillers plats forcent vos épaules dans des positions crispées.",
+            "solution": "Les encoches latérales laissent vos épaules reposer naturellement."
           }
         },
         "p2": {
           "type": "item",
           "settings": {
-            "title": "Back Discomfort",
-            "cause": "Poor support adds pressure on your lower back.",
-            "solution": "Supports natural spine alignment."
+            "title": "Inconfort dans le dos",
+            "cause": "Un mauvais soutien augmente la pression sur le bas du dos.",
+            "solution": "Favorise l'alignement naturel de la colonne."
           }
         },
         "p3": {
           "type": "item",
           "settings": {
-            "title": "Restless Sleep",
-            "cause": "Tossing and turning means poor support.",
-            "solution": "Memory foam spreads pressure evenly."
+            "title": "Sommeil agité",
+            "cause": "Se tourner et se retourner, c'est le signe d'un mauvais soutien.",
+            "solution": "La mousse à mémoire de forme répartit la pression uniformément."
           }
         },
         "p4": {
           "type": "item",
           "settings": {
-            "title": "Morning Headaches",
-            "cause": "Neck tension builds up during the night.",
-            "solution": "Better alignment, calmer wake-ups."
+            "title": "Maux de tête au réveil",
+            "cause": "Les tensions de la nuque s'accumulent pendant la nuit.",
+            "solution": "Meilleur alignement, réveils plus sereins."
           }
         },
         "p5": {
           "type": "item",
           "settings": {
-            "title": "Nighttime Breathing",
-            "cause": "A bad head position can affect breathing.",
-            "solution": "Keeps your head in a better position for quieter sleep."
+            "title": "Respiration nocturne",
+            "cause": "Une mauvaise position de la tête peut gêner la respiration.",
+            "solution": "Maintient votre tête dans une meilleure position pour un sommeil plus calme."
           }
         }
       },
@@ -290,11 +290,11 @@
         "p5"
       ],
       "settings": {
-        "heading": "Here's Why the Pain Won't Go Away — <em>And What You Can Do</em>",
+        "heading": "Voici pourquoi la douleur ne part pas — <em>et ce que vous pouvez faire</em>",
         "image": "shopify://shop_images/pv-benefits-black.jpg",
         "layout": "image-left",
-        "cause_label": "Cause:",
-        "solution_label": "How Pillowvia helps:",
+        "cause_label": "Cause :",
+        "solution_label": "Comment Pillowvia aide :",
         "color_scheme": "scheme-1",
         "padding_top": 16,
         "padding_bottom": 20
@@ -305,9 +305,9 @@
       "settings": {
         "style": "box",
         "badge": "pv-badge-100.svg",
-        "badge_alt": "100-night trial",
-        "heading": "Try It Risk-Free for 100 Nights",
-        "text": "<p>Sleep on it for <strong>100 nights</strong>. Not completely satisfied? <strong>We'll refund you.</strong></p>",
+        "badge_alt": "Essai de 100 nuits",
+        "heading": "Essayez-le sans risque pendant 100 nuits",
+        "text": "<p>Dormez dessus pendant <strong>100 nuits</strong>. Pas entièrement satisfait ? <strong>Nous vous remboursons.</strong></p>",
         "button_label": "",
         "button_link": "",
         "color_scheme": "scheme-1",
@@ -318,10 +318,10 @@
     "goodbye": {
       "type": "pv-media-text",
       "settings": {
-        "heading": "Say Goodbye to <em>Neck Pain</em>",
-        "subheading": "Do you wake up tired and tense?",
-        "text": "<p>Neck pain, stiff shoulders and broken sleep drain your energy before the day even starts.</p><p>Often the reason is simple: <strong>your pillow doesn't support your neck</strong>.</p>",
-        "button_label": "Wake up rested — without the pain",
+        "heading": "Dites adieu aux <em>douleurs cervicales</em>",
+        "subheading": "Vous vous réveillez fatigué et tendu ?",
+        "text": "<p>Nuque douloureuse, épaules raides et sommeil haché vous vident de votre énergie avant même le début de la journée.</p><p>Souvent, la raison est simple : <strong>votre oreiller ne soutient pas votre nuque</strong>.</p>",
+        "button_label": "Se réveiller reposé — sans douleur",
         "button_link": "",
         "image": "shopify://shop_images/pv-neck-pain-morning.jpg",
         "layout": "image-right",
@@ -335,9 +335,9 @@
     "protect": {
       "type": "pv-media-text",
       "settings": {
-        "heading": "Protect Your Neck With <em>Pillowvia</em>",
+        "heading": "Protégez votre nuque avec <em>Pillowvia</em>",
         "subheading": "",
-        "text": "<p>Ergonomic support keeps your neck in its natural position, <strong>reducing tension</strong> for more comfortable mornings.</p>",
+        "text": "<p>Le soutien ergonomique maintient votre nuque dans sa position naturelle et <strong>réduit les tensions</strong> pour des matins plus agréables.</p>",
         "button_label": "",
         "button_link": "",
         "image": "shopify://shop_images/pv-why-choose.jpg",
@@ -355,25 +355,25 @@
         "c1": {
           "type": "card",
           "settings": {
-            "title": "For side sleepers",
+            "title": "Pour dormir sur le côté",
             "image": "shopify://shop_images/pv-sleep-side.jpg",
-            "text": "<p>Raised sides keep your neck aligned.</p>"
+            "text": "<p>Les côtés surélevés gardent votre nuque alignée.</p>"
           }
         },
         "c2": {
           "type": "card",
           "settings": {
-            "title": "For stomach sleepers",
+            "title": "Pour dormir sur le ventre",
             "image": "shopify://shop_images/pv-sleep-stomach.jpg",
-            "text": "<p>Low, gentle support for head and neck.</p>"
+            "text": "<p>Un soutien bas et doux pour la tête et la nuque.</p>"
           }
         },
         "c3": {
           "type": "card",
           "settings": {
-            "title": "For back sleepers",
+            "title": "Pour dormir sur le dos",
             "image": "shopify://shop_images/pv-sleep-back.jpg",
-            "text": "<p>Rest your head in the center for optimal comfort.</p>"
+            "text": "<p>Posez la tête au centre pour un confort optimal.</p>"
           }
         }
       },
@@ -383,7 +383,7 @@
         "c3"
       ],
       "settings": {
-        "heading": "Made for <em>Every Sleeping</em> Position",
+        "heading": "Conçu pour <em>toutes les positions</em> de sommeil",
         "color_scheme": "scheme-1",
         "padding_top": 20,
         "padding_bottom": 20
@@ -395,22 +395,22 @@
         "s1": {
           "type": "step",
           "settings": {
-            "title": "Rest your neck in the contour",
-            "text": "The curved edge fills the gap under your neck and keeps it in a natural line with your spine."
+            "title": "Posez la nuque dans le contour",
+            "text": "Le bord incurvé comble l'espace sous la nuque et la garde dans l'alignement naturel de la colonne."
           }
         },
         "s2": {
           "type": "step",
           "settings": {
-            "title": "Pick your height",
-            "text": "Lower center for back sleepers, higher sides for side sleepers — just rotate the pillow."
+            "title": "Choisissez votre hauteur",
+            "text": "Centre plus bas pour dormir sur le dos, côtés plus hauts pour dormir sur le côté — il suffit de tourner l'oreiller."
           }
         },
         "s3": {
           "type": "step",
           "settings": {
-            "title": "Let the memory foam adapt",
-            "text": "The foam slowly shapes to you and spreads pressure evenly, so you can relax all night."
+            "title": "Laissez la mousse s'adapter",
+            "text": "La mousse épouse lentement vos formes et répartit la pression, pour vous détendre toute la nuit."
           }
         }
       },
@@ -420,7 +420,7 @@
         "s3"
       ],
       "settings": {
-        "heading": "How <em>Pillowvia</em> Works",
+        "heading": "Comment fonctionne <em>Pillowvia</em>",
         "media_alt_match": "alignment",
         "color_scheme": "scheme-1",
         "padding_top": 20,
@@ -433,7 +433,7 @@
         "r0": {
           "type": "row",
           "settings": {
-            "feature": "Ergonomic neck contour",
+            "feature": "Contour cervical ergonomique",
             "brand": true,
             "other": false
           }
@@ -441,7 +441,7 @@
         "r1": {
           "type": "row",
           "settings": {
-            "feature": "Two heights in one pillow",
+            "feature": "Deux hauteurs en un seul oreiller",
             "brand": true,
             "other": false
           }
@@ -449,7 +449,7 @@
         "r2": {
           "type": "row",
           "settings": {
-            "feature": "Cutouts for shoulders & arms",
+            "feature": "Encoches pour épaules et bras",
             "brand": true,
             "other": false
           }
@@ -457,7 +457,7 @@
         "r3": {
           "type": "row",
           "settings": {
-            "feature": "Memory foam that adapts to you",
+            "feature": "Mousse à mémoire de forme qui s'adapte à vous",
             "brand": true,
             "other": false
           }
@@ -465,7 +465,7 @@
         "r4": {
           "type": "row",
           "settings": {
-            "feature": "Breathable mesh sides",
+            "feature": "Côtés en maille respirante",
             "brand": true,
             "other": false
           }
@@ -473,7 +473,7 @@
         "r5": {
           "type": "row",
           "settings": {
-            "feature": "Removable, washable cover",
+            "feature": "Housse amovible et lavable",
             "brand": true,
             "other": true
           }
@@ -481,7 +481,7 @@
         "r6": {
           "type": "row",
           "settings": {
-            "feature": "100-night money-back guarantee",
+            "feature": "Satisfait ou remboursé pendant 100 nuits",
             "brand": true,
             "other": false
           }
@@ -497,10 +497,10 @@
         "r6"
       ],
       "settings": {
-        "heading": "Pillowvia vs. <em>a Regular Pillow</em>",
+        "heading": "Pillowvia vs <em>un oreiller classique</em>",
         "subheading": "",
         "brand_label": "Pillowvia",
-        "other_label": "Regular pillow",
+        "other_label": "Oreiller classique",
         "color_scheme": "scheme-1",
         "padding_top": 20,
         "padding_bottom": 24
@@ -512,57 +512,57 @@
         "q0": {
           "type": "question",
           "settings": {
-            "question": "Is a pillowcase included?",
-            "answer": "<p>Yes — a soft, removable cover shaped to fit the pillow is included.</p>"
+            "question": "Une taie est-elle incluse ?",
+            "answer": "<p>Oui — une housse douce et amovible, adaptée à la forme de l'oreiller, est incluse.</p>"
           }
         },
         "q1": {
           "type": "question",
           "settings": {
-            "question": "How do I clean it?",
-            "answer": "<p>Machine wash the cover on gentle (max 86°F / 30°C). Wipe the foam with a damp cloth — don't machine wash it.</p>"
+            "question": "Comment l'entretenir ?",
+            "answer": "<p>Lavez la housse en machine en cycle délicat (30 °C max). Nettoyez la mousse avec un chiffon humide — ne la passez pas en machine.</p>"
           }
         },
         "q2": {
           "type": "question",
           "settings": {
-            "question": "How do I pay?",
-            "answer": "<p>Visa, Mastercard, Amex, Apple Pay, Google Pay and Shop Pay — all SSL-secured.</p>"
+            "question": "Comment payer ?",
+            "answer": "<p>Carte Bancaire, Visa, Mastercard, Amex, Apple Pay, Google Pay et Shop Pay — paiement 100 % sécurisé (SSL).</p>"
           }
         },
         "q3": {
           "type": "question",
           "settings": {
-            "question": "How long to get used to it?",
-            "answer": "<p>Most people feel comfortable after 1–2 nights; some take up to 10.</p>"
+            "question": "Combien de temps pour s'y habituer ?",
+            "answer": "<p>La plupart des gens s'y sentent bien après 1 à 2 nuits ; certains ont besoin de 10 nuits.</p>"
           }
         },
         "q4": {
           "type": "question",
           "settings": {
-            "question": "Which side should I use?",
-            "answer": "<p>Lower center for back sleepers, higher sides for side sleepers. Just rotate it.</p>"
+            "question": "Quel côté utiliser ?",
+            "answer": "<p>Centre plus bas pour dormir sur le dos, côtés plus hauts pour dormir sur le côté. Il suffit de le tourner.</p>"
           }
         },
         "q5": {
           "type": "question",
           "settings": {
-            "question": "Is it hypoallergenic?",
-            "answer": "<p>Yes — latex-free memory foam with a breathable cover.</p>"
+            "question": "Est-il hypoallergénique ?",
+            "answer": "<p>Oui — mousse à mémoire de forme sans latex avec housse respirante.</p>"
           }
         },
         "q6": {
           "type": "question",
           "settings": {
-            "question": "What if it's not right for me?",
-            "answer": "<p>You have <strong>100 nights</strong> to try it. Not happy? Get a full refund. See our <a href=\"/policies/refund-policy\">Refund Policy</a>.</p>"
+            "question": "Et s'il ne me convient pas ?",
+            "answer": "<p>Vous avez <strong>100 nuits</strong> pour l'essayer. Pas satisfait ? Vous êtes intégralement remboursé. Voir notre <a href=\"/policies/refund-policy\">politique de remboursement</a>.</p>"
           }
         },
         "q7": {
           "type": "question",
           "settings": {
-            "question": "How long does delivery take?",
-            "answer": "<p>Free US shipping. Processed in 1–3 business days, delivered in 7–15. Tracking sent by email.</p>"
+            "question": "Quel est le délai de livraison ?",
+            "answer": "<p>Livraison offerte en France. Préparation sous 1 à 3 jours ouvrés, livraison en 7 à 15 jours ouvrés. Numéro de suivi envoyé par e-mail.</p>"
           }
         }
       },
@@ -577,8 +577,8 @@
         "q7"
       ],
       "settings": {
-        "heading": "Still Have Questions?",
-        "link_label": "No? Try Pillowvia now",
+        "heading": "Encore des questions ?",
+        "link_label": "Non ? Essayez Pillowvia maintenant",
         "link": "",
         "wave": true,
         "color_scheme": "scheme-1",
@@ -628,7 +628,7 @@
         "ph5"
       ],
       "settings": {
-        "heading": "<em>Real People.</em> Better Sleep.",
+        "heading": "<em>De vraies personnes.</em> Un meilleur sommeil.",
         "wave": true,
         "color_scheme": "scheme-1",
         "padding_top": 12,
@@ -638,7 +638,7 @@
     "jm_reviews": {
       "type": "pv-judgeme-carousel",
       "settings": {
-        "heading": "What Our <em>Customers Say</em>",
+        "heading": "Ce que disent <em>nos clients</em>",
         "min_rating": 4,
         "min_length": 40,
         "max_reviews": 10,

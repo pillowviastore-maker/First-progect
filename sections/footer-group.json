@@ -16,14 +16,14 @@
         "support": {
           "type": "text",
           "settings": {
-            "heading": "Customer support",
-            "subtext": "<p>Fast, friendly support. We reply to every message within 24 hours on business days.</p><p>📧 <strong>pillowviastore@gmail.com</strong></p>"
+            "heading": "Service client",
+            "subtext": "<p>Un service rapide et à l'écoute. Nous répondons à chaque message sous 24 heures (jours ouvrés).</p><p>📧 <strong>pillowviastore@gmail.com</strong></p>"
           }
         },
         "help": {
           "type": "link_list",
           "settings": {
-            "heading": "Need help?",
+            "heading": "Besoin d'aide ?",
             "menu": "footer"
           }
         }
@@ -36,7 +36,7 @@
       "settings": {
         "color_scheme": "scheme-3",
         "newsletter_enable": true,
-        "newsletter_heading": "Join the Pillowvia club",
+        "newsletter_heading": "Rejoignez le club Pillowvia",
         "enable_follow_on_shop": false,
         "show_social": true,
         "enable_country_selector": false,

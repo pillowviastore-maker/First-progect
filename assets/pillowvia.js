@@ -41,7 +41,7 @@
     if (el.scrollHeight > el.clientHeight + 2) btn.hidden = false;
     btn.addEventListener('click', function () {
       var open = el.classList.toggle('is-open');
-      btn.textContent = open ? 'Read less' : 'Read more';
+      btn.textContent = open ? 'Réduire' : 'Lire la suite';
     });
   }
 
@@ -236,7 +236,7 @@
     btn.addEventListener('click', function () {
       var open = section.classList.toggle('pv-jm-collapsed') === false;
       btn.setAttribute('aria-expanded', open);
-      btn.textContent = open ? 'Hide reviews' : btn.dataset.label;
+      btn.textContent = open ? 'Masquer les avis' : btn.dataset.label;
       if (open) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
     btn.dataset.label = btn.textContent;
@@ -252,7 +252,7 @@
     bar.className = 'pv-sticky-atc';
     bar.setAttribute('aria-hidden', 'true');
     bar.innerHTML = '<div class="pv-sticky-atc__info"><span class="pv-sticky-atc__title"></span><span class="pv-sticky-atc__price"></span></div>' +
-      '<button type="button" class="pv-sticky-atc__btn" tabindex="-1">Add to cart</button>';
+      '<button type="button" class="pv-sticky-atc__btn" tabindex="-1">Ajouter au panier</button>';
     bar.querySelector('.pv-sticky-atc__title').textContent = title ? title.textContent.trim().replace(/\s+/g, ' ') : '';
     document.body.appendChild(bar);
     var price = bar.querySelector('.pv-sticky-atc__price');

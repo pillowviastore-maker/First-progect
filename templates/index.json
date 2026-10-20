@@ -3,11 +3,11 @@
     "hero": {
       "type": "pv-hero",
       "settings": {
-        "heading": "The relief your body has been asking for",
-        "text": "Designed for natural neck alignment — this could be the last pillow you'll ever need.",
-        "button_label": "Feel the relief now",
+        "heading": "Le soulagement que votre corps attendait",
+        "text": "Conçu pour aligner naturellement votre nuque — ce sera peut-être le dernier oreiller dont vous aurez besoin.",
+        "button_label": "Je veux être soulagé(e)",
         "button_link": "shopify://products/pillowvia-ergonomic-cervical-pillow",
-        "rating_text": "100-night money-back guarantee",
+        "rating_text": "Satisfait ou remboursé pendant 100 nuits",
         "image": "shopify://shop_images/pv-hero-family.jpg",
         "color_scheme": "scheme-1",
         "padding_top": 24,
@@ -21,9 +21,9 @@
           "type": "product",
           "settings": {
             "product": "pillowvia-ergonomic-cervical-pillow",
-            "badge": "🏆 Best seller",
+            "badge": "🏆 Meilleure vente",
             "rating_text": "",
-            "tagline": "Ergonomic memory-foam neck support"
+            "tagline": "Soutien cervical ergonomique en mousse à mémoire de forme"
           }
         }
       },
@@ -31,9 +31,9 @@
         "p1"
       ],
       "settings": {
-        "heading": "Our Best Sellers for Your Wellbeing",
-        "text": "Sleep better, wake up without stiffness.",
-        "button_label": "Shop now",
+        "heading": "Nos meilleures ventes pour votre bien-être",
+        "text": "Dormez mieux, réveillez-vous sans raideurs.",
+        "button_label": "Acheter maintenant",
         "color_scheme": "scheme-2",
         "padding_top": 20,
         "padding_bottom": 20
@@ -44,9 +44,9 @@
       "settings": {
         "style": "centered",
         "badge": "pv-badge-100-round.svg",
-        "badge_alt": "100-night trial",
-        "heading": "Try It Risk-Free for 100 Nights",
-        "text": "<p>Try it at home for <strong>100 nights</strong>. If it doesn't make a difference for you, <strong>we'll refund you</strong> — no questions asked.</p>",
+        "badge_alt": "Essai de 100 nuits",
+        "heading": "Essayez-le sans risque pendant 100 nuits",
+        "text": "<p>Essayez-le chez vous pendant <strong>100 nuits</strong>. S'il ne change rien pour vous, <strong>nous vous remboursons</strong> — sans aucune question.</p>",
         "button_label": "",
         "button_link": "",
         "color_scheme": "scheme-1",
@@ -61,27 +61,27 @@
           "type": "expert",
           "settings": {
             "image": "shopify://shop_images/pv-expert-1.jpg",
-            "quote": "Well designed, well made, and good for both sleep quality and spinal health. I highly recommend it.",
+            "quote": "Bien conçu, bien fabriqué, et bon à la fois pour la qualité du sommeil et pour la colonne vertébrale. Je le recommande vivement.",
             "name": "Anna Maria Guerrini",
-            "role": "Physiotherapist"
+            "role": "Kinésithérapeute"
           }
         },
         "e1": {
           "type": "expert",
           "settings": {
             "image": "shopify://shop_images/pv-expert-2.jpg",
-            "quote": "A good pillow can really improve posture and sleep. This one stands out for its smart design — I recommend it to my patients.",
+            "quote": "Un bon oreiller peut vraiment améliorer la posture et le sommeil. Celui-ci se distingue par sa conception intelligente — je le recommande à mes patients.",
             "name": "Luca Romano",
-            "role": "Physiotherapist"
+            "role": "Kinésithérapeute"
           }
         },
         "e2": {
           "type": "expert",
           "settings": {
             "image": "shopify://shop_images/pv-expert-3.jpg",
-            "quote": "I felt the difference from the very first night. I recommend it to anyone with neck pain or muscle tension.",
+            "quote": "J'ai senti la différence dès la première nuit. Je le recommande à toute personne souffrant de douleurs cervicales ou de tensions musculaires.",
             "name": "Chiara Bianchi",
-            "role": "Professional massage therapist"
+            "role": "Masseuse professionnelle"
           }
         }
       },
@@ -91,7 +91,7 @@
         "e2"
       ],
       "settings": {
-        "heading": "Recommended by Experts",
+        "heading": "Recommandé par des experts",
         "color_scheme": "scheme-1",
         "padding_top": 16,
         "padding_bottom": 20
@@ -104,8 +104,8 @@
           "type": "review",
           "settings": {
             "rating": 5,
-            "title": "Worth every penny",
-            "text": "<p>Worth every penny! My neck pain has decreased significantly since I started using this pillow.</p>",
+            "title": "Il vaut chaque centime",
+            "text": "<p>Il vaut chaque centime ! Mes douleurs à la nuque ont nettement diminué depuis que j'utilise cet oreiller.</p>",
             "author": "Andrea"
           }
         },
@@ -113,8 +113,8 @@
           "type": "review",
           "settings": {
             "rating": 4,
-            "title": "Customer service",
-            "text": "<p>I ordered an extra pillowcase that didn't arrive at first, but customer support was very kind and reshipped it for free. Great service — 4 stars only because of the small initial hiccup.</p>",
+            "title": "Service client",
+            "text": "<p>J'avais commandé une taie supplémentaire qui n'est pas arrivée au début, mais le service client a été très aimable et me l'a renvoyée gratuitement. Super service — 4 étoiles seulement à cause du petit souci du début.</p>",
             "author": "Giorgio"
           }
         },
@@ -122,8 +122,8 @@
           "type": "review",
           "settings": {
             "rating": 5,
-            "title": "Neck pain gone!",
-            "text": "<p>I'm very happy with my pillow. Since I started using it, my neck pain has disappeared. I had swelling at the base of my neck and now it's gone. It's been fantastic, thank you! 👍</p>",
+            "title": "Plus de douleur à la nuque !",
+            "text": "<p>Je suis très contente de mon oreiller. Depuis que je l'utilise, mes douleurs à la nuque ont disparu. J'avais un gonflement à la base du cou et il est parti. C'est génial, merci ! 👍</p>",
             "author": "Lucia"
           }
         },
@@ -131,8 +131,8 @@
           "type": "review",
           "settings": {
             "rating": 3,
-            "title": "Good, but it takes time",
-            "text": "<p>The pillow is good, but it took me a few days to get used to it. I sleep better now, but it wasn't an immediate change.</p>",
+            "title": "Bien, mais il faut un peu de temps",
+            "text": "<p>L'oreiller est bien, mais il m'a fallu quelques jours pour m'y habituer. Je dors mieux maintenant, mais le changement n'a pas été immédiat.</p>",
             "author": "Luca"
           }
         },
@@ -140,8 +140,8 @@
           "type": "review",
           "settings": {
             "rating": 5,
-            "title": "No adjustment period",
-            "text": "<p>I was afraid I'd have to put up with weeks of neck and shoulder pain to get used to it, but that wasn't the case. I fall asleep faster and almost never wake up with neck or back pain anymore. It really made a difference for me.</p>",
+            "title": "Aucune période d'adaptation",
+            "text": "<p>J'avais peur de devoir supporter des semaines de douleurs à la nuque et aux épaules pour m'y habituer, mais pas du tout. Je m'endors plus vite et je ne me réveille presque plus jamais avec mal au cou ou au dos. Ça a vraiment fait la différence pour moi.</p>",
             "author": "Serena"
           }
         },
@@ -149,8 +149,8 @@
           "type": "review",
           "settings": {
             "rating": 5,
-            "title": "Happy with my purchase",
-            "text": "<p>I'm really happy with my pillow. Thank you!</p>",
+            "title": "Contente de mon achat",
+            "text": "<p>Je suis vraiment contente de mon oreiller. Merci !</p>",
             "author": "Martina"
           }
         },
@@ -158,8 +158,8 @@
           "type": "review",
           "settings": {
             "rating": 5,
-            "title": "The best pillow for my husband",
-            "text": "<p>Finally a pillow that really relieves neck pain. My husband had suffered for years: after a few days of use he told me it's the best pillow he's ever tried. He no longer has pain at night. It really makes a difference. We highly recommend it!</p>",
+            "title": "Le meilleur oreiller pour mon mari",
+            "text": "<p>Enfin un oreiller qui soulage vraiment la nuque. Mon mari en souffrait depuis des années : après quelques jours, il m'a dit que c'était le meilleur oreiller qu'il ait jamais essayé. Il n'a plus mal la nuit. Ça change vraiment tout. Nous le recommandons vivement !</p>",
             "author": "Francesca"
           }
         },
@@ -167,8 +167,8 @@
           "type": "review",
           "settings": {
             "rating": 5,
-            "title": "No more stiffness",
-            "text": "<p>I wake up without stiffness. 10/10</p>",
+            "title": "Fini les raideurs",
+            "text": "<p>Je me réveille sans raideurs. 10/10</p>",
             "author": "Simone"
           }
         },
@@ -176,8 +176,8 @@
           "type": "review",
           "settings": {
             "rating": 5,
-            "title": "The best pillow I've tried",
-            "text": "<p>No neck pain. I must have tried at least ten, including a water pillow. This is without a doubt the best pillow I've ever had.</p>",
+            "title": "Le meilleur oreiller que j'ai essayé",
+            "text": "<p>Plus de douleur à la nuque. J'en ai essayé au moins dix, dont un oreiller à eau. C'est sans aucun doute le meilleur oreiller que j'aie jamais eu.</p>",
             "author": "Davide"
           }
         },
@@ -185,8 +185,8 @@
           "type": "review",
           "settings": {
             "rating": 5,
-            "title": "Neck pain gone",
-            "text": "<p>I suffered from neck pain for years, but this pillow has really made a difference. I wake up pain-free and finally rested!</p>",
+            "title": "Adieu les douleurs cervicales",
+            "text": "<p>J'ai souffert de la nuque pendant des années, mais cet oreiller a vraiment fait la différence. Je me réveille sans douleur et enfin reposé !</p>",
             "author": "Laura"
           }
         },
@@ -194,8 +194,8 @@
           "type": "review",
           "settings": {
             "rating": 5,
-            "title": "I use it on the couch too",
-            "text": "<p>I have back and neck problems and I use this pillow while reading or watching TV on the couch. It's memory foam and helps relieve the pain. I also use it for my back when sitting, and the pain goes away.</p>",
+            "title": "Je l'utilise aussi sur le canapé",
+            "text": "<p>J'ai des problèmes de dos et de nuque et j'utilise cet oreiller pour lire ou regarder la télé sur le canapé. Il est en mousse à mémoire de forme et aide à soulager la douleur. Je l'utilise aussi pour le dos en position assise, et la douleur s'en va.</p>",
             "author": "Giuseppe"
           }
         }
@@ -214,8 +214,8 @@
         "rv10"
       ],
       "settings": {
-        "eyebrow": "Customer stories",
-        "heading": "What Customers <em>Are Saying</em>",
+        "eyebrow": "Avis clients",
+        "heading": "Ce que <em>disent nos clients</em>",
         "score": "",
         "source_note": "",
         "color_scheme": "scheme-1",
@@ -226,10 +226,10 @@
     "help": {
       "type": "pv-media-text",
       "settings": {
-        "heading": "Need Help?",
+        "heading": "Besoin d'aide ?",
         "subheading": "",
-        "text": "<p>Questions or a problem with your order? We reply within 24 hours.</p>",
-        "button_label": "Contact us",
+        "text": "<p>Une question ou un souci avec votre commande ? Nous répondons sous 24 heures.</p>",
+        "button_label": "Nous contacter",
         "button_link": "shopify://pages/contact",
         "image": "shopify://shop_images/pv-support-team.jpg",
         "layout": "image-left",
@@ -247,28 +247,28 @@
           "type": "badge",
           "settings": {
             "icon": "truck",
-            "text": "Tracked & secure delivery"
+            "text": "Livraison suivie et sécurisée"
           }
         },
         "b2": {
           "type": "badge",
           "settings": {
             "icon": "box",
-            "text": "Easy, fast returns"
+            "text": "Retours simples et rapides"
           }
         },
         "b3": {
           "type": "badge",
           "settings": {
             "icon": "check_mark",
-            "text": "Satisfied or refunded"
+            "text": "Satisfait ou remboursé"
           }
         },
         "b4": {
           "type": "badge",
           "settings": {
             "icon": "chat_bubble",
-            "text": "Friendly support"
+            "text": "Service client à l'écoute"
           }
         }
       },
